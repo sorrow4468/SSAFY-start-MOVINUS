@@ -8,9 +8,9 @@ results = list()
 
 for i in range(1, 21):
     request_url = tmdb_helper.get_request_url(
-        # region='KR', 
+        region='KR', 
         language='ko',
-        # page = i
+        page = i
         )
 
     data = requests.get(request_url).json()
