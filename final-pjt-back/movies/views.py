@@ -8,3 +8,4 @@ def index(request):
     context = {
         'movies':movies,
     }
+    return render(request, 'movies/templates/index.html', context)
