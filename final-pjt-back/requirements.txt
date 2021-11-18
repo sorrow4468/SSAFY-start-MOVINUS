@@ -3,8 +3,8 @@ backcall==0.2.0
 colorama==0.4.4
 decorator==5.1.0
 Django==3.2.9
-django-cors-headers==3.10.0
 django-seed==0.2.2
+djangorestframework==3.12.4
 Faker==9.8.2
 ipython==7.29.0
 jedi==0.18.0
