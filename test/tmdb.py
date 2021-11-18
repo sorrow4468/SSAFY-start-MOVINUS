@@ -10,7 +10,7 @@ class TMDBHelper:
     def __init__(self, api_key=None):
         self.api_key = api_key
 
-
+    base_url = 'https://api.themoviedb.org/3'
     def get_request_url(self, method='/movie/popular', **kwargs):
         """API 요청에 필요한 주소를 구성합니다.
         
@@ -21,8 +21,8 @@ class TMDBHelper:
         Returns:
             base_url, 메서드, 쿼리 스트링으로 구성된 요청 주소를 반환합니다.
         """
-        base_url = 'https://api.themoviedb.org/3'
-        request_url = base_url + method
+        
+        request_url = self.base_url + method
         request_url += f'?api_key={self.api_key}'
 
         for k, v in kwargs.items():
@@ -30,6 +30,12 @@ class TMDBHelper:
 
         return request_url
     
+    def get_genre_url(self, method='/genre/movie/list'):
+        genre_url = self.base_url + method
+        genre_url += f"?api_key={self.api_key}&language=ko-KR"
+        
+        return  genre_url
+
 
     def get_movie_id(self, title):
         """영화 제목을 이용하여 아이디를 추출합니다.

@@ -4,24 +4,41 @@ from pprint import pprint
 
 tmdb_helper = TMDBHelper('17ad6036a4743047f1619ddbc5e0fbf2')
 
-results = list()
+# results = list()
 
-for i in range(1, 21):
-    request_url = tmdb_helper.get_request_url(
-        region='KR', 
-        language='ko',
-        page = i
-        )
+# for i in range(1, 21):
+#     request_url = tmdb_helper.get_request_url(
+#         region='KR', 
+#         language='ko',
+#         page = i
+#         )
 
-    data = requests.get(request_url).json()
-    results += data.get('results')
+#     data = requests.get(request_url).json()
+#     results += data.get('results')
 
-results.sort(key=lambda x: x['release_date'])
+# results.sort(key=lambda x: x['release_date'])
 
-pprint((results))
+# pprint((results))
 
+genre_url = tmdb_helper.get_genre_url()
+data = requests.get(genre_url).json()
+genres = data.get('genres')
 
+# print(genres)
 
+genre_list = []
+for genre in genres:
+    temp = {
+        "model": "movies.genre",
+        "pk": genre['id'],
+        "fields": {
+            "name": genre['name']
+        }
+    }
+    genre_list.append(temp)
+
+print(genre_list)
+    
 
 
 
