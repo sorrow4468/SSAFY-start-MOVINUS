@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'accounts',
     'movies',
 
+    'rest_framework',
     'django_seed',
     
     'django.contrib.admin',
