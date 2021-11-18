@@ -8,4 +8,3 @@ def index(request):
     context = {
         'movies':movies,
     }
-    return render(request, )
