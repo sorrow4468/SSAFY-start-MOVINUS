@@ -1,24 +1,48 @@
 import requests
 from tmdb import TMDBHelper
 from pprint import pprint
+import json
+import sys
 
 tmdb_helper = TMDBHelper('17ad6036a4743047f1619ddbc5e0fbf2')
 
-# results = list()
+results = list()
 
-# for i in range(1, 21):
-#     request_url = tmdb_helper.get_request_url(
-#         region='KR', 
-#         language='ko',
-#         page = i
-#         )
+movies_list = list()
 
-#     data = requests.get(request_url).json()
-#     results += data.get('results')
+for i in range(1, 21):
+    request_url = tmdb_helper.get_request_url(
+        region='KR', 
+        language='ko',
+        page = i
+        )
 
-# results.sort(key=lambda x: x['release_date'])
+    data = requests.get(request_url).json()
+    results = data.get('results')
 
-# pprint((results))
+    for result in results:
+        temp = {
+            "model": "movies.genre",            
+            "fields": {
+                "title": result["title"],
+                "release_date": result["release_date"],
+                "popularity": result["popularity"],
+                "vote_count": result["vote_count"],
+                "vote_average": result["vote_average"],
+                "overview": result["overview"],
+                "poster_path": result["poster_path"],
+                "genres": result["genre_ids"],
+
+            }
+        }
+        movies_list.append(temp)
+
+movies_list.sort(key=lambda x: x['fields']['release_date'])
+
+print(movies_list)
+
+with open('movies.json', 'w', encoding="utf-8") as make_file:
+    json.dump(movies_list, make_file, ensure_ascii=False, indent="\t")
 
 genre_url = tmdb_helper.get_genre_url()
 data = requests.get(genre_url).json()
@@ -36,27 +60,6 @@ for genre in genres:
         }
     }
     genre_list.append(temp)
-
-print(genre_list)
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
-최신영화 나오는거 같은데 20개 밖에 안주네
-이게 하루에 영화 20개밖에 안줘서
-크롤링 할거면 일찍 시작하라는 얘기 같은데
-영화는 나름 최신영화 들어있는거같아
-누나 API_KEY, 내 API_KEY 돌려서 모으면 
-하루 40개씩 2~3일정도 모으면 될거같다 
-"""
+with open('genres.json', 'w', encoding="utf-8") as make_file:
+    json.dump(genre_list, make_file, ensure_ascii=False, indent="\t")
