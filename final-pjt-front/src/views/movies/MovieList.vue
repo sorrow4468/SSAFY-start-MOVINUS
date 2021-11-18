@@ -23,10 +23,18 @@ export default {
     }
   },
   methods: {
+    setToken: function () {
+      const token = localStorage.getItem('jwt')
+      const config = {
+        Authorization: `JWT ${token}`
+      }
+      return config
+    },
     getMovies: function() {
       axios({
         method: 'get',
-        url: 'http://127.0.0.1:8000/movies/'
+        url: 'http://127.0.0.1:8000/movies/',
+        headers: this.setToken()
       })
         .then(res => {
           // console.log(res)

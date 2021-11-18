@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'Login',
   data: function () {
@@ -33,7 +34,12 @@ export default {
         data: this.credentials,
       })
         .then(res => {
-          console.log(res)
+          // console.log(res)
+          localStorage.setItem('jwt', res.data.token)
+          this.$router.push({name: 'MovieList'})
+        })
+        .catch(err => {
+          console.log(err)
         })
     }
   }
