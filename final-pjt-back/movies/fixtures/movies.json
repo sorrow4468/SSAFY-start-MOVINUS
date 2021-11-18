@@ -1,5 +1,5 @@
 [
-	{
+  {
 		"model": "movies.genre",
 		"pk": 28,
 		"fields": {
@@ -132,8 +132,8 @@
 			"name": "서부"
 		}
 	},
-  {
-		"model": "movies.genre",
+	{
+		"model": "movies.movie",
 		"fields": {
 			"title": "신데렐라",
 			"release_date": "1962-07-26",
@@ -151,7 +151,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "환타지아",
 			"release_date": "1982-12-20",
@@ -167,7 +167,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인어공주",
 			"release_date": "1991-12-21",
@@ -184,7 +184,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "미녀와 야수",
 			"release_date": "1992-07-04",
@@ -202,7 +202,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "나 홀로 집에 2: 뉴욕을 헤매다",
 			"release_date": "1992-12-18",
@@ -219,7 +219,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라이온 킹",
 			"release_date": "1994-07-02",
@@ -236,7 +236,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "토이 스토리",
 			"release_date": "1995-12-30",
@@ -254,7 +254,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "101 달마시안",
 			"release_date": "1996-12-21",
@@ -270,7 +270,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "뮬란",
 			"release_date": "1998-07-17",
@@ -287,7 +287,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "벅스 라이프",
 			"release_date": "1998-12-12",
@@ -305,7 +305,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "타이타닉",
 			"release_date": "1999-03-13",
@@ -321,7 +321,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "매트릭스",
 			"release_date": "1999-05-15",
@@ -337,7 +337,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "토이 스토리 2",
 			"release_date": "1999-12-18",
@@ -354,7 +354,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "다이너소어",
 			"release_date": "2000-07-15",
@@ -370,7 +370,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "무서운 영화",
 			"release_date": "2000-09-23",
@@ -385,7 +385,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "슈렉",
 			"release_date": "2001-07-06",
@@ -404,7 +404,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "무서운 영화 2",
 			"release_date": "2001-11-30",
@@ -419,7 +419,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "몬스터 주식회사",
 			"release_date": "2001-12-21",
@@ -436,7 +436,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "반지의 제왕: 반지 원정대",
 			"release_date": "2001-12-31",
@@ -453,7 +453,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이더맨",
 			"release_date": "2002-05-03",
@@ -469,7 +469,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스쿠비 두",
 			"release_date": "2002-07-17",
@@ -486,7 +486,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "릴로 & 스티치",
 			"release_date": "2002-07-19",
@@ -502,7 +502,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이스 에이지",
 			"release_date": "2002-08-09",
@@ -520,7 +520,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "반지의 제왕: 두 개의 탑",
 			"release_date": "2002-12-19",
@@ -537,7 +537,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "니모를 찾아서",
 			"release_date": "2003-06-06",
@@ -553,7 +553,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캐리비안의 해적: 블랙펄의 저주",
 			"release_date": "2003-09-10",
@@ -570,7 +570,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "반지의 제왕: 왕의 귀환",
 			"release_date": "2003-12-17",
@@ -587,7 +587,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "브라더 베어",
 			"release_date": "2004-01-17",
@@ -604,7 +604,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "패션 오브 크라이스트",
 			"release_date": "2004-04-02",
@@ -619,7 +619,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "슈렉 2",
 			"release_date": "2004-06-18",
@@ -638,7 +638,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이더맨 2",
 			"release_date": "2004-06-30",
@@ -655,7 +655,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인크레더블",
 			"release_date": "2004-12-15",
@@ -673,7 +673,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "폴라 익스프레스",
 			"release_date": "2004-12-24",
@@ -692,7 +692,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "마다가스카",
 			"release_date": "2005-07-14",
@@ -710,7 +710,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "찰리와 초콜릿 공장",
 			"release_date": "2005-09-16",
@@ -728,7 +728,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "유령 신부",
 			"release_date": "2005-11-03",
@@ -745,7 +745,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "나니아 연대기: 사자, 마녀 그리고 옷장",
 			"release_date": "2005-12-29",
@@ -762,7 +762,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이스 에이지 2",
 			"release_date": "2006-04-20",
@@ -780,7 +780,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캐리비안의 해적: 망자의 함",
 			"release_date": "2006-07-06",
@@ -797,7 +797,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "팀버튼의 크리스마스 악몽",
 			"release_date": "2006-12-07",
@@ -814,7 +814,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "007 카지노 로얄",
 			"release_date": "2006-12-21",
@@ -831,7 +831,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아포칼립토",
 			"release_date": "2007-01-31",
@@ -849,7 +849,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이더맨 3",
 			"release_date": "2007-05-01",
@@ -866,7 +866,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캐리비안의 해적: 세상의 끝에서",
 			"release_date": "2007-05-23",
@@ -883,7 +883,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "슈렉 3",
 			"release_date": "2007-06-06",
@@ -902,7 +902,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 불사조 기사단",
 			"release_date": "2007-07-11",
@@ -919,7 +919,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라따뚜이",
 			"release_date": "2007-07-25",
@@ -937,7 +937,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "심슨 가족: 더 무비",
 			"release_date": "2007-08-22",
@@ -954,7 +954,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이언맨",
 			"release_date": "2008-04-30",
@@ -971,7 +971,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "쿵푸팬더",
 			"release_date": "2008-06-05",
@@ -990,7 +990,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "핸콕",
 			"release_date": "2008-07-02",
@@ -1006,7 +1006,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "007 퀀텀 오브 솔러스",
 			"release_date": "2008-11-05",
@@ -1024,7 +1024,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "트와일라잇",
 			"release_date": "2008-12-10",
@@ -1041,7 +1041,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "벼랑 위의 포뇨",
 			"release_date": "2008-12-18",
@@ -1058,7 +1058,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "노잉",
 			"release_date": "2009-04-16",
@@ -1076,7 +1076,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스테이트 오브 플레이",
 			"release_date": "2009-04-30",
@@ -1092,7 +1092,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스타 트렉: 더 비기닝",
 			"release_date": "2009-05-07",
@@ -1109,7 +1109,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "천사와 악마",
 			"release_date": "2009-05-14",
@@ -1125,7 +1125,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "터미네이터 4: 미래전쟁의 시작",
 			"release_date": "2009-05-21",
@@ -1142,7 +1142,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "코렐라인: 비밀의 문",
 			"release_date": "2009-05-21",
@@ -1159,7 +1159,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 혼혈 왕자",
 			"release_date": "2009-07-15",
@@ -1175,7 +1175,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "업",
 			"release_date": "2009-07-29",
@@ -1193,7 +1193,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "지.아이.조 - 전쟁의 서막",
 			"release_date": "2009-08-06",
@@ -1211,7 +1211,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "퍼블릭 에너미",
 			"release_date": "2009-08-12",
@@ -1227,7 +1227,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이스 에이지 3: 공룡시대",
 			"release_date": "2009-08-12",
@@ -1245,7 +1245,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "프로포즈",
 			"release_date": "2009-09-03",
@@ -1262,7 +1262,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "디스트릭트 9",
 			"release_date": "2009-10-15",
@@ -1277,7 +1277,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "바스터즈: 거친 녀석들",
 			"release_date": "2009-10-28",
@@ -1295,7 +1295,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "2012",
 			"release_date": "2009-11-12",
@@ -1312,7 +1312,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "닌자 어쌔신",
 			"release_date": "2009-11-26",
@@ -1327,7 +1327,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "뉴 문",
 			"release_date": "2009-12-02",
@@ -1345,7 +1345,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "모범시민",
 			"release_date": "2009-12-10",
@@ -1362,7 +1362,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "퍼시 잭슨과 번개도둑",
 			"release_date": "2010-02-11",
@@ -1379,7 +1379,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "타이탄",
 			"release_date": "2010-04-01",
@@ -1396,7 +1396,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이언맨 2",
 			"release_date": "2010-04-29",
@@ -1413,7 +1413,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "로빈후드",
 			"release_date": "2010-05-13",
@@ -1428,7 +1428,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "슈렉 포에버",
 			"release_date": "2010-07-01",
@@ -1447,7 +1447,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "이클립스",
 			"release_date": "2010-07-07",
@@ -1465,7 +1465,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인셉션",
 			"release_date": "2010-07-21",
@@ -1482,7 +1482,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "솔트",
 			"release_date": "2010-07-29",
@@ -1499,7 +1499,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "토이 스토리 3",
 			"release_date": "2010-08-05",
@@ -1516,7 +1516,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라스트 에어벤더",
 			"release_date": "2010-08-19",
@@ -1533,7 +1533,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "익스펜더블",
 			"release_date": "2010-08-19",
@@ -1550,7 +1550,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아바타",
 			"release_date": "2010-08-26",
@@ -1568,7 +1568,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스카이라인",
 			"release_date": "2010-11-24",
@@ -1584,7 +1584,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "워리어스 웨이",
 			"release_date": "2010-12-01",
@@ -1603,7 +1603,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 죽음의 성물 1",
 			"release_date": "2010-12-15",
@@ -1619,7 +1619,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "트론: 새로운 시작",
 			"release_date": "2010-12-29",
@@ -1636,7 +1636,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "러브 & 드럭스",
 			"release_date": "2011-01-13",
@@ -1653,7 +1653,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "메가마인드",
 			"release_date": "2011-01-13",
@@ -1672,7 +1672,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "타운",
 			"release_date": "2011-01-27",
@@ -1689,7 +1689,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라푼젤",
 			"release_date": "2011-02-10",
@@ -1705,7 +1705,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "월드 인베이젼",
 			"release_date": "2011-03-10",
@@ -1721,7 +1721,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "써커 펀치",
 			"release_date": "2011-04-07",
@@ -1738,7 +1738,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "토르: 천둥의 신",
 			"release_date": "2011-04-28",
@@ -1755,7 +1755,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캐리비안의 해적: 낯선 조류",
 			"release_date": "2011-05-19",
@@ -1772,7 +1772,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "13인의 자객",
 			"release_date": "2011-06-09",
@@ -1789,7 +1789,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "그린 랜턴: 반지의 선택",
 			"release_date": "2011-06-16",
@@ -1807,7 +1807,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "슈퍼 에이트",
 			"release_date": "2011-06-16",
@@ -1824,7 +1824,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 죽음의 성물 2",
 			"release_date": "2011-07-13",
@@ -1840,7 +1840,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "카 2",
 			"release_date": "2011-07-20",
@@ -1858,7 +1858,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캡틴 아메리카: 퍼스트 어벤져",
 			"release_date": "2011-07-28",
@@ -1875,7 +1875,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "혹성탈출: 진화의 시작",
 			"release_date": "2011-08-17",
@@ -1893,7 +1893,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "콜롬비아나",
 			"release_date": "2011-08-31",
@@ -1911,7 +1911,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인 타임",
 			"release_date": "2011-10-27",
@@ -1928,7 +1928,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "백사대전",
 			"release_date": "2011-11-17",
@@ -1944,7 +1944,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "브레이킹 던 Part 1",
 			"release_date": "2011-11-30",
@@ -1961,7 +1961,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "잃어버린 세계를 찾아서 2: 신비의 섬",
 			"release_date": "2012-01-19",
@@ -1978,7 +1978,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 그레이",
 			"release_date": "2012-02-16",
@@ -1996,7 +1996,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "고스트 라이더 3D : 복수의 화신",
 			"release_date": "2012-02-16",
@@ -2013,7 +2013,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "언더월드: 어웨이크닝",
 			"release_date": "2012-02-22",
@@ -2030,7 +2030,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "크로니클",
 			"release_date": "2012-03-15",
@@ -2047,7 +2047,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "언터처블: 1%의 우정",
 			"release_date": "2012-03-22",
@@ -2063,7 +2063,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "타이탄의 분노",
 			"release_date": "2012-03-29",
@@ -2079,7 +2079,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어벤져스",
 			"release_date": "2012-04-26",
@@ -2096,7 +2096,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "맨 인 블랙 3",
 			"release_date": "2012-05-24",
@@ -2113,7 +2113,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "프로메테우스",
 			"release_date": "2012-06-06",
@@ -2130,7 +2130,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어메이징 스파이더맨",
 			"release_date": "2012-06-28",
@@ -2147,7 +2147,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "리미트리스",
 			"release_date": "2012-07-12",
@@ -2164,7 +2164,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "다크 나이트 라이즈",
 			"release_date": "2012-07-19",
@@ -2182,7 +2182,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이스 에이지 4: 대륙 이동설",
 			"release_date": "2012-07-25",
@@ -2200,7 +2200,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인시디어스",
 			"release_date": "2012-09-13",
@@ -2216,7 +2216,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "19곰 테드",
 			"release_date": "2012-09-27",
@@ -2232,7 +2232,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "메리다와 마법의 숲",
 			"release_date": "2012-09-27",
@@ -2252,7 +2252,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "테이큰 2",
 			"release_date": "2012-09-27",
@@ -2269,7 +2269,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "007 스카이폴",
 			"release_date": "2012-11-01",
@@ -2286,7 +2286,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "브레이킹 던 Part 2",
 			"release_date": "2012-11-15",
@@ -2304,7 +2304,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "가디언즈",
 			"release_date": "2012-11-29",
@@ -2323,7 +2323,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "호빗: 뜻밖의 여정",
 			"release_date": "2012-12-13",
@@ -2340,7 +2340,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "주먹왕 랄프",
 			"release_date": "2012-12-19",
@@ -2358,7 +2358,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "몬스터 호텔",
 			"release_date": "2013-01-17",
@@ -2376,7 +2376,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "헨젤과 그레텔 마녀 사냥꾼",
 			"release_date": "2013-02-14",
@@ -2393,7 +2393,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이언맨 3",
 			"release_date": "2013-04-25",
@@ -2410,7 +2410,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "크루즈 패밀리",
 			"release_date": "2013-05-16",
@@ -2430,7 +2430,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "맨 오브 스틸",
 			"release_date": "2013-06-13",
@@ -2448,7 +2448,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "월드워Z",
 			"release_date": "2013-06-20",
@@ -2467,7 +2467,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "퍼시픽 림",
 			"release_date": "2013-07-11",
@@ -2484,7 +2484,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "드래곤볼Z: 신들의 전쟁",
 			"release_date": "2013-08-29",
@@ -2501,7 +2501,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "몬스터 대학교",
 			"release_date": "2013-09-12",
@@ -2517,7 +2517,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "슈퍼배드 2",
 			"release_date": "2013-09-12",
@@ -2534,7 +2534,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "컨저링",
 			"release_date": "2013-09-17",
@@ -2550,7 +2550,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "토르: 다크 월드",
 			"release_date": "2013-10-30",
@@ -2567,7 +2567,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 퍼지",
 			"release_date": "2013-11-06",
@@ -2584,7 +2584,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "이스케이프 플랜",
 			"release_date": "2013-12-05",
@@ -2600,7 +2600,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "호빗: 스마우그의 폐허",
 			"release_date": "2013-12-12",
@@ -2617,7 +2617,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 울프 오브 월 스트리트",
 			"release_date": "2014-01-09",
@@ -2634,7 +2634,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "겨울왕국",
 			"release_date": "2014-01-16",
@@ -2651,7 +2651,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "니드 포 스피드",
 			"release_date": "2014-04-16",
@@ -2669,7 +2669,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "다이버전트",
 			"release_date": "2014-04-16",
@@ -2686,7 +2686,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어메이징 스파이더맨 2",
 			"release_date": "2014-04-23",
@@ -2703,7 +2703,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "말레피센트",
 			"release_date": "2014-05-29",
@@ -2722,7 +2722,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "트랜스포머: 사라진 시대",
 			"release_date": "2014-06-25",
@@ -2739,7 +2739,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "혹성탈출: 반격의 서막",
 			"release_date": "2014-07-10",
@@ -2757,7 +2757,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "허큘리스",
 			"release_date": "2014-08-06",
@@ -2773,7 +2773,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "오드 토머스",
 			"release_date": "2014-08-27",
@@ -2789,7 +2789,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "닌자터틀",
 			"release_date": "2014-08-28",
@@ -2807,7 +2807,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "메이즈 러너",
 			"release_date": "2014-09-18",
@@ -2825,7 +2825,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인터스텔라",
 			"release_date": "2014-11-06",
@@ -2842,7 +2842,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "퓨리",
 			"release_date": "2014-11-20",
@@ -2859,7 +2859,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "헝거게임: 모킹제이",
 			"release_date": "2014-11-20",
@@ -2876,7 +2876,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "호빗: 다섯 군대 전투",
 			"release_date": "2014-12-17",
@@ -2893,7 +2893,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "마놀로와 마법의 책",
 			"release_date": "2014-12-24",
@@ -2912,7 +2912,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "마다가스카의 펭귄",
 			"release_date": "2014-12-31",
@@ -2930,7 +2930,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "테이큰 3",
 			"release_date": "2015-01-01",
@@ -2946,7 +2946,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아메리칸 스나이퍼",
 			"release_date": "2015-01-14",
@@ -2962,7 +2962,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "빅 히어로",
 			"release_date": "2015-01-21",
@@ -2981,7 +2981,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "주피터 어센딩",
 			"release_date": "2015-02-05",
@@ -2999,7 +2999,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "도라에몽: 스탠바이미",
 			"release_date": "2015-02-12",
@@ -3017,7 +3017,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "그레이의 50가지 그림자",
 			"release_date": "2015-02-25",
@@ -3034,7 +3034,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "채피",
 			"release_date": "2015-03-12",
@@ -3051,7 +3051,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인서전트",
 			"release_date": "2015-03-25",
@@ -3069,7 +3069,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "분노의 질주: 더 세븐",
 			"release_date": "2015-04-01",
@@ -3087,7 +3087,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어벤져스: 에이지 오브 울트론",
 			"release_date": "2015-04-23",
@@ -3104,7 +3104,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "매드 맥스: 분노의 도로",
 			"release_date": "2015-05-14",
@@ -3121,7 +3121,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "샌 안드레아스",
 			"release_date": "2015-06-03",
@@ -3138,7 +3138,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "쥬라기 월드",
 			"release_date": "2015-06-11",
@@ -3156,7 +3156,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "19곰 테드2",
 			"release_date": "2015-06-25",
@@ -3171,7 +3171,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "터미네이터 제니시스",
 			"release_date": "2015-07-02",
@@ -3189,7 +3189,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인사이드 아웃",
 			"release_date": "2015-07-09",
@@ -3208,7 +3208,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "픽셀",
 			"release_date": "2015-07-16",
@@ -3225,7 +3225,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "히트맨: 에이전트 47",
 			"release_date": "2015-09-03",
@@ -3242,7 +3242,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "앤트맨",
 			"release_date": "2015-09-03",
@@ -3259,7 +3259,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "메이즈 러너: 스코치 트라이얼",
 			"release_date": "2015-09-16",
@@ -3277,7 +3277,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "드래곤볼 Z - 부활의 'F'",
 			"release_date": "2015-10-01",
@@ -3294,7 +3294,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "사우스포",
 			"release_date": "2015-10-29",
@@ -3310,7 +3310,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "007 스펙터",
 			"release_date": "2015-11-11",
@@ -3327,7 +3327,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "시카리오:  암살자의 도시",
 			"release_date": "2015-12-03",
@@ -3344,7 +3344,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "몬스터 호텔 2",
 			"release_date": "2015-12-24",
@@ -3362,7 +3362,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "데드풀",
 			"release_date": "2016-02-17",
@@ -3379,7 +3379,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "주토피아",
 			"release_date": "2016-02-17",
@@ -3397,7 +3397,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "배트맨 대 슈퍼맨: 저스티스의 시작",
 			"release_date": "2016-03-24",
@@ -3414,7 +3414,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캡틴 아메리카: 시빌 워",
 			"release_date": "2016-04-27",
@@ -3431,7 +3431,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "미라클 프롬 헤븐",
 			"release_date": "2016-05-25",
@@ -3446,7 +3446,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "엑스맨: 아포칼립스",
 			"release_date": "2016-05-25",
@@ -3464,7 +3464,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "미 비포 유",
 			"release_date": "2016-06-01",
@@ -3480,7 +3480,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "컨저링 2",
 			"release_date": "2016-06-09",
@@ -3497,7 +3497,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "부산행",
 			"release_date": "2016-07-20",
@@ -3514,7 +3514,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아이스 에이지: 지구 대충돌",
 			"release_date": "2016-07-20",
@@ -3533,7 +3533,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "수어사이드 스쿼드",
 			"release_date": "2016-08-03",
@@ -3550,7 +3550,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "소시지 파티",
 			"release_date": "2016-08-11",
@@ -3568,7 +3568,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "고스트 버스터즈",
 			"release_date": "2016-08-25",
@@ -3585,7 +3585,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "맨 인 더 다크",
 			"release_date": "2016-10-06",
@@ -3601,7 +3601,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "블랙의 50가지 그림자",
 			"release_date": "2016-10-20",
@@ -3617,7 +3617,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "닥터 스트레인지",
 			"release_date": "2016-10-26",
@@ -3635,7 +3635,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "신비한 동물사전",
 			"release_date": "2016-11-16",
@@ -3651,7 +3651,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "씽",
 			"release_date": "2016-12-21",
@@ -3670,7 +3670,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "너의 이름은.",
 			"release_date": "2017-01-04",
@@ -3687,7 +3687,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "50가지 그림자: 심연",
 			"release_date": "2017-02-09",
@@ -3703,7 +3703,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "핵소 고지",
 			"release_date": "2017-02-22",
@@ -3720,7 +3720,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "존 윅: 리로드",
 			"release_date": "2017-02-22",
@@ -3737,7 +3737,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "23 아이덴티티",
 			"release_date": "2017-02-22",
@@ -3753,7 +3753,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "로건",
 			"release_date": "2017-03-01",
@@ -3770,7 +3770,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "분노의 질주: 더 익스트림",
 			"release_date": "2017-04-12",
@@ -3787,7 +3787,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "오두막",
 			"release_date": "2017-04-20",
@@ -3803,7 +3803,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "가디언즈 오브 갤럭시 Vol. 2",
 			"release_date": "2017-05-02",
@@ -3820,7 +3820,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "목소리의 형태",
 			"release_date": "2017-05-09",
@@ -3836,7 +3836,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "에이리언: 커버넌트",
 			"release_date": "2017-05-09",
@@ -3853,7 +3853,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캐리비안의 해적: 죽은 자는 말이 없다",
 			"release_date": "2017-05-24",
@@ -3870,7 +3870,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "원더 우먼",
 			"release_date": "2017-05-31",
@@ -3887,7 +3887,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "트랜스포머: 최후의 기사",
 			"release_date": "2017-06-21",
@@ -3905,7 +3905,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이더맨: 홈커밍",
 			"release_date": "2017-07-05",
@@ -3923,7 +3923,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "카 3: 새로운 도전",
 			"release_date": "2017-07-13",
@@ -3941,7 +3941,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "애나벨: 인형의 주인",
 			"release_date": "2017-08-10",
@@ -3958,7 +3958,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "킬러의 보디가드",
 			"release_date": "2017-08-30",
@@ -3976,7 +3976,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "킹스맨: 골든 서클",
 			"release_date": "2017-09-27",
@@ -3995,7 +3995,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어메이징 메리",
 			"release_date": "2017-10-04",
@@ -4012,7 +4012,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "토르: 라그나로크",
 			"release_date": "2017-10-25",
@@ -4031,7 +4031,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "포켓몬스터 극장판 - 너로 정했다!",
 			"release_date": "2017-12-21",
@@ -4049,7 +4049,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "페르디난드",
 			"release_date": "2018-01-03",
@@ -4067,7 +4067,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "코코",
 			"release_date": "2018-01-11",
@@ -4087,7 +4087,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "메이즈 러너: 데스 큐어",
 			"release_date": "2018-01-17",
@@ -4105,7 +4105,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "블랙 팬서",
 			"release_date": "2018-02-14",
@@ -4122,7 +4122,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "퍼시픽 림: 업라이징",
 			"release_date": "2018-03-21",
@@ -4140,7 +4140,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "콜 미 바이 유어 네임",
 			"release_date": "2018-03-22",
@@ -4156,7 +4156,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "레디 플레이어 원",
 			"release_date": "2018-03-28",
@@ -4173,7 +4173,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "콰이어트 플레이스",
 			"release_date": "2018-04-12",
@@ -4190,7 +4190,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어벤져스: 인피니티 워",
 			"release_date": "2018-04-26",
@@ -4207,7 +4207,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "데드풀 2",
 			"release_date": "2018-05-16",
@@ -4224,7 +4224,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "쥬라기 월드: 폴른 킹덤",
 			"release_date": "2018-06-06",
@@ -4241,7 +4241,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "앤트맨과 와스프",
 			"release_date": "2018-07-04",
@@ -4258,7 +4258,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "인크레더블 2",
 			"release_date": "2018-07-18",
@@ -4276,7 +4276,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "이별의 아침에 약속의 꽃을 장식하자",
 			"release_date": "2018-07-19",
@@ -4294,7 +4294,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 넌",
 			"release_date": "2018-09-19",
@@ -4311,7 +4311,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "베놈",
 			"release_date": "2018-10-03",
@@ -4327,7 +4327,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 마법사의 돌",
 			"release_date": "2018-10-24",
@@ -4343,7 +4343,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이더맨: 뉴 유니버스",
 			"release_date": "2018-12-12",
@@ -4362,7 +4362,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아쿠아맨",
 			"release_date": "2018-12-19",
@@ -4379,7 +4379,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "버드 박스",
 			"release_date": "2018-12-21",
@@ -4396,7 +4396,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "주먹왕 랄프 2: 인터넷 속으로",
 			"release_date": "2019-01-03",
@@ -4414,7 +4414,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "드래곤볼 슈퍼: 브로리",
 			"release_date": "2019-02-14",
@@ -4431,7 +4431,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 비밀의 방",
 			"release_date": "2019-02-20",
@@ -4447,7 +4447,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캡틴 마블",
 			"release_date": "2019-03-06",
@@ -4464,7 +4464,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "장난스런 키스",
 			"release_date": "2019-03-27",
@@ -4480,7 +4480,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "샤잠!",
 			"release_date": "2019-04-03",
@@ -4497,7 +4497,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어벤져스: 엔드게임",
 			"release_date": "2019-04-24",
@@ -4514,7 +4514,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "명탐정 피카츄",
 			"release_date": "2019-05-09",
@@ -4531,7 +4531,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "알라딘",
 			"release_date": "2019-05-23",
@@ -4549,7 +4549,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "고질라: 킹 오브 몬스터",
 			"release_date": "2019-05-29",
@@ -4565,7 +4565,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "기생충",
 			"release_date": "2019-05-30",
@@ -4582,7 +4582,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "폴라로이드",
 			"release_date": "2019-06-06",
@@ -4599,7 +4599,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "토이 스토리 4",
 			"release_date": "2019-06-20",
@@ -4619,7 +4619,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "사탄의 인형",
 			"release_date": "2019-06-20",
@@ -4634,7 +4634,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "존 윅 3: 파라벨룸",
 			"release_date": "2019-06-26",
@@ -4651,7 +4651,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "애나벨 집으로",
 			"release_date": "2019-06-26",
@@ -4668,7 +4668,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이더맨: 파 프롬 홈",
 			"release_date": "2019-07-02",
@@ -4685,7 +4685,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라이온 킹",
 			"release_date": "2019-07-17",
@@ -4702,7 +4702,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "레드슈즈",
 			"release_date": "2019-07-25",
@@ -4719,7 +4719,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "마이펫의 이중생활  2",
 			"release_date": "2019-07-31",
@@ -4737,7 +4737,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "앵그리 버드 2: 독수리 왕국의 침공",
 			"release_date": "2019-08-07",
@@ -4755,7 +4755,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "분노의 질주: 홉스 & 쇼",
 			"release_date": "2019-08-14",
@@ -4772,7 +4772,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "애프터",
 			"release_date": "2019-08-22",
@@ -4788,7 +4788,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "청춘 돼지는 꿈꾸는 소녀의 꿈을 꾸지 않는다",
 			"release_date": "2019-08-22",
@@ -4807,7 +4807,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "그것: 두 번째 이야기",
 			"release_date": "2019-09-04",
@@ -4823,7 +4823,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "조커",
 			"release_date": "2019-10-02",
@@ -4840,7 +4840,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "말레피센트 2",
 			"release_date": "2019-10-17",
@@ -4857,7 +4857,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "날씨의 아이",
 			"release_date": "2019-10-30",
@@ -4875,7 +4875,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아담스 패밀리",
 			"release_date": "2019-11-07",
@@ -4892,7 +4892,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "겨울왕국 2",
 			"release_date": "2019-11-21",
@@ -4911,7 +4911,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "크롤",
 			"release_date": "2019-11-27",
@@ -4927,7 +4927,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "쥬만지: 넥스트 레벨",
 			"release_date": "2019-12-11",
@@ -4944,7 +4944,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "디에고",
 			"release_date": "2019-12-12",
@@ -4959,7 +4959,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "백두산",
 			"release_date": "2019-12-19",
@@ -4976,7 +4976,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "나쁜 녀석들: 포에버",
 			"release_date": "2020-01-15",
@@ -4993,7 +4993,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "버즈 오브 프레이: 할리 퀸의 황홀한 해방",
 			"release_date": "2020-02-05",
@@ -5009,7 +5009,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "수퍼 소닉",
 			"release_date": "2020-02-12",
@@ -5027,7 +5027,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 아즈카반의 죄수",
 			"release_date": "2020-02-26",
@@ -5043,7 +5043,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "얼터드 카본: 리슬리브",
 			"release_date": "2020-03-19",
@@ -5059,7 +5059,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "트롤: 월드 투어",
 			"release_date": "2020-04-29",
@@ -5079,7 +5079,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어느 수학자의 모험",
 			"release_date": "2020-06-18",
@@ -5095,7 +5095,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "우는 여인",
 			"release_date": "2020-06-20",
@@ -5112,7 +5112,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "너와 파도를 탈 수 있다면",
 			"release_date": "2020-07-08",
@@ -5131,7 +5131,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 톨: 함정",
 			"release_date": "2020-07-13",
@@ -5147,7 +5147,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "반도",
 			"release_date": "2020-07-15",
@@ -5164,7 +5164,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라바 아일랜드 무비",
 			"release_date": "2020-07-23",
@@ -5180,7 +5180,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "고블린 슬레이어 -GOBLIN'S CROWN-",
 			"release_date": "2020-07-30",
@@ -5198,7 +5198,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "테넷",
 			"release_date": "2020-08-22",
@@ -5215,7 +5215,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "에이바",
 			"release_date": "2020-09-09",
@@ -5233,7 +5233,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "뉴 뮤턴트",
 			"release_date": "2020-09-10",
@@ -5249,7 +5249,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아무도 없다",
 			"release_date": "2020-09-10",
@@ -5264,7 +5264,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "뮬란",
 			"release_date": "2020-09-17",
@@ -5280,7 +5280,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "극장판 포켓몬스터: 뮤츠의 역습 EVOLUTION",
 			"release_date": "2020-09-30",
@@ -5299,7 +5299,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "오버 더 문",
 			"release_date": "2020-10-23",
@@ -5317,7 +5317,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "택스 콜렉터",
 			"release_date": "2020-11-18",
@@ -5334,7 +5334,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "기븐 극장판",
 			"release_date": "2020-11-26",
@@ -5352,7 +5352,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "원더 우먼 1984",
 			"release_date": "2020-12-23",
@@ -5369,7 +5369,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "100% 울프: 푸들이 될 순 없어",
 			"release_date": "2020-12-24",
@@ -5386,7 +5386,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "오늘부터 히어로",
 			"release_date": "2020-12-25",
@@ -5404,7 +5404,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "로알드 달의 마녀를 잡아라",
 			"release_date": "2020-12-30",
@@ -5423,7 +5423,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "뱅가드",
 			"release_date": "2020-12-30",
@@ -5440,7 +5440,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "도살자들: 돌아온 텍사스 전기톱 살인자",
 			"release_date": "2021-01-12",
@@ -5455,7 +5455,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아웃사이드 더 와이어",
 			"release_date": "2021-01-15",
@@ -5472,7 +5472,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "소울",
 			"release_date": "2021-01-20",
@@ -5490,7 +5490,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "귀멸의 칼날 극장판 무한열차편",
 			"release_date": "2021-01-27",
@@ -5508,7 +5508,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "디노소어 어드벤쳐",
 			"release_date": "2021-01-27",
@@ -5524,7 +5524,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "어니스트 씨프",
 			"release_date": "2021-02-03",
@@ -5542,7 +5542,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "승리호",
 			"release_date": "2021-02-05",
@@ -5559,7 +5559,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "몬스터 헌터",
 			"release_date": "2021-02-10",
@@ -5576,7 +5576,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "레드 닷",
 			"release_date": "2021-02-11",
@@ -5591,7 +5591,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "톰과 제리",
 			"release_date": "2021-02-24",
@@ -5608,7 +5608,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "카오스 워킹",
 			"release_date": "2021-02-24",
@@ -5623,7 +5623,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라야와 마지막 드래곤",
 			"release_date": "2021-03-04",
@@ -5642,7 +5642,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "해리 포터와 불의 잔",
 			"release_date": "2021-03-10",
@@ -5659,7 +5659,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "웨이 다운",
 			"release_date": "2021-03-11",
@@ -5676,7 +5676,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "잭 스나이더의 저스티스 리그",
 			"release_date": "2021-03-18",
@@ -5694,7 +5694,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "고질라 VS. 콩",
 			"release_date": "2021-03-25",
@@ -5711,7 +5711,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "배드 트립",
 			"release_date": "2021-03-26",
@@ -5726,7 +5726,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "모탈 컴뱃",
 			"release_date": "2021-04-08",
@@ -5743,7 +5743,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "불어라 검풍아",
 			"release_date": "2021-04-08",
@@ -5759,7 +5759,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "낙원의 밤",
 			"release_date": "2021-04-09",
@@ -5777,7 +5777,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "서복",
 			"release_date": "2021-04-15",
@@ -5793,7 +5793,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "코스믹 씬",
 			"release_date": "2021-04-22",
@@ -5808,7 +5808,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 스파이",
 			"release_date": "2021-04-28",
@@ -5825,7 +5825,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "내가 죽기를 바라는 자들",
 			"release_date": "2021-05-05",
@@ -5840,7 +5840,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이럴",
 			"release_date": "2021-05-12",
@@ -5857,7 +5857,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "분노의 질주: 더 얼티메이트",
 			"release_date": "2021-05-19",
@@ -5874,7 +5874,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "크라이시스",
 			"release_date": "2021-05-20",
@@ -5891,7 +5891,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아미 오브 더 데드",
 			"release_date": "2021-05-21",
@@ -5909,7 +5909,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "크루엘라",
 			"release_date": "2021-05-26",
@@ -5925,7 +5925,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "컨저링 3: 악마가 시켰다",
 			"release_date": "2021-06-03",
@@ -5942,7 +5942,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "새콤달콤",
 			"release_date": "2021-06-04",
@@ -5958,7 +5958,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "플래시백",
 			"release_date": "2021-06-10",
@@ -5973,7 +5973,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "콰이어트 플레이스 2",
 			"release_date": "2021-06-16",
@@ -5990,7 +5990,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "루카",
 			"release_date": "2021-06-17",
@@ -6008,7 +6008,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "여고괴담 여섯번째 이야기: 모교",
 			"release_date": "2021-06-17",
@@ -6023,7 +6023,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "투모로우 워",
 			"release_date": "2021-07-02",
@@ -6040,7 +6040,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "피어 스트리트 파트 1: 1994",
 			"release_date": "2021-07-02",
@@ -6056,7 +6056,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "제8일의 밤",
 			"release_date": "2021-07-02",
@@ -6073,7 +6073,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "블랙 위도우",
 			"release_date": "2021-07-07",
@@ -6090,7 +6090,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "블러드써스티",
 			"release_date": "2021-07-09",
@@ -6105,7 +6105,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "같이 놀아줘",
 			"release_date": "2021-07-09",
@@ -6120,7 +6120,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "피어 스트리트 파트 2: 1978",
 			"release_date": "2021-07-09",
@@ -6136,7 +6136,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "베니 러브 유",
 			"release_date": "2021-07-11",
@@ -6152,7 +6152,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 퍼지: 포에버",
 			"release_date": "2021-07-14",
@@ -6169,7 +6169,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "이스케이프 룸 2: 노 웨이 아웃",
 			"release_date": "2021-07-14",
@@ -6186,7 +6186,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스페이스 잼: 새로운 시대",
 			"release_date": "2021-07-15",
@@ -6204,7 +6204,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "피어 스트리트 파트 3: 1666",
 			"release_date": "2021-07-16",
@@ -6220,7 +6220,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "보스 베이비 2",
 			"release_date": "2021-07-21",
@@ -6238,7 +6238,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "나르코 서브",
 			"release_date": "2021-07-22",
@@ -6255,7 +6255,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "정글 크루즈",
 			"release_date": "2021-07-28",
@@ -6273,7 +6273,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "킬러의 보디가드 2",
 			"release_date": "2021-08-04",
@@ -6290,7 +6290,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 수어사이드 스쿼드",
 			"release_date": "2021-08-05",
@@ -6308,7 +6308,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "그린 나이트",
 			"release_date": "2021-08-05",
@@ -6325,7 +6325,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "프리 가이",
 			"release_date": "2021-08-11",
@@ -6343,7 +6343,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "싱크홀",
 			"release_date": "2021-08-11",
@@ -6359,7 +6359,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "암살자들",
 			"release_date": "2021-08-12",
@@ -6374,7 +6374,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "베킷",
 			"release_date": "2021-08-13",
@@ -6394,7 +6394,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "올드",
 			"release_date": "2021-08-18",
@@ -6410,7 +6410,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "레미니센스",
 			"release_date": "2021-08-25",
@@ -6425,7 +6425,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "샹치와 텐 링즈의 전설",
 			"release_date": "2021-09-01",
@@ -6442,7 +6442,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "맨 인 더 다크 2",
 			"release_date": "2021-09-01",
@@ -6458,7 +6458,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "건파우더 밀크셰이크",
 			"release_date": "2021-09-08",
@@ -6475,7 +6475,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스네이크 아이즈: 지.아이.조",
 			"release_date": "2021-09-09",
@@ -6491,7 +6491,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "말리그넌트",
 			"release_date": "2021-09-15",
@@ -6508,7 +6508,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "데드 캠프: 리부트",
 			"release_date": "2021-09-16",
@@ -6524,7 +6524,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "캔디맨",
 			"release_date": "2021-09-22",
@@ -6540,7 +6540,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "침입자",
 			"release_date": "2021-09-22",
@@ -6555,7 +6555,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "007 노 타임 투 다이",
 			"release_date": "2021-09-29",
@@ -6572,7 +6572,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아무도 살아서 나갈 수 없다",
 			"release_date": "2021-09-29",
@@ -6589,7 +6589,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 길티",
 			"release_date": "2021-10-01",
@@ -6604,7 +6604,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "티탄",
 			"release_date": "2021-10-09",
@@ -6621,7 +6621,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "베놈 2: 렛 데어 비 카니지",
 			"release_date": "2021-10-13",
@@ -6638,7 +6638,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "애프터: 관계의 함정",
 			"release_date": "2021-10-13",
@@ -6654,7 +6654,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "트립",
 			"release_date": "2021-10-15",
@@ -6672,7 +6672,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "더 포가튼 배틀",
 			"release_date": "2021-10-15",
@@ -6689,7 +6689,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "듄",
 			"release_date": "2021-10-20",
@@ -6705,7 +6705,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라스트 듀얼: 최후의 결투",
 			"release_date": "2021-10-20",
@@ -6722,7 +6722,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스웻",
 			"release_date": "2021-10-26",
@@ -6738,7 +6738,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "할로윈 킬즈",
 			"release_date": "2021-10-27",
@@ -6754,7 +6754,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "고장난 론",
 			"release_date": "2021-10-27",
@@ -6772,7 +6772,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "이터널스",
 			"release_date": "2021-11-03",
@@ -6789,7 +6789,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "핀치",
 			"release_date": "2021-11-05",
@@ -6806,7 +6806,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "아담스 패밀리 2",
 			"release_date": "2021-11-10",
@@ -6823,7 +6823,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "패싱",
 			"release_date": "2021-11-10",
@@ -6838,7 +6838,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "프렌치 디스패치",
 			"release_date": "2021-11-18",
@@ -6855,7 +6855,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "엔칸토: 마법의 세계",
 			"release_date": "2021-11-24",
@@ -6875,7 +6875,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "고스트버스터즈 라이즈",
 			"release_date": "2021-12-01",
@@ -6891,7 +6891,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "라스트 나잇 인 소호",
 			"release_date": "2021-12-01",
@@ -6908,7 +6908,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "베네데타",
 			"release_date": "2021-12-01",
@@ -6925,7 +6925,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "스파이더맨: 노 웨이 홈",
 			"release_date": "2021-12-16",
@@ -6942,7 +6942,7 @@
 		}
 	},
 	{
-		"model": "movies.genre",
+		"model": "movies.movie",
 		"fields": {
 			"title": "클리포드 더 빅 레드 독",
 			"release_date": "2021-12-29",

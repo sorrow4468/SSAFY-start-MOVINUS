@@ -1,5 +1,4 @@
 import requests
-from tmdb import TMDBHelper
 # from pprint import pprint
 import json
 
@@ -30,6 +29,25 @@ results = list()
 
 movies_list = list()
 
+# 장르정보 저장
+genre_url = tmdb_helper.get_genre_url()
+data = requests.get(genre_url).json()
+genres = data.get('genres')
+genre_list = []
+for genre in genres:
+    temp = {
+        "model": "movies.genre",
+        "pk": genre['id'],
+        "fields": {
+            "name": genre['name']
+        }
+    }
+    genre_list.append(temp)
+    
+with open('genres.json', 'w', encoding="utf-8") as make_file:
+    json.dump(genre_list, make_file, ensure_ascii=False, indent="\t")
+
+# 영화정보 저장
 for i in range(1, 21):
     request_url = tmdb_helper.get_request_url(
         region='KR', 
@@ -42,7 +60,7 @@ for i in range(1, 21):
 
     for result in results:
         temp = {
-            "model": "movies.genre",            
+            "model": "movies.movie",            
             "fields": {
                 "title": result["title"],
                 "release_date": result["release_date"],
@@ -64,22 +82,7 @@ movies_list.sort(key=lambda x: x['fields']['release_date'])
 with open('movies.json', 'w', encoding="utf-8") as make_file:
     json.dump(movies_list, make_file, ensure_ascii=False, indent="\t")
 
-genre_url = tmdb_helper.get_genre_url()
-data = requests.get(genre_url).json()
-genres = data.get('genres')
+
 
 # print(genres)
 
-genre_list = []
-for genre in genres:
-    temp = {
-        "model": "movies.genre",
-        "pk": genre['id'],
-        "fields": {
-            "name": genre['name']
-        }
-    }
-    genre_list.append(temp)
-    
-with open('genres.json', 'w', encoding="utf-8") as make_file:
-    json.dump(genre_list, make_file, ensure_ascii=False, indent="\t")
