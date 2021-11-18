@@ -2,7 +2,10 @@
   <div>
     <ul>
       <li v-for="movie in movies" :key="movie.id">
-        {{ movie }}
+        <h1>{{ movie.title }}</h1>
+        <img :src="imgSrc+movie.poster_path" alt="포스터이미지">
+        <p>{{ movie.overview }}</p>
+        <p>{{ movie.genres }}</p>
       </li>
     </ul>
   </div>
@@ -16,6 +19,7 @@ export default {
   data() {
     return {
       movies: null,
+      imgSrc: null,
     }
   },
   methods: {
@@ -25,7 +29,9 @@ export default {
         url: 'http://127.0.0.1:8000/movies/'
       })
         .then(res => {
-          console.log(res)
+          // console.log(res)
+          this.movies = res.data
+          this.imgSrc = "https://image.tmdb.org/t/p/w300"
         })
         .catch(err => {
           console.log(err)
