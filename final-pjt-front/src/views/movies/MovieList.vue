@@ -5,7 +5,7 @@
       <li v-for="movie in movies" :key="movie.id">        
         <h1 >{{ movie.title }}</h1>
         <img :src="imgSrc+movie.poster_path" alt="포스터이미지"
-          @click="getDetail(movie.id)">
+          @click="getDetail(movie)">
         <p>{{ movie.overview }}</p>
         <p>{{ movie.genres }}</p>
       </li>
@@ -48,9 +48,9 @@ export default {
           console.log(err)
         })
     },
-    getDetail(key) {      
-      // console.log(key)
-      this.$store.dispatch('getDetail', key)
+    getDetail(movie) {      
+      // console.log(movie)
+      this.$store.dispatch('getDetail', movie)
     }
   },
   created() {

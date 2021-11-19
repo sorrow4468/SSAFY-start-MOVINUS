@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <div id="nav">
       <router-link :to="{ name:'MovieList' }">Movies</router-link>|
       <router-link :to="{ name:'Login' }">Log In</router-link>|

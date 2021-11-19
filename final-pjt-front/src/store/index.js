@@ -7,8 +7,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    movie: null,
     isLogin: false,    
     movieId: null,
+    imgSrc: "https://image.tmdb.org/t/p/w300"
   },
   mutations: {
     LOGOUT(state) {
@@ -19,9 +21,12 @@ export default new Vuex.Store({
     LOGIN(state) {
       state.isLogin = true               
     },
-    GET_DETAIL(state, movieId) {
-      state.movieId = movieId
-      router.push({ name: 'Detail', params: { movieId: movieId } })
+    GET_DETAIL(state, movie) {
+      console.log(movie)
+      state.movie = movie   
+      state.movieId = movie.id   
+      state.imgSrc = state.imgSrc + movie.poster_path
+      router.push({ name: 'Detail', params: { movieId: state.movieId } })
     }
   },
   actions: {
@@ -44,8 +49,8 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
-    getDetail({ commit }, movieId) {
-      commit('GET_DETAIL', movieId)
+    getDetail({ commit }, movie) {
+      commit('GET_DETAIL', movie)
     }
   },
   modules: {
