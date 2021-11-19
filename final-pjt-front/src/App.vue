@@ -20,13 +20,18 @@ export default {
     ...mapActions([
       'logout',
       'login',
+      'getMovies'
     ])
   },
   computed: {
     ...mapState([
       'isLogin',
     ])
+  },
+  created() {
+    this.getMovies()
   }
+  
 }
 </script>
 

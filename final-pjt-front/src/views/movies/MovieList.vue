@@ -1,6 +1,5 @@
 <template>
   <div>
-    <button @click="this.$router.push({name:'Login'})"> Log in페이지로 가라 </button>
     <ul>
       <li v-for="movie in movies" :key="movie.id">        
         <h1 >{{ movie.title }}</h1>
@@ -12,17 +11,13 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
+import { mapState } from 'vuex'
+import { mapActions } from 'vuex'
+
 
 export default {
   name: 'MovieList',
-  data() {
-    return {
-      movies: null,
-      imgSrc: null,
-      detail_movie: null,
-    }
-  },
   methods: {
     setToken: function () {
       const token = localStorage.getItem('jwt')
@@ -31,28 +26,35 @@ export default {
       }
       return config
     },
-    getMovies: function() {
-      axios({
-        method: 'get',
-        url: 'http://127.0.0.1:8000/movies/',
-        // headers: this.setToken()
-      })
-        .then(res => {
-          console.log(res)
-          this.movies = res.data
-          this.imgSrc = "https://image.tmdb.org/t/p/w300"
-        })
-        .catch(err => {
-          console.log(err)
-        })
-    },
-    getDetail(movie) {      
-      // console.log(movie)
-      this.$store.dispatch('getDetail', movie)
-    }
+    // getMovies: function() {
+    //   axios({
+    //     method: 'get',
+    //     url: 'http://127.0.0.1:8000/movies/',
+    //     // headers: this.setToken()
+    //   })
+    //     .then(res => {
+    //       console.log(res)
+    //       this.movies = res.data
+    //       this.imgSrc = "https://image.tmdb.org/t/p/w300"
+    //     })
+    //     .catch(err => {
+    //       console.log(err)
+    //     })
+    // },
+    ...mapActions([
+      'getMovies',
+      'getDetail',
+    ])
+    // getDetail(movie) {      
+    //   // console.log(movie)
+    //   this.$store.dispatch('getDetail', movie)
+    // }
   },
-  created() {
-    this.getMovies()
+  computed: {
+    ...mapState([
+      'movies',
+      'imgSrc',
+    ])
   }
 }
 </script>
