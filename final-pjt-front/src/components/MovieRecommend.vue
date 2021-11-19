@@ -9,7 +9,7 @@
         
       </template> -->
     <div v-for="findGenreName in findGenreNames" :key="findGenreName.id">
-      {{ findGenreName }}  
+      <p @click="getGenreMovies(findGenreName['id'])">{{ findGenreName['name'] }}</p>
     </div>
     <!-- </template> -->
   </div>
@@ -24,6 +24,7 @@ export default {
   methods: {
     ...mapActions([
       'findGenreName',
+      'getGenreMovies',
     ])
   },
   computed: {
@@ -31,7 +32,8 @@ export default {
       'movie',
       'imgSrc',
       'genres',
-      'findGenreNames'
+      'findGenreNames',
+      'genreMovies',
     ]),
   },  
   created() {

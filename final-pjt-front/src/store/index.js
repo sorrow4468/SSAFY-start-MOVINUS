@@ -14,6 +14,7 @@ export default new Vuex.Store({
     movies: null,
     genres: null,
     findGenreNames: [],
+    genreMovies: null,
   },
   mutations: {
     LOGOUT(state) {
@@ -41,17 +42,21 @@ export default new Vuex.Store({
     FIND_GENRE_NAME(state) {
       if (state.findGenreNames.length === 0) {
         state.genres.forEach(genre => {
-          state.movie.genres.forEach(movie_genre => {
-            
+          state.movie.genres.forEach(movie_genre => {            
             if (movie_genre === genre['id']) {
               // console.log(genre['name'])
-              state.findGenreNames.push(genre['name'])
+              state.findGenreNames.push(genre['name','id'])
             }
             
+
           })
         })
-      }        
+      }
+      console.log(state.findGenreNames)
     },
+    GET_GENRE_MOVIES(state, movie) {
+      state.genreMovies.push(movie)
+    }
   },
   actions: {
     setToken: function () {
@@ -114,6 +119,20 @@ export default new Vuex.Store({
     findGenreName({ commit }) {
       commit('FIND_GENRE_NAME')    
     },
+    getGenreMovies({ commit }, genreId) {
+      axios({
+        method: 'get',
+        url: `http://127.0.0.1:8000/movies/genres/${genreId}`,
+        // headers: this.setToken()
+      })
+        .then(res => {
+          console.log(res)
+          commit('GET_GENRE_MOVIES', res.data)
+        })
+        .catch(err => {
+          console.log(err)
+        })      
+    }
   },
   modules: {
   }
