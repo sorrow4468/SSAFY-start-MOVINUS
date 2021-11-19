@@ -12,7 +12,8 @@ export default new Vuex.Store({
     movieId: null,
     imgSrc: "https://image.tmdb.org/t/p/w300",
     movies: null,
-    genres: null
+    genres: null,
+    findGenreNames: [],
   },
   mutations: {
     LOGOUT(state) {
@@ -36,7 +37,21 @@ export default new Vuex.Store({
     GET_GENRES(state, genredata){
       state.genres = genredata
       console.log(state.genres)
-    }
+    },
+    FIND_GENRE_NAME(state) {
+      if (state.findGenreNames.length === 0) {
+        state.genres.forEach(genre => {
+          state.movie.genres.forEach(movie_genre => {
+            
+            if (movie_genre === genre['id']) {
+              // console.log(genre['name'])
+              state.findGenreNames.push(genre['name'])
+            }
+            
+          })
+        })
+      }        
+    },
   },
   actions: {
     setToken: function () {
@@ -95,6 +110,9 @@ export default new Vuex.Store({
         .catch(err => {
           console.log(err)
         })
+    },
+    findGenreName({ commit }) {
+      commit('FIND_GENRE_NAME')    
     },
   },
   modules: {

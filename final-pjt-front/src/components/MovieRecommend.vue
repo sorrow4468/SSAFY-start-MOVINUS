@@ -8,8 +8,8 @@
         {{ genre.name }} 
         
       </template> -->
-    <div v-for="findGenre in findGenres" :key="findGenre.id">
-      {{ findGenre }}  
+    <div v-for="findGenreName in findGenreNames" :key="findGenreName.id">
+      {{ findGenreName }}  
     </div>
     <!-- </template> -->
   </div>
@@ -17,36 +17,25 @@
 
 <script>
 import { mapState } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
-  name: 'MovieRecommend',
-  data() {
-    return {
-      findGenres: []  
-    }
+  name: 'MovieRecommend',  
+  methods: {
+    ...mapActions([
+      'findGenreName',
+    ])
   },
   computed: {
     ...mapState([
       'movie',
       'imgSrc',
       'genres',
+      'findGenreNames'
     ]),
-  },
-  methods: {    
-    findGenre() {
-      this.genres.forEach(genre => {
-        this.movie.genres.forEach(movie_genre => {
-          if (movie_genre === genre['id']) {
-            // console.log(genre['name'])
-            this.findGenres.push(genre['name'])
-          }
-        })
-      })
-      return this.findGenres
-    }
-  },
+  },  
   created() {
-    this.findGenre()
+    this.findGenreName()
   }
 }
 </script>
