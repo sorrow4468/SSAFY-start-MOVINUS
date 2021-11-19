@@ -8,6 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isLogin: false,    
+    movieId: null,
   },
   mutations: {
     LOGOUT(state) {
@@ -17,6 +18,10 @@ export default new Vuex.Store({
     },
     LOGIN(state) {
       state.isLogin = true               
+    },
+    GET_DETAIL(state, movieId) {
+      state.movieId = movieId
+      router.push({ name: 'Detail', params: { movieId: movieId } })
     }
   },
   actions: {
@@ -38,6 +43,9 @@ export default new Vuex.Store({
         .catch(err => {
           console.log(err)
         })
+    },
+    getDetail({ commit }, movieId) {
+      commit('GET_DETAIL', movieId)
     }
   },
   modules: {

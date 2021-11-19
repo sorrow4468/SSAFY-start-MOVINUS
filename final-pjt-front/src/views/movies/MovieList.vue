@@ -2,11 +2,10 @@
   <div>
     <button @click="this.$router.push({name:'Login'})"> Log in페이지로 가라 </button>
     <ul>
-      <li v-for="movie in movies" :key="movie.id">
-        <div @click="detail_movie=movie, getDetail">
-          <h1 >{{ movie.title }}</h1>
-          <img :src="imgSrc+movie.poster_path" alt="포스터이미지">
-        </div>
+      <li v-for="movie in movies" :key="movie.id">        
+        <h1 >{{ movie.title }}</h1>
+        <img :src="imgSrc+movie.poster_path" alt="포스터이미지"
+          @click="getDetail(movie.id)">
         <p>{{ movie.overview }}</p>
         <p>{{ movie.genres }}</p>
       </li>
@@ -49,8 +48,9 @@ export default {
           console.log(err)
         })
     },
-    getDetail() {
-      return this.$router.push({ name:'Detail', params: { movieId: this.detail_movie.id }} )
+    getDetail(key) {      
+      // console.log(key)
+      this.$store.dispatch('getDetail', key)
     }
   },
   created() {
