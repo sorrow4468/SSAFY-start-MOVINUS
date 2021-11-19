@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import MovieList from '@/views/movies/MovieList'
 import Signup from '@/views/accounts/Signup'
 import Login from '@/views/accounts/Login'
+import Detail from '@/views/movies/Detail'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
     name: 'MovieList',
     component: MovieList,
   },
+  {
+    path: '/detail/:movieId',
+    name: 'Detail',
+    component: Detail,
+  }
 ]
 
 const router = new VueRouter({

@@ -2,8 +2,9 @@
   <div>
     <ul>
       <li v-for="movie in movies" :key="movie.id">
-        <h1>{{ movie.title }}</h1>
-        <img :src="imgSrc+movie.poster_path" alt="포스터이미지">
+        <h1 @click="this.$router.push({ name:'Detail', params: { movieId:movie.id } })">{{ movie.title }}</h1>
+        <img :src="imgSrc+movie.poster_path" alt="포스터이미지"
+          @click="getDetail">
         <p>{{ movie.overview }}</p>
         <p>{{ movie.genres }}</p>
       </li>
@@ -45,6 +46,9 @@ export default {
           console.log(err)
         })
     },
+    getDetail() {
+      return this.$router.push({ name:'Detail', params: { movieId: this.movie.id } })
+    }
   },
   created() {
     this.getMovies()
