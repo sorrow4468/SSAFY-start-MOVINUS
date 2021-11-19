@@ -15,33 +15,27 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { mapState } from 'vuex'
+
 export default {
   name: 'Login',
-  data: function () {
+  data() {
     return {
       credentials: {
-        username: null,
-        password: null,
+      username: null,
+      password: null,
       }
     }
   },
   methods: {
-    login: function () {
-      axios({
-        method: 'post',
-        url: 'http://127.0.0.1:8000/accounts/api-token-auth/',
-        data: this.credentials,
-      })
-        .then(res => {
-          // console.log(res)
-          localStorage.setItem('jwt', res.data.token)
-          this.$router.push({name: 'MovieList'})
-        })
-        .catch(err => {
-          console.log(err)
-        })
+    login() {
+      this.$store.dispatch('login', this.credentials)
     }
+  },
+  computed: {
+    ...mapState([
+      'isLogin',
+    ])
   }
 }
 </script>

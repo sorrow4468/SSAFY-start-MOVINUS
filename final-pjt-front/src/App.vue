@@ -3,11 +3,32 @@
     <div id="nav">
       <router-link :to="{ name:'MovieList' }">Movies</router-link>|
       <router-link :to="{ name:'Login' }">Log In</router-link>|
-      <router-link :to="{ name:'Signup'}">Sign Up</router-link>
+      <router-link :to="{ name:'Signup' }">Sign Up</router-link> |
+      <router-link @click.native="logout()" to="#">Log Out</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+import { mapActions } from 'vuex'
+
+export default {
+  name: 'App',
+  methods: {
+    ...mapActions([
+      'logout',
+      'login',
+    ])
+  },
+  computed: {
+    ...mapState([
+      'isLogin',
+    ])
+  }
+}
+</script>
 
 <style>
 #app {
