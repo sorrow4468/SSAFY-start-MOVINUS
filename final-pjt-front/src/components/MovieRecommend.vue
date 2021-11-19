@@ -2,30 +2,33 @@
   <div>
     <h1>MovieRecommend</h1>
     <p>이 영화와 장르가 비슷한 영화들</p>
-    <!-- <template v-for="movie_genre in movie.genres">
-      <template v-for="genre in genres" v-if="movie_genre === genre.id">
-      
-        {{ genre.name }} 
-        
-      </template> -->
     <div v-for="findGenreName in findGenreNames" :key="findGenreName.id">
       <p @click="getGenreMovies(findGenreName['id'])">{{ findGenreName['name'] }}</p>
     </div>
-    <!-- </template> -->
+    <div v-if="randomMovies">
+      <!-- <movie-filter-genre> -->
+      <div v-for="randomMovie in randomMovies" :key="randomMovie.id"> 
+        {{ randomMovie.title }}
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import { mapActions } from 'vuex'
+import MovieFilterGenre from '@/components/MovieFilterGenre.vue'
 
 export default {
-  name: 'MovieRecommend',  
+  name: 'MovieRecommend',
+  componenets: MovieFilterGenre, 
   methods: {
     ...mapActions([
       'findGenreName',
       'getGenreMovies',
-    ])
+      // 'getRandomMovies'
+    ]),
+
   },
   computed: {
     ...mapState([
@@ -34,11 +37,12 @@ export default {
       'genres',
       'findGenreNames',
       'genreMovies',
+      'randomMovies'
     ]),
   },  
   created() {
     this.findGenreName()
-  }
+  },
 }
 </script>
 

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import router from '@/router'
+import _ from 'lodash'
 
 Vue.use(Vuex)
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
     genres: null,
     findGenreNames: [],
     genreMovies: null,
+    randomMovies: [],
   },
   mutations: {
     LOGOUT(state) {
@@ -37,7 +39,7 @@ export default new Vuex.Store({
     },
     GET_GENRES(state, genredata){
       state.genres = genredata
-      console.log(state.genres)
+      // console.log(state.genres)
     },
     FIND_GENRE_NAME(state) {
       if (state.findGenreNames.length === 0) {
@@ -45,17 +47,23 @@ export default new Vuex.Store({
           state.movie.genres.forEach(movie_genre => {            
             if (movie_genre === genre['id']) {
               // console.log(genre['name'])
-              state.findGenreNames.push(genre['name','id'])
+              const genre_name_id = {
+                'id': genre['id'],
+                'name': genre['name']
+              }
+              state.findGenreNames.push(genre_name_id)
             }
-            
-
           })
         })
       }
-      console.log(state.findGenreNames)
+      // console.log(state.findGenreNames)
     },
     GET_GENRE_MOVIES(state, movie) {
-      state.genreMovies.push(movie)
+      // console.log(movie)
+      state.genreMovies = movie
+    },
+    GET_RANDOM_MOVIES(state){
+      state.randomMovies = _.sampleSize(state.genreMovies, 5)
     }
   },
   actions: {
@@ -126,13 +134,17 @@ export default new Vuex.Store({
         // headers: this.setToken()
       })
         .then(res => {
-          console.log(res)
+          // console.log(res.data)
           commit('GET_GENRE_MOVIES', res.data)
+          commit('GET_RANDOM_MOVIES')
         })
         .catch(err => {
           console.log(err)
         })      
-    }
+    },
+    // getRandomMovies({ commit }){
+      
+    // }
   },
   modules: {
   }
