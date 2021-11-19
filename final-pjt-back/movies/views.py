@@ -7,7 +7,8 @@ from rest_framework.serializers import Serializer
 
 from .serializers import GenreSerializer, MovieSerializer
 from .models import Genre, Movie
-
+import operator
+from django.db.models import Q
 
 # Create your views here.
 @api_view(['GET'])
@@ -26,4 +27,13 @@ def genres(request):
     if request.method == 'GET':
         genres = Genre.objects.all()
         serializer = GenreSerializer(genres, many=True)
+        return Response(serializer.data)
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])   
+def genre_filter(request, genre_pk):
+    if request.method == 'GET':
+        genre_movies = Movie.objects.filter(genres__in=[genre_pk])
+        serializer = MovieSerializer(genre_movies, many=True)
         return Response(serializer.data)
