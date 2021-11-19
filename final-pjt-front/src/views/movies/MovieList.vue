@@ -6,8 +6,6 @@
         <h1 >{{ movie.title }}</h1>
         <img :src="imgSrc+movie.poster_path" alt="포스터이미지"
           @click="getDetail(movie)">
-        <p>{{ movie.overview }}</p>
-        <p>{{ movie.genres }}</p>
       </li>
     </ul>
   </div>
