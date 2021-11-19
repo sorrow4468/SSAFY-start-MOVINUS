@@ -9,6 +9,8 @@
       <!-- <movie-filter-genre> -->
       <div v-for="randomMovie in randomMovies" :key="randomMovie.id"> 
         {{ randomMovie.title }}
+        {{ randomMovie.vote_count }}
+        <!-- {{ randomMovie.like_users|length }} -->
       </div>
     </div>
   </div>

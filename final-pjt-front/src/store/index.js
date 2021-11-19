@@ -42,20 +42,22 @@ export default new Vuex.Store({
       // console.log(state.genres)
     },
     FIND_GENRE_NAME(state) {
-      if (state.findGenreNames.length === 0) {
-        state.genres.forEach(genre => {
-          state.movie.genres.forEach(movie_genre => {            
-            if (movie_genre === genre['id']) {
-              // console.log(genre['name'])
-              const genre_name_id = {
-                'id': genre['id'],
-                'name': genre['name']
-              }
-              state.findGenreNames.push(genre_name_id)
+      state.findGenreNames = []
+      state.randomMovies = null
+      // if (state.findGenreNames.length === 0) {
+      state.genres.forEach(genre => {
+        state.movie.genres.forEach(movie_genre => {            
+          if (movie_genre === genre['id']) {
+            // console.log(genre['name'])
+            const genre_name_id = {
+              'id': genre['id'],
+              'name': genre['name']
             }
-          })
+            state.findGenreNames.push(genre_name_id)
+          }
         })
-      }
+      })
+      // }
       // console.log(state.findGenreNames)
     },
     GET_GENRE_MOVIES(state, movie) {
@@ -147,5 +149,5 @@ export default new Vuex.Store({
     // }
   },
   modules: {
-  }
+  },
 })
