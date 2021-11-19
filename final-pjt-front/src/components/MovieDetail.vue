@@ -2,7 +2,7 @@
   <div>
     <h1>MovieDetail</h1>
     <div class="d-flex">      
-      <img :src="imgSrc" alt="포스터이미지">
+      <img :src="imgSrc+movie.poster_path" alt="포스터이미지">
       <div>        
         <div class="d-flex justify-content-between">        
           <p>제목 : {{ movie.title }}</p>

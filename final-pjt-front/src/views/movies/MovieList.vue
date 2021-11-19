@@ -19,36 +19,9 @@ import { mapActions } from 'vuex'
 export default {
   name: 'MovieList',
   methods: {
-    setToken: function () {
-      const token = localStorage.getItem('jwt')
-      const config = {
-        Authorization: `JWT ${token}`
-      }
-      return config
-    },
-    // getMovies: function() {
-    //   axios({
-    //     method: 'get',
-    //     url: 'http://127.0.0.1:8000/movies/',
-    //     // headers: this.setToken()
-    //   })
-    //     .then(res => {
-    //       console.log(res)
-    //       this.movies = res.data
-    //       this.imgSrc = "https://image.tmdb.org/t/p/w300"
-    //     })
-    //     .catch(err => {
-    //       console.log(err)
-    //     })
-    // },
     ...mapActions([
-      'getMovies',
       'getDetail',
     ])
-    // getDetail(movie) {      
-    //   // console.log(movie)
-    //   this.$store.dispatch('getDetail', movie)
-    // }
   },
   computed: {
     ...mapState([

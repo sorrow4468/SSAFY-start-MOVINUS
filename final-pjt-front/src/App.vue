@@ -20,7 +20,8 @@ export default {
     ...mapActions([
       'logout',
       'login',
-      'getMovies'
+      'getMovies',
+      'getGenres',
     ])
   },
   computed: {
@@ -30,6 +31,7 @@ export default {
   },
   created() {
     this.getMovies()
+    this.getGenres()
   }
   
 }
