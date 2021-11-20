@@ -88,13 +88,13 @@ export default new Vuex.Store({
         data: state.credentials,
       })
       .then(res => {
-        console.log(res)
+        console.log(res.data)
         router.push({name:'Login'})
       })
       .catch(err => {
         console.log(err)
       })
-      console.log(state.credentials)
+      // console.log(state.credentials)
     }
   },
   actions: {
