@@ -4,6 +4,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from .serializers import UserSerializer
+from django.shortcuts import get_object_or_404
+from django.contrib.auth import get_user_model
 
 # Create your views here.
 @api_view(['POST'])
@@ -11,13 +13,13 @@ from .serializers import UserSerializer
 def signup(request):
     password = request.data.get('password')
     password_confirmation = request.data.get('passwordConfirmation')
-    like_genres = request.data.get('likeGenres')
-    # print(type(like_genres))
+    # like_genres = request.data.get('likeGenres')
+    # person = get_object_or_404(get_user_model(),username=request.data.get('username'))
 
     # for like_genre in like_genres:
     #     if like_genre['isLiked'] == True:
-    #         genre_id = like_genre['id']
-    #         GenreUser
+    #         person.like_genres.add(like_genre['id'])
+            
             
 
     if password != password_confirmation:

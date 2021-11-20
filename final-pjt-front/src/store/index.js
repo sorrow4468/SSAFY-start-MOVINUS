@@ -9,7 +9,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     movie: null,
-    isLogin: false,    
+    isLogin: false,
+    isPicked: false,    
     movieId: null,
     imgSrc: "https://image.tmdb.org/t/p/w300",
     movies: null,
@@ -175,6 +176,11 @@ export default new Vuex.Store({
     },
     signup({ commit }) {
       commit('SIGNUP')
+    }
+  },
+  getters:{
+    isPicked(state) {
+      return state.isPicked = true
     }
   },
   modules: {

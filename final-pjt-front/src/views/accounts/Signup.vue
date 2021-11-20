@@ -13,21 +13,21 @@
       <label for="passwordConfirmation">password confirmation: </label>
       <input v-model="credentials.passwordConfirmation" type="password" id="passwordConfirmation" @keyup.enter="signup()">
     </div>    
-    <pick-like-genres></pick-like-genres>
+    <!-- <pick-like-genres></pick-like-genres> -->
     <button @click="signup()">회원가입</button>
   </div>
 </template>
 
 <script>
-import PickLikeGenres from '@/components/accounts/PickLikeGenres'
+// import PickLikeGenres from '@/components/accounts/PickLikeGenres'
 import { mapState } from 'vuex'
 import { mapActions } from 'vuex'
 
 export default {
   name: 'Signup',
-  components: {
-    PickLikeGenres,
-  },  
+  // components: {
+  //   PickLikeGenres,
+  // },  
   methods: {
     ...mapActions([
       'signup',
