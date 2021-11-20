@@ -24,6 +24,10 @@ export default new Vuex.Store({
       passwordConfirmation: null,
       likeGenres: [],
     },
+    comment:{
+      content: null,
+      rank: null,
+    }
   },
   mutations: {
     LOGOUT(state) {

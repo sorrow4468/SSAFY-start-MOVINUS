@@ -10,7 +10,7 @@ from .models import Genre, Movie
 def index(request):
     if request.method == 'GET':
         # movies = Movie.objects.order_by('?')[:20]
-        movies = Movie.objects.all()
+        movies = Movie.objects.order_by('?')[:30]
         serializer = MovieSerializer(movies, many=True)
         return Response(serializer.data)
 
