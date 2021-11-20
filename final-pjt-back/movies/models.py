@@ -27,7 +27,7 @@ class Comment(models.Model):
         (4, '★★★★'),
         (5, '★★★★★'),
     ]    
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     content = models.CharField(max_length=200)
     rank = models.IntegerField(choices=RANKS, default=5)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)

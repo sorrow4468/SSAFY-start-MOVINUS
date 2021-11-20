@@ -1,10 +1,14 @@
 <template>
   <div id="app" class="container">
     <div id="nav">
-      <router-link :to="{ name:'MovieList' }">Movies</router-link>|
-      <router-link :to="{ name:'Login' }">Log In</router-link>|
-      <router-link :to="{ name:'Signup' }">Sign Up</router-link> |
-      <router-link @click.native="logout()" to="#">Log Out</router-link>
+        <router-link :to="{ name:'MovieList' }">Movies</router-link>|
+      <span v-if="isLogin">
+        <router-link @click.native="logout()" to="#">Log Out</router-link>
+      </span>
+      <span v-if="!isLogin">
+        <router-link :to="{ name:'Login' }">Log In</router-link>|
+        <router-link :to="{ name:'Signup' }">Sign Up</router-link>
+      </span>
     </div>
     <router-view/>
   </div>

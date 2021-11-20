@@ -1,26 +1,20 @@
 <template>
   <div>
     <h1>MovieComment</h1>
-    <div>
-      <input type="text" placeholder="댓글을 작성해주세요" v-model="comment.content">
-      <input type="number" v-model="comment.rank">
-      <button>댓글작성</button>
-    </div>
+      <movie-comment-form></movie-comment-form>
     
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import MovieCommentForm from '@/components/movies/MovieCommentForm'
+
 
 
 export default {
+  components: { MovieCommentForm },
   name: 'MovieComment',
-  computed: {
-    ...mapState([
-      'comment',
-    ])
-  }
+  
 }
 </script>
 

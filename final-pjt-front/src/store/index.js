@@ -27,7 +27,8 @@ export default new Vuex.Store({
     comment:{
       content: null,
       rank: null,
-    }
+    },
+    comments:[]
   },
   mutations: {
     LOGOUT(state) {
@@ -100,6 +101,21 @@ export default new Vuex.Store({
         console.log(err)
       })
       // console.log(state.credentials)
+    },
+    CREATE_COMMENT(state, comment, token) {
+      axios({
+        method: 'post',
+        url: `http://127.0.0.1:8000/movies/detail/${state.movieId}/comments/`,
+        data: comment,
+        headers: token,
+      })
+        .then(res => {
+          console.log(res)
+          state.comments.push(comment)
+        })
+        .catch(err =>{
+          console.log(err)
+        })
     }
   },
   actions: {
@@ -180,6 +196,9 @@ export default new Vuex.Store({
     },
     signup({ commit }) {
       commit('SIGNUP')
+    },
+    createComment({ commit }, comment,token){
+      commit('CREATE_COMMENT',comment,token)
     }
   },
   getters:{
