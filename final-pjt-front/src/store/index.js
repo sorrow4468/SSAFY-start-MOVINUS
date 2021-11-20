@@ -102,12 +102,12 @@ export default new Vuex.Store({
       })
       // console.log(state.credentials)
     },
-    CREATE_COMMENT(state, comment, token) {
+    CREATE_COMMENT(state, comment) {
       axios({
         method: 'post',
         url: `http://127.0.0.1:8000/movies/detail/${state.movieId}/comments/`,
         data: comment,
-        headers: token,
+        // headers: token,
       })
         .then(res => {
           console.log(res)
@@ -197,8 +197,8 @@ export default new Vuex.Store({
     signup({ commit }) {
       commit('SIGNUP')
     },
-    createComment({ commit }, comment,token){
-      commit('CREATE_COMMENT',comment,token)
+    createComment({ commit }, comment){
+      commit('CREATE_COMMENT',comment)
     }
   },
   getters:{

@@ -2,7 +2,7 @@
   <div>
     <input type="text" placeholder="댓글을 작성해주세요" v-model="comment.content">
       <input type="number" v-model="comment.rank">
-      <button @click="createComment(comment,setToken())">댓글작성</button>
+      <button @click="createComment(comment)">댓글작성</button>
   </div>
 </template>
 
@@ -23,9 +23,9 @@ export default {
       'setToken'
     ])
   },
-  created(){
-    this.setToken()
-  }
+  // created(){
+  //   this.setToken()
+  // }
 }
 </script>
 

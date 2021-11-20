@@ -26,13 +26,20 @@ def detail(request, movie_pk):
         return Response(serializer.data)
 
 
-@api_view(['POST'])
+@api_view(['GET','POST'])
+@permission_classes([AllowAny])
 def comment_create(request, movie_pk):
     movie = get_object_or_404(Movie,pk=movie_pk)
-    serializer = CommentSerializer(data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        serializer.save(movie=movie, user=request.user)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    if request.method == 'GET':
+        comments = movie.comment_set.all()
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+        
+    elif request.method == 'POST':
+        serializer = CommentSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(movie=movie,user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 @api_view(['PUT','DELETE'])    
