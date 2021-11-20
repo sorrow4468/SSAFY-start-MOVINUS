@@ -18,7 +18,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import MovieDetailTeaser from '@/components/MovieDetailTeaser'
+import MovieDetailTeaser from '@/components/movies/MovieDetailTeaser'
 
 export default {
   name: 'MovieDetail',

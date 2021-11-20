@@ -11,42 +11,32 @@
     </div>
     <div>
       <label for="passwordConfirmation">password confirmation: </label>
-      <input v-model="credentials.passwordConfirmation" type="password" id="passwordConfirmation" @keyup.enter="signup">
-    </div>
-    <button @click="signup">회원가입</button>
+      <input v-model="credentials.passwordConfirmation" type="password" id="passwordConfirmation" @keyup.enter="signup()">
+    </div>    
+    <pick-like-genres></pick-like-genres>
+    <button @click="signup()">회원가입</button>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-
+import PickLikeGenres from '@/components/accounts/PickLikeGenres'
+import { mapState } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'Signup',
-  data: function () {
-    return {
-      credentials: {
-        username: null,
-        password: null,
-        passwordConfirmation: null,
-      }
-    }
-  },
+  components: {
+    PickLikeGenres,
+  },  
   methods: {
-    signup: function () {
-      axios({
-        method: 'post',
-        url: 'http://127.0.0.1:8000/accounts/signup/',
-        data: this.credentials,
-      })
-        .then(() => {
-          // console.log(res)
-          this.$router.push({name:'Login'})
-        })
-        .catch(err => {
-          console.log(err)
-        })
-    }
+    ...mapActions([
+      'signup',
+    ])
+  },
+  computed: {
+    ...mapState([
+      'credentials',
+    ])
   }
 }
 </script>

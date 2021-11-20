@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import MovieDetail from '@/components/MovieDetail'
-import MovieRecommend from '@/components/MovieRecommend'
-import MovieComment from '@/components/MovieComment'
+import MovieDetail from '@/components/movies/MovieDetail'
+import MovieRecommend from '@/components/movies/MovieRecommend'
+import MovieComment from '@/components/movies/MovieComment'
 
 export default {
   name: 'Detail',

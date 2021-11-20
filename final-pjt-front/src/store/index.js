@@ -17,6 +17,12 @@ export default new Vuex.Store({
     findGenreNames: [],
     genreMovies: null,
     randomMovies: [],
+    credentials: {
+      username: null,
+      password: null,
+      passwordConfirmation: null,
+      like_genres: [],
+    },
   },
   mutations: {
     LOGOUT(state) {
@@ -39,6 +45,14 @@ export default new Vuex.Store({
     },
     GET_GENRES(state, genredata){
       state.genres = genredata
+      state.genres.forEach(genre => {
+        const like_genres_data = {
+          'id': genre['id'],
+          'name': genre['name'],
+          'isLiked': false,
+        }
+        state.credentials.like_genres.push(like_genres_data)
+      })
       // console.log(state.genres)
     },
     FIND_GENRE_NAME(state) {
@@ -66,6 +80,20 @@ export default new Vuex.Store({
     },
     GET_RANDOM_MOVIES(state){
       state.randomMovies = _.sampleSize(state.genreMovies, 5)
+    },
+    SIGNUP(state) {
+      axios({
+        method: 'post',
+        url: 'http://127.0.0.1:8000/accounts/signup/',
+        data: state.credentials,
+      })
+        .then(() => {
+          // console.log(res)
+          router.push({name:'Login'})
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   },
   actions: {
@@ -144,9 +172,9 @@ export default new Vuex.Store({
           console.log(err)
         })      
     },
-    // getRandomMovies({ commit }){
-      
-    // }
+    signup({ commit }) {
+      commit('SIGNUP')
+    }
   },
   modules: {
   },

@@ -12,3 +12,10 @@ class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
         fields = ('id', 'name',)
+
+
+class GenreUserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Genre.user
+        fields = ('__all__')

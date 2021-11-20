@@ -19,7 +19,7 @@
 <script>
 import { mapState } from 'vuex'
 import { mapActions } from 'vuex'
-import MovieFilterGenre from '@/components/MovieFilterGenre.vue'
+import MovieFilterGenre from '@/components/movies/MovieFilterGenre.vue'
 
 export default {
   name: 'MovieRecommend',
