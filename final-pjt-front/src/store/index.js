@@ -21,7 +21,7 @@ export default new Vuex.Store({
       username: null,
       password: null,
       passwordConfirmation: null,
-      like_genres: [],
+      likeGenres: [],
     },
   },
   mutations: {
@@ -51,7 +51,7 @@ export default new Vuex.Store({
           'name': genre['name'],
           'isLiked': false,
         }
-        state.credentials.like_genres.push(like_genres_data)
+        state.credentials.likeGenres.push(like_genres_data)
       })
       // console.log(state.genres)
     },
@@ -87,13 +87,14 @@ export default new Vuex.Store({
         url: 'http://127.0.0.1:8000/accounts/signup/',
         data: state.credentials,
       })
-        .then(() => {
-          // console.log(res)
-          router.push({name:'Login'})
-        })
-        .catch(err => {
-          console.log(err)
-        })
+      .then(res => {
+        console.log(res)
+        router.push({name:'Login'})
+      })
+      .catch(err => {
+        console.log(err)
+      })
+      console.log(state.credentials)
     }
   },
   actions: {

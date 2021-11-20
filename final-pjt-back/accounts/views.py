@@ -11,6 +11,14 @@ from .serializers import UserSerializer
 def signup(request):
     password = request.data.get('password')
     password_confirmation = request.data.get('passwordConfirmation')
+    like_genres = request.data.get('likeGenres')
+    # print(type(like_genres))
+
+    # for like_genre in like_genres:
+    #     if like_genre['isLiked'] == True:
+    #         genre_id = like_genre['id']
+    #         GenreUser
+            
 
     if password != password_confirmation:
         return Response({'error': '비밀번호가 일치하지 않습니다.'}, status=status.HTTP_400_BAD_REQUEST)
