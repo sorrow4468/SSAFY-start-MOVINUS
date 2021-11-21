@@ -2,8 +2,8 @@
   <div>
     <h1>Review 게시판</h1>
     <div v-for="review in reviews" :key="review.id" :review=review>
-      <p>{{review.title}}</p>
-      <span>{{review.user}} </span>
+      <p @click="goReviewDetail(review.id)">{{review.title}}</p>
+      <span>{{review.user.username}} </span>
     </div>
   </div>
 </template>
@@ -24,6 +24,9 @@ export default {
       }
       return config
     },
+    goReviewDetail(reviewId) {
+      return this.$router.push({name: 'ReviewsItem',params:{reviewId: reviewId}})
+    }
   },
   computed: {
     ...mapState([

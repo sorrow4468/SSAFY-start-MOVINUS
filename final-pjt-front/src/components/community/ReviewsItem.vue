@@ -1,9 +1,12 @@
 <template>
   <div>
     <h1>ReviewsItem</h1>
-    <p>{{review.title}}</p>
-    <p>{{review.content}}</p>
-    <p>{{review.rank}}</p>
+    <p>리뷰: {{review.title}}</p>
+    <!-- <p>영화: {{review.movie_title}}</p> -->
+    <p>내용: {{review.content}}</p>
+    <p>작성시간: {{review.created_at}}</p>
+    <p>수정시간: {{review.updated_at}}</p>
+    <p>별점: {{review.rank}}</p>
   </div>
 </template>
 

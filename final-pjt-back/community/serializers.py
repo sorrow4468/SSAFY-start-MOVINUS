@@ -1,22 +1,24 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
 from .models import Review,Comment
 
 
-class ReviewListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Review
-        fields = ('title','user',)
+# class ReviewListSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Review
+#         fields = ('id','title','user',)
+#         read_only_field = ('user',)
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        # fields = '__all__'
-        fields = ('id','title','content','rank',)
+        fields = '__all__'
+        # fields = ('id','title','content','rank',)
+        read_only_fields = ('user',)
 
 
 class CommentSerializer(serializers.ModelSerializer):
     review = ReviewSerializer(read_only=True)
     class Meta:
         model = Comment
-        fields = ('review','id','content',)
+        fields = '__all__'
+        read_only_fields = ('user','review','created_at','updated_at')

@@ -3,14 +3,14 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
-from .serializers import ReviewListSerializer, ReviewSerializer, CommentSerializer
+from .serializers import ReviewSerializer, CommentSerializer
 from .models import Comment, Review
 
 # Create your views here.
 @api_view(['GET'])
 def reviews(request):
     reviews = Review.objects.all()
-    serializer = ReviewListSerializer(reviews,many=True)
+    serializer = ReviewSerializer(reviews,many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -37,8 +37,10 @@ def review_detail_update_or_delete(request, review_pk):
             return Response(serializer.data, status=status.HTTP_200_OK)
     
     elif request.method == 'DELETE':
+        if not request.user.review_set.filter(pk=review_pk).exists():
+            return Response({'detail': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
         review.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'id':review_pk},status=status.HTTP_204_NO_CONTENT)
 
 
 

@@ -14,6 +14,7 @@ export default new Vuex.Store({
     genres: null,
     imgSrc: "https://image.tmdb.org/t/p/w300",
     reviews: [],
+    review: null,
   },
   mutations: {
     LOGIN(state) {
@@ -41,6 +42,9 @@ export default new Vuex.Store({
     },
     GET_REVIEWS(state, reviewItems){
       state.reviews = reviewItems
+    },
+    CREATE_REVIEW(state, reviewdata){
+      state.review = reviewdata
     }
   },
   actions: {
@@ -99,6 +103,23 @@ export default new Vuex.Store({
         .then(res=> {
           // console.log(res)
           commit('GET_REVIEWS', res.data)
+        })
+        .catch(err=> {
+          console.log(err)
+        })
+    },
+    createReview({ commit }, reviewdata){
+      // console.log(reviewdata)
+      axios({
+        method: 'post',
+        url: 'http://127.0.0.1:8000/community/reviews/',
+        data: reviewdata.form,
+        headers: reviewdata.token
+      })
+        .then(res=>{
+          console.log(res)
+          commit('CREATE_REVIEW',res.data)
+          router.push({name:'Community'})
         })
         .catch(err=> {
           console.log(err)
