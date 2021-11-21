@@ -40,6 +40,13 @@ export default new Vuex.Store({
       //   state.credentials.likeGenres.push(like_genres_data)
       // })
     },
+    /////////////////////////////////////////
+    GO_REVIEW_DETAIL(state, reviewinfo){
+      state.review = reviewinfo
+      router.push({name: 'ReviewsItem',params:{reviewId: reviewinfo.id}})
+    },
+    /////////////////////////////////////////
+
     GET_REVIEWS(state, reviewItems){
       state.reviews = reviewItems
     },
@@ -94,6 +101,12 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    /////////////////////////////////////////////
+    goReviewDetail({ commit }, reviewinfo){
+      // console.log(reviewinfo)
+      commit('GO_REVIEW_DETAIL',reviewinfo)
+    },
+    /////////////////////////////////////////////
     getReviews({ commit }, token){
       axios({
         method: 'get',

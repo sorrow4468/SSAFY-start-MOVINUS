@@ -1,8 +1,9 @@
 <template>
   <div>
     <h1>ReviewsItem</h1>
+    
     <p>리뷰: {{review.title}}</p>
-    <!-- <p>영화: {{review.movie_title}}</p> -->
+    <!-- <p>영화제목: {{review.movie_title}}</p>  -->
     <p>내용: {{review.content}}</p>
     <p>작성시간: {{review.created_at}}</p>
     <p>수정시간: {{review.updated_at}}</p>
@@ -11,12 +12,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'ReviewsItem',
-  props:{
-    review:{
-      type: Object
-    }
+  computed:{
+    ...mapState([
+      'review',
+    ])
   }
 }
 </script>
