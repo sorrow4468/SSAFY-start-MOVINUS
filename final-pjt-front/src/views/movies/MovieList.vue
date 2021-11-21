@@ -1,13 +1,12 @@
 <template>
   <div>
     <h1>다양한 영화들</h1>
-    <ul>
-      <li v-for="movie in movies" :key="movie.id">
-        <h2>{{ movie.title }}</h2>
+    <hr>
+    <b-row class="justify-content-center">
+      <b-col col="3" class="m-3" v-for="movie in movies" :key="movie.id">
         <img :src="imgSrc+movie.poster_path" alt="포스터이미지">
-
-      </li>
-    </ul>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
