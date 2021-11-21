@@ -1,13 +1,13 @@
 <template>
   <div id="app" class="container">
     <div id="nav">
-      <router-link :to="{ name:'MovieList' }">홈</router-link>|
+        <router-link :to="{ name:'MovieList' }">Movies</router-link>|
       <span v-if="isLogin">
-        <router-link @click.native="logout()" to="#">로그아웃</router-link>
+        <router-link @click.native="logout()" to="#">Log Out</router-link>
       </span>
       <span v-if="!isLogin">
-        <router-link :to="{ name:'Login' }">로그인</router-link>|
-        <router-link :to="{ name:'Signup' }">회원가입</router-link>
+        <router-link :to="{ name:'Login' }">Log In</router-link>|
+        <router-link :to="{ name:'Signup' }">Sign Up</router-link>
       </span>
     </div>
     <router-view/>
@@ -15,14 +15,27 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'App',
   methods: {
+    ...mapActions([
+      'logout',
+      'login',
+      'getMovies',
+      'getGenres',
+    ])
   },
   computed: {
+    ...mapState([
+      'isLogin',
+    ])
   },
   created() {
+    this.getMovies()
+    this.getGenres()
   }
   
 }
