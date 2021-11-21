@@ -1,19 +1,16 @@
 <template>
   <div>
-    <h1>Signup</h1>
-    <div>
-      <label for="username">ID: </label>
-      <input v-model="credentials.username" type="text" id="username" placeholder="아이디">
+    <h1 style="padding-top:220px;">회원가입을 환영합니다!</h1>    
+    <div class="d-flex justify-content-center">
+      <b-form style="width:400px;">        
+        <b-form-input class="rounded-pill mt-3" style="height:50px;" id="username" v-model="credentials.username" required placeholder="아이디"></b-form-input>
+        <b-form-input class="rounded-pill mt-3" style="height:50px;" v-model="credentials.password" type="password" id="password" aria-describedby="password-help-block" placeholder="비밀번호"></b-form-input>
+        <b-form-input class="rounded-pill mt-3" style="height:50px;" v-model="credentials.passwordConfirmation" type="password" id="passwordConfirmation" aria-describedby="password-help-block" @keyup.enter="signup" placeholder="비밀번호 확인"></b-form-input>    
+        <b-button class="rounded-pill mt-3 w-100" style="height:50px;" @click="signup" variant="success">회원가입</b-button>
+      </b-form>
     </div>
-    <div>
-      <label for="password">password: </label>
-      <input v-model="credentials.password" type="password" id="password" placeholder="비밀번호">
-    </div>
-    <div>
-      <label for="passwordConfirmation">password confirmation: </label>
-      <input v-model="credentials.passwordConfirmation" type="password" id="passwordConfirmation" @keyup.enter="signup" placeholder="비밀번호 확인">
-    </div>    
-    <button @click="signup">회원가입</button>
+    <p class="m-3">가입 후 로그인 페이지로 이동합니다</p>
+
   </div>
 </template>
 
