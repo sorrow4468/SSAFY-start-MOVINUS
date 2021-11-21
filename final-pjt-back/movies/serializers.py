@@ -13,14 +13,3 @@ class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
         fields = ('id', 'name',)
-
-# class CommentListSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Comment
-#         fields = ('user_id','content','rank','updated_at',)
-
-class CommentSerializer(serializers.ModelSerializer):
-    movie = MovieSerializer(read_only=True)
-    class Meta:
-        model = Comment
-        fields = ('movie','id','content','rank','updated_at',)

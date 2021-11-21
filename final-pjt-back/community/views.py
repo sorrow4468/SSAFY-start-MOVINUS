@@ -1,0 +1,66 @@
+from django.shortcuts import get_object_or_404
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
+from .serializers import ReviewListSerializer, ReviewSerializer, CommentSerializer
+from .models import Comment, Review
+
+# Create your views here.
+@api_view(['GET'])
+def reviews(request):
+    reviews = Review.objects.all()
+    serializer = ReviewListSerializer(reviews,many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+def review_create(request):
+    serializer = ReviewSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(user=request.user)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def review_detail_update_or_delete(request, review_pk):
+    review = get_object_or_404(Review, pk=review_pk)
+    if request.method == 'GET':
+        serializer = ReviewSerializer(review)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    elif request.method == 'PUT':
+        serializer = ReviewSerializer(review, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    elif request.method == 'DELETE':
+        review.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+
+@api_view(['GET','POST'])
+def comment_create(request, review_pk):
+    review = get_object_or_404(Review,pk=review_pk)
+    if request.method == 'GET':
+        comments = review.comment.all()
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+        
+    elif request.method == 'POST':
+        serializer = CommentSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(review=review, user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(['PUT','DELETE'])    
+def comment_update_or_delete(request, comment_pk):
+    comment = get_object_or_404(Comment,pk=comment_pk)
+    if request.method == 'DELETE':
+        comment.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    elif request.method == 'PUT':
+        serializer = CommentSerializer(comment)
+        return Response(serializer.data, status=status.HTTP_200_OK)

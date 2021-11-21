@@ -6,6 +6,7 @@ class Genre(models.Model):
     name = models.CharField(max_length=50)
     user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_genres')
 
+
 class Movie(models.Model):
     title = models.CharField(max_length=100)
     release_date = models.DateField()
@@ -17,21 +18,3 @@ class Movie(models.Model):
     
     genres = models.ManyToManyField(Genre)
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
-
-
-class Comment(models.Model):
-    RANKS = [
-        (1, '★'),
-        (2, '★★'),
-        (3, '★★★'),
-        (4, '★★★★'),
-        (5, '★★★★★'),
-    ]    
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    content = models.CharField(max_length=200)
-    rank = models.IntegerField(choices=RANKS, default=5)
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-
