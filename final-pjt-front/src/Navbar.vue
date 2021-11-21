@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <b-navbar fixed="top" id="nav" class="d-flex justify-content-between">
     <!-- <ul>
       <li>
         <router-link :to="{ name:'MovieList' }">홈</router-link> |
@@ -11,18 +11,21 @@
         <router-link :to="{ name:'Recommend' }">영화 추천</router-link> |
       </li>
     </ul> -->
-      <router-link :to="{ name:'MovieList' }">홈</router-link> |
-      <router-link :to="{ name:'Community' }">커뮤니티</router-link> |
-      <router-link :to="{ name:'Recommend' }">영화 추천</router-link> |
-    
-    <span v-if="isLogin">
-      <router-link @click.native="logout()" to="#">로그아웃</router-link>
-    </span>
-    <span v-if="!isLogin">
-      <router-link :to="{ name:'Login' }">로그인</router-link> |
-      <router-link :to="{ name:'Signup' }">회원가입</router-link>
-    </span>
-  </div>
+    <div> 
+      <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">홈</router-link> |       
+      <router-link :to="{ name:'Community' }" class="fs-4 text-decoration-none">커뮤니티</router-link> | 
+      <router-link :to="{ name:'Recommend' }" class="fs-4 text-decoration-none">영화 추천</router-link>
+    </div>
+    <div>      
+      <span v-if="isLogin">
+        <router-link @click.native="logout()" to="#" class="fs-5 text-decoration-none">로그아웃</router-link>
+      </span>
+      <span v-if="!isLogin">
+        <router-link :to="{ name:'Login' }" class="fs-5 text-decoration-none">로그인</router-link> | 
+        <router-link :to="{ name:'Signup' }" class="fs-5 text-decoration-none">회원가입</router-link>
+      </span>
+    </div>
+  </b-navbar>
 </template>
 
 <script>
@@ -56,5 +59,5 @@ export default {
 </script>
 
 <style>
-
+  @import './assets/styles/common.css';
 </style>
