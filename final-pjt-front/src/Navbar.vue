@@ -1,20 +1,14 @@
 <template>
-  <b-navbar fixed="top" id="nav" class="d-flex justify-content-between">
-    <!-- <ul>
-      <li>
-        <router-link :to="{ name:'MovieList' }">홈</router-link> |
-      </li>
-      <li>
-        <router-link :to="{ name:'Community' }">커뮤니티</router-link> |
-      </li>
-      <li>
-        <router-link :to="{ name:'Recommend' }">영화 추천</router-link> |
-      </li>
-    </ul> -->
+  <b-navbar type="dark" variant="black" fixed="top" id="nav" class="d-flex justify-content-between">
     <div> 
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">홈</router-link> |       
       <router-link :to="{ name:'Community' }" class="fs-4 text-decoration-none">커뮤니티</router-link> | 
       <router-link :to="{ name:'Recommend' }" class="fs-4 text-decoration-none">영화 추천</router-link>
+    </div>
+    <div class="">
+      <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">
+        MOVINUS
+      </router-link>
     </div>
     <div>      
       <span v-if="isLogin">
