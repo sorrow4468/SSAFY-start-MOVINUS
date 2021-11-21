@@ -10,11 +10,34 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {    
     isLogin: false,
+    movies: null,
+    genres: null,
+    imgSrc: "https://image.tmdb.org/t/p/w300",
   },
   mutations: {
     LOGIN(state) {
       state.isLogin = true
     },
+    LOGOUT(state) {
+      state.isLogin = false
+      localStorage.removeItem('jwt')
+      router.push({ name: 'Login' })
+    },
+    GET_MOVIES(state, moviedata){
+      state.movies = moviedata
+      // state.imgSrc = state.imgSrc + movie.poster_path
+    },
+    GET_GENRES(state, genredata){
+      state.genres = genredata
+      // state.genres.forEach(genre => {
+      //   const like_genres_data = {
+      //     'id': genre['id'],
+      //     'name': genre['name'],
+      //     'isLiked': false,
+      //   }
+      //   state.credentials.likeGenres.push(like_genres_data)
+      // })
+    }
   },
   actions: {
     login({commit}, credentials) {
@@ -27,6 +50,37 @@ export default new Vuex.Store({
           localStorage.setItem('jwt', res.data.token)
           commit('LOGIN')
           router.push({name: 'MovieList'})
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    },
+    logout({ commit }){
+      commit('LOGOUT')
+    },
+    getMovies({ commit }){
+      axios({
+        method: 'get',
+        url: 'http://127.0.0.1:8000/movies/',
+        // headers: this.setToken()
+      })
+        .then(res => {
+          // console.log(res)
+          commit('GET_MOVIES',res.data)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    },
+    getGenres({ commit }){
+      axios({
+        method: 'get',
+        url: 'http://127.0.0.1:8000/movies/genres/',
+        // headers: this.setToken()
+      })
+        .then(res => {
+          // console.log(res)
+          commit('GET_GENRES',res.data)
         })
         .catch(err => {
           console.log(err)

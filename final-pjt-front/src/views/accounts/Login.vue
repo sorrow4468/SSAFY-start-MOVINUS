@@ -7,7 +7,7 @@
     </div>
     <div>
       <label for="password">password: </label>
-      <input v-model="credentials.password" type="password" id="password" placeholder="비밀번호">
+      <input v-model="credentials.password" type="password" id="password" placeholder="비밀번호" @keyup.enter="login">
     </div>
     <button @click="login">Login</button>
   </div>

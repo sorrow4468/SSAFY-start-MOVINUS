@@ -7,6 +7,7 @@
 
 <script>
 import Navbar from '@/Navbar'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'App',
@@ -14,10 +15,16 @@ export default {
     Navbar,
   },
   methods: {
+    ...mapActions([
+      'getMovies',
+      'getGenres',
+    ])
   },
   computed: {
   },
   created() {
+    this.getMovies()
+    this.getGenres()
   }
   
 }
