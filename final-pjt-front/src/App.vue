@@ -1,23 +1,18 @@
 <template>
   <div id="app" class="container">
-    <div id="nav">
-      <router-link :to="{ name:'MovieList' }">홈</router-link>|
-      <span v-if="isLogin">
-        <router-link @click.native="logout()" to="#">로그아웃</router-link>
-      </span>
-      <span v-if="!isLogin">
-        <router-link :to="{ name:'Login' }">로그인</router-link>|
-        <router-link :to="{ name:'Signup' }">회원가입</router-link>
-      </span>
-    </div>
+    <Navbar/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from '@/Navbar'
 
 export default {
   name: 'App',
+  components: {
+    Navbar,
+  },
   methods: {
   },
   computed: {
