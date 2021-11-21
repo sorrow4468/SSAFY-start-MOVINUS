@@ -1,26 +1,29 @@
 <template>
   <div>
-    <h2>Login</h2>
+    <h1>Log In</h1>
     <div>
       <label for="username">ID: </label>
-      <input v-model="credentials.username" type="text" id="username" placeholder="아이디">
+      <input v-model="credentials.username" type="text" id="username">
     </div>
     <div>
       <label for="password">password: </label>
-      <input v-model="credentials.password" type="password" id="password" placeholder="비밀번호">
+      <input v-model="credentials.password" type="password" id="password">
     </div>
+    
     <button @click="login">Login</button>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'Login',
   data() {
     return {
       credentials: {
-        username: null,
-        password: null,
+      username: null,
+      password: null,
       }
     }
   },
@@ -28,6 +31,11 @@ export default {
     login() {
       this.$store.dispatch('login', this.credentials)
     }
+  },
+  computed: {
+    ...mapState([
+      'isLogin',
+    ])
   }
 }
 </script>

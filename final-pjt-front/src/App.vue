@@ -1,41 +1,23 @@
 <template>
   <div id="app" class="container">
-    <div id="nav">
-        <router-link :to="{ name:'MovieList' }">Movies</router-link>|
-      <span v-if="isLogin">
-        <router-link @click.native="logout()" to="#">Log Out</router-link>
-      </span>
-      <span v-if="!isLogin">
-        <router-link :to="{ name:'Login' }">Log In</router-link>|
-        <router-link :to="{ name:'Signup' }">Sign Up</router-link>
-      </span>
-    </div>
+    <Navbar/>
     <router-view/>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { mapActions } from 'vuex'
+import Navbar from '@/Navbar'
 
 export default {
   name: 'App',
+  components: {
+    Navbar,
+  },
   methods: {
-    ...mapActions([
-      'logout',
-      'login',
-      'getMovies',
-      'getGenres',
-    ])
   },
   computed: {
-    ...mapState([
-      'isLogin',
-    ])
   },
   created() {
-    this.getMovies()
-    this.getGenres()
   }
   
 }
