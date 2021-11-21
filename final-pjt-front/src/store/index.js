@@ -13,6 +13,7 @@ export default new Vuex.Store({
     movies: null,
     genres: null,
     imgSrc: "https://image.tmdb.org/t/p/w300",
+    reviews: [],
   },
   mutations: {
     LOGIN(state) {
@@ -37,6 +38,9 @@ export default new Vuex.Store({
       //   }
       //   state.credentials.likeGenres.push(like_genres_data)
       // })
+    },
+    GET_REVIEWS(state, reviewItems){
+      state.reviews = reviewItems
     }
   },
   actions: {
@@ -86,6 +90,20 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    getReviews({ commit }, token){
+      axios({
+        method: 'get',
+        url: 'http://127.0.0.1:8000/community/',
+        headers: token,
+      })
+        .then(res=> {
+          // console.log(res)
+          commit('GET_REVIEWS', res.data)
+        })
+        .catch(err=> {
+          console.log(err)
+        })
+    }
   },
   modules: {
   },

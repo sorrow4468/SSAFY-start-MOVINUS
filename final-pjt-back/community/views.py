@@ -13,12 +13,15 @@ def reviews(request):
     serializer = ReviewListSerializer(reviews,many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
+
 @api_view(['POST'])
+@permission_classes([AllowAny])
 def review_create(request):
     serializer = ReviewSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(user=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def review_detail_update_or_delete(request, review_pk):

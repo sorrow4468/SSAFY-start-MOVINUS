@@ -6,11 +6,12 @@ from .models import Review,Comment
 class ReviewListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ('title',)
+        fields = ('title','user',)
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
+        # fields = '__all__'
         fields = ('id','title','content','rank',)
 
 
