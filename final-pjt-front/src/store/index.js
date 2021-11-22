@@ -67,9 +67,11 @@ export default new Vuex.Store({
     },
     CREATE_REVIEW(state, reviewdata){
       state.review = reviewdata
+      router.go()
     },
     UPDATE_REVIEW(state, reviewdata){
       state.review = reviewdata
+      router.go()
     },
     DELETE_REVIEW(state, reviewdata){
       const index = state.reviews.indexOf(reviewdata)
@@ -114,6 +116,10 @@ export default new Vuex.Store({
       state.comment = commentdata
       router.go()
     },
+    UPDATE_COMMENTS(state, commentdata){
+      state.comment = commentdata
+      router.go()
+    }
     
   },
   actions: {
@@ -201,9 +207,8 @@ export default new Vuex.Store({
         headers: reviewdata.token
       })
         .then(res=>{
-          console.log(res)
+          // console.log(res)
           commit('CREATE_REVIEW',res.data)
-          router.push({name:'Community'})
           router.go()
         })
         .catch(err=> {
@@ -219,9 +224,9 @@ export default new Vuex.Store({
         headers: reviewdata.token
       })
         .then(res=>{
-          console.log(res)
+          // console.log(res)
           commit('UPDATE_REVIEW',res.data)
-          router.push({name:'ReviewsItem', params: {reviewId:reviewdata.form.id}})
+          
         })
         .catch(err=> {
           console.log(err)
@@ -270,7 +275,7 @@ export default new Vuex.Store({
         headers: commentdata.token
       })
         .then(res=> {
-          console.log(res)
+          // console.log(res)
           commit('CREATE_COMMENT',res.data)
         })
         .catch(err=> {
@@ -286,6 +291,20 @@ export default new Vuex.Store({
         .then(res=> {
           // console.log(res)
           commit('GET_COMMENTS', res.data)
+        })
+        .catch(err=> {
+          console.log(err)
+        })
+    },
+    updateComment({ commit }, commentdata){
+      axios({
+        method: 'put',
+        url: `http://127.0.0.1:8000/community/comments/${commentdata.commentId}/`,
+        data: commentdata.content,
+        headers: commentdata.token
+      })
+        .then(res=>{
+          commit('UPDATE_COMMENTS', res.data)
         })
         .catch(err=> {
           console.log(err)

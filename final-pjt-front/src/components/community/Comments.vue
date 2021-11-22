@@ -2,7 +2,8 @@
   <div>
     <h1>Comments</h1>
     <comment-form :review="review"></comment-form>
-    <div>      
+    <div>
+      <!-- {{ comments }} -->
       <comments-item v-for="comment in comments" :key="comment.id" :comment="comment" :review="review"></comments-item>    
     </div>
   </div>

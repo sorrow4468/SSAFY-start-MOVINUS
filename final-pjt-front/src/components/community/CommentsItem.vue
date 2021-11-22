@@ -1,8 +1,13 @@
 <template>
   <div v-if="comment.review===review.id">
-    <p>{{comment.content}}</p>
+    
+    <p v-if="show">{{comment.content}}</p>
+    <div v-else>
+      <input v-model="comment.content">
+      <button class="btn btn-success" @click="updateComment">댓글수정</button>
+    </div>
     <p>{{comment.updated_at}}</p>
-    <button class="btn btn-success">댓글수정</button>
+    <button class="btn btn-success" @click="showToggle">댓글수정</button>
     <button class="btn btn-danger">댓글삭제</button>
   </div>
 
@@ -18,7 +23,36 @@ export default {
     review: {
       type: Object,
     }
-  },  
+  },
+  data(){
+    return {
+      show: true,
+    }
+  },
+  methods:{
+    showToggle(){
+      return this.show = !this.show
+    },
+    setToken() {
+      const token = localStorage.getItem('jwt')
+      const config = {
+        Authorization: `JWT ${token}`
+      }
+      return config
+    },
+    updateComment(){
+      const commentdata = {
+        commentId: this.comment.id,
+        reviewId: this.review.id,
+        content: {
+          content: this.comment.content
+        },
+        token: this.setToken()
+      }
+      this.$store.dispatch('updateComment',commentdata)
+      this.showToggle()
+    }
+  }  
 }
 </script>
 

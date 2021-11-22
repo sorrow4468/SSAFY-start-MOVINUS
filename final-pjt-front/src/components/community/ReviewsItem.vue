@@ -1,14 +1,16 @@
 <template>
   <div>
     <h1>ReviewsItem</h1>
-    
-    <p>리뷰: {{review.title}}</p>
-    <!-- <p>영화제목: {{review.movie_title}}</p>  -->
-    <p>내용: {{review.content}}</p>
-    <p>작성시간: {{review.created_at}}</p>
-    <p>수정시간: {{review.updated_at}}</p>
-    <p>별점: {{review.rank}}</p>
-    <div>
+    <div v-if="show">
+      <p>리뷰: {{review.title}}</p>
+      <!-- <p>영화제목: {{review.movie_title}}</p>  -->
+      <p>내용: {{review.content}}</p>
+      <p>작성시간: {{review.created_at}}</p>
+      <p>수정시간: {{review.updated_at}}</p>
+      <p>별점: {{review.rank}}</p>
+      <button class="btn btn-success" @click="showToggle">수정</button>
+    </div>
+    <div v-else>
       <p>리뷰제목: <input type="text" v-model="review.title"></p>
       <label for="content">내용: </label>
       <textarea name="content" id="content" cols="30" rows="10" v-model="review.content"></textarea>
@@ -22,10 +24,10 @@
           <option>1</option>
         </select>
       </p>    
+      <button class="btn btn-success" @click="updateReview()">수정</button>
     </div>
+      <button class="btn btn-danger" @click="deleteReview()">삭제</button>
 
-    <button class="btn btn-success" @click="updateReview()">수정</button>
-    <button class="btn btn-danger" @click="deleteReview()">삭제</button>
     <Comments :review="review"/>
   </div>
 
@@ -41,7 +43,11 @@ export default {
   components: { 
     Comments,
   },
-  
+  data() {
+    return {
+      show: true
+    }
+  },
   computed:{
     ...mapState([
       'review',
@@ -80,7 +86,9 @@ export default {
         token: this.setToken()
       }
       this.$store.dispatch('deleteReview', idsetToken)
-
+    },
+    showToggle(){
+      return this.show = !this.show
     }
   }
 }
