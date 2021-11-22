@@ -10,7 +10,7 @@
     </div>
     <b-row class="d-flex">      
       <b-col cols="3" v-for="randomMovie in randomMovies" :key="randomMovie.id">
-        <img :src="imgSrc+randomMovie.poster_path" alt="포스터 이미지" class="w-75 m-3">
+        <img @click="goMovieDetail(randomMovie)" :src="imgSrc+randomMovie.poster_path" alt="포스터 이미지" class="w-75 m-3">
       </b-col>
     </b-row>
   </div>
@@ -32,6 +32,7 @@ export default {
   methods: {
     ...mapActions([      
       'getGenreMovies',
+      'goMovieDetail',
     ])
   },
   created() {
