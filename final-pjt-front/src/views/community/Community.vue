@@ -2,7 +2,7 @@
   <div>
     <h1>Community</h1>
     <Reviews/>
-    <ReviewForm/>
+    <ReviewForm/>    
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>ReviewForm</h1>
+    <!-- <h1>ReviewForm</h1> -->
     <p>리뷰제목: <input type="text" v-model="form.title"></p>
     <!-- <p>영화제목: <input type="text"></p> -->
     <label for="content">내용: </label>
@@ -14,8 +14,7 @@
         <option>2</option>
         <option>1</option>
       </select>
-
-    </p>
+    </p>    
     <button @click="createReview">리뷰작성</button>
   </div>
 </template>

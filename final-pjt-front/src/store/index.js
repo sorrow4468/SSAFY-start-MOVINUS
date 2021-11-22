@@ -64,6 +64,9 @@ export default new Vuex.Store({
     CREATE_REVIEW(state, reviewdata){
       state.review = reviewdata
     },
+    UPDATE_REVIEW(state, reviewdata){
+      state.review = reviewdata
+    },
     GET_GENRE_MOVIES(state, movie) {
       // console.log(movie)
       state.genreMovies = movie
@@ -180,10 +183,27 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    updateReview({ commit }, reviewdata){
+      console.log(reviewdata)
+      axios({
+        method: 'put',
+        url: `http://127.0.0.1:8000/community/reviews/${reviewdata.form.id}/`,
+        data: reviewdata.form,
+        headers: reviewdata.token
+      })
+        .then(res=>{
+          console.log(res)
+          commit('UPDATE_REVIEW',res.data)
+          router.push({name:'ReviewsItem', params: {reviewId:reviewdata.form.id}})
+        })
+        .catch(err=> {
+          console.log(err)
+        })
+    },
     getGenreMovies({ commit }, genreId) {
       axios({
         method: 'get',
-        url: `http://127.0.0.1:8000/movies/genres/${genreId}`,
+        url: `http://127.0.0.1:8000/movies/genres/${genreId}/`,
         // headers: this.setToken()
       })
         .then(res => {
