@@ -1,5 +1,5 @@
 <template>
-  <detail>
+  <div>
     <p class="position-absolute" style="!important">MOVINUS</p>
     <h1 style="padding-top:0px;">DETAIL</h1>
     <div class="d-flex">    
@@ -14,7 +14,7 @@
       </div>
     </div>
     <movie-detail-recommend></movie-detail-recommend>
-  </detail>
+  </div>
 </template>
 
 <script>

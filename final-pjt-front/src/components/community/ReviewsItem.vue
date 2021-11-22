@@ -37,11 +37,11 @@ import { mapState } from 'vuex'
 import Comments from '@/components/community/Comments'
 
 export default {
+  name: 'ReviewsItem',
   components: { 
     Comments,
   },
   
-  name: 'ReviewsItem',
   computed:{
     ...mapState([
       'review',
