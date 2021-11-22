@@ -3,7 +3,7 @@ html, body, template, #app {
 }
 
 body {
-  background-color: #080000 !important;
+  background-color: #000000 !important;
   color: #ffffff;
   padding-top: 80px;
 }
@@ -14,11 +14,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
-  background-color: #080000;
+  background-color: #000000;
 }
 
 #nav {
-  padding: 50px;
+  padding: 40px;
+  
 }
 
 #nav a {

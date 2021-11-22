@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import router from '@/router'
+import _ from 'lodash'
 
 Vue.use(Vuex)
 
@@ -12,10 +13,13 @@ export default new Vuex.Store({
     isLogin: false,
     movies: null,
     movie: null,
-    genres: null,
+    genres: [],
     imgSrc: "https://image.tmdb.org/t/p/w300",
     reviews: [],
     review: null,
+    genreMovies: null,
+    randomMovies: [],    
+    findGenreNames: [],
   },
   mutations: {
     LOGIN(state) {
@@ -31,15 +35,15 @@ export default new Vuex.Store({
       // state.imgSrc = state.imgSrc + movie.poster_path
     },
     GET_GENRES(state, genredata){
-      state.genres = genredata
-      // state.genres.forEach(genre => {
-      //   const like_genres_data = {
-      //     'id': genre['id'],
-      //     'name': genre['name'],
-      //     'isLiked': false,
-      //   }
-      //   state.credentials.likeGenres.push(like_genres_data)
-      // })
+      // console.log(state.genres)
+      genredata.forEach(genre => {
+        const genre_data = {
+          'id': genre['id'],
+          'name': genre['name'],
+          'isLiked': false,
+        }
+        state.genres.push(genre_data)
+      })
     },
     GO_MOVIE_DETAIL(state, movieinfo){
       state.movie = movieinfo
@@ -59,7 +63,35 @@ export default new Vuex.Store({
     },
     CREATE_REVIEW(state, reviewdata){
       state.review = reviewdata
-    }
+    },
+    GET_GENRE_MOVIES(state, movie) {
+      // console.log(movie)
+      state.genreMovies = movie
+    },
+    GET_RANDOM_MOVIES(state){
+      state.randomMovies = _.sampleSize(state.genreMovies, 5)
+    },
+
+    // detail.vue안에서 추천할 때
+    FIND_GENRE_NAME(state) {
+      state.findGenreNames = []
+      state.randomMovies = null
+      // if (state.findGenreNames.length === 0) {
+      state.genres.forEach(genre => {
+        state.movie.genres.forEach(movie_genre => {            
+          if (movie_genre === genre['id']) {
+            // console.log(genre['name'])
+            const genre_name_id = {
+              'id': genre['id'],
+              'name': genre['name']
+            }
+            state.findGenreNames.push(genre_name_id)
+          }
+        })
+      })
+      // }
+      // console.log(state.findGenreNames)
+    },
   },
   actions: {
     login({commit}, credentials) {
@@ -147,7 +179,25 @@ export default new Vuex.Store({
         .catch(err=> {
           console.log(err)
         })
-    }
+    },
+    getGenreMovies({ commit }, genreId) {
+      axios({
+        method: 'get',
+        url: `http://127.0.0.1:8000/movies/genres/${genreId}`,
+        // headers: this.setToken()
+      })
+        .then(res => {
+          // console.log(res.data)
+          commit('GET_GENRE_MOVIES', res.data)
+          commit('GET_RANDOM_MOVIES')
+        })
+        .catch(err => {
+          console.log(err)
+        })      
+    },
+    findGenreName({ commit }) {
+      commit('FIND_GENRE_NAME')    
+    },
   },
   modules: {
   },
