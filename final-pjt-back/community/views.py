@@ -66,7 +66,7 @@ def comment_update_or_delete(request, comment_pk):
     comment = get_object_or_404(Comment,pk=comment_pk)
     if request.method == 'DELETE':
         comment.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'id':comment_pk},status=status.HTTP_204_NO_CONTENT)
 
     elif request.method == 'PUT':
         serializer = CommentSerializer(comment, data=request.data)

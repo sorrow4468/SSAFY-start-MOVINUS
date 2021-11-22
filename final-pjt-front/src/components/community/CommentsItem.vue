@@ -8,7 +8,7 @@
     </div>
     <p>{{comment.updated_at}}</p>
     <button class="btn btn-success" @click="showToggle">댓글수정</button>
-    <button class="btn btn-danger">댓글삭제</button>
+    <button class="btn btn-danger" @click="deleteComment">댓글삭제</button>
   </div>
 
 </template>
@@ -51,8 +51,15 @@ export default {
       }
       this.$store.dispatch('updateComment',commentdata)
       this.showToggle()
+    },
+    deleteComment(){
+      const commentdata = {
+        commentId: this.comment.id,
+        token: this.setToken()
+      }
+      this.$store.dispatch('deleteComment',commentdata)
     }
-  }  
+  }, 
 }
 </script>
 
