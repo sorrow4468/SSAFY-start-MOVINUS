@@ -103,11 +103,12 @@ export default new Vuex.Store({
       // console.log(state.findGenreNames)
     },
     GET_COMMENTS(state, commentdata){
-      state.comments.push(commentdata)
+      state.comments = commentdata
     }
     ,
     CREATE_COMMENT(state, commentdata) {
       state.comment = commentdata
+      router.go()
     },
     
   },
@@ -277,12 +278,17 @@ export default new Vuex.Store({
         headers: commentdata.token
       })
         .then(res=> {
-          console.log(res)
+          // console.log(res)
           commit('GET_COMMENTS', res.data)
         })
         .catch(err=> {
           console.log(err)
         })
+    }
+  },
+  getters:{
+    comments(state){
+      return state.comments
     }
   },
   modules: {

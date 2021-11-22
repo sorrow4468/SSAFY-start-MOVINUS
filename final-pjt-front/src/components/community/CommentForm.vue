@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>CommentForm</h1>
-    <input type="text" placeholder="댓글을 입력해주세요." v-model="form.content">
+    <input type="text" placeholder="댓글을 입력해주세요." v-model="form.content" @keyup.enter="createComment">
     <button class="btn btn-primary" @click="createComment">댓글작성</button>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
         token: this.setToken()
       }
       this.$store.dispatch('createComment', formsetToken)
-      this.content = null
+      this.form.content = null
     }
   }
 }

@@ -1,16 +1,15 @@
 <template>
   <div>
     <h1>Comments</h1>
-    {{comments}}
     <comment-form :review="review"></comment-form>
     <div>      
-      <comments-item v-for="comment in comments" :key="comment.id" :comment="comment"></comments-item>    
+      <comments-item v-for="comment in comments" :key="comment.id" :comment="comment" :review="review"></comments-item>    
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 import CommentForm from '@/components/community/CommentForm'
 import CommentsItem from '@/components/community/CommentsItem'
 
@@ -28,6 +27,9 @@ export default {
   computed: {
     ...mapState([
       'comments',
+    ]),
+    ...mapGetters([
+      'comments'
     ])
   },
   methods:{
