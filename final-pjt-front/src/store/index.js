@@ -20,6 +20,8 @@ export default new Vuex.Store({
     genreMovies: null,
     randomMovies: [],    
     findGenreNames: [],
+    comments: [],
+    comment: null,
   },
   mutations: {
     LOGIN(state) {
@@ -67,6 +69,11 @@ export default new Vuex.Store({
     UPDATE_REVIEW(state, reviewdata){
       state.review = reviewdata
     },
+    DELETE_REVIEW(state, reviewdata){
+      const index = state.reviews.indexOf(reviewdata)
+      state.reviews.splice(index, 1)
+    },
+  
     GET_GENRE_MOVIES(state, movie) {
       // console.log(movie)
       state.genreMovies = movie
@@ -95,6 +102,9 @@ export default new Vuex.Store({
       // }
       // console.log(state.findGenreNames)
     },
+    CREATE_COMMENT(state, commentdata) {
+      state.comment = commentdata.content
+    }
   },
   actions: {
     login({commit}, credentials) {
@@ -184,7 +194,7 @@ export default new Vuex.Store({
         })
     },
     updateReview({ commit }, reviewdata){
-      console.log(reviewdata)
+      // console.log(reviewdata)
       axios({
         method: 'put',
         url: `http://127.0.0.1:8000/community/reviews/${reviewdata.form.id}/`,
@@ -195,6 +205,22 @@ export default new Vuex.Store({
           console.log(res)
           commit('UPDATE_REVIEW',res.data)
           router.push({name:'ReviewsItem', params: {reviewId:reviewdata.form.id}})
+        })
+        .catch(err=> {
+          console.log(err)
+        })
+    },
+    deleteReview({ commit }, reviewdata){
+      // console.log(reviewdata)
+      axios({
+        method: 'delete',
+        url: `http://127.0.0.1:8000/community/reviews/${reviewdata.id}/`,
+        headers: reviewdata.token
+      })
+        .then(res=>{
+          console.log(res)
+          commit('DELETE_REVIEW',res.data)
+          router.push({name:'Community'})
         })
         .catch(err=> {
           console.log(err)
@@ -218,6 +244,20 @@ export default new Vuex.Store({
     findGenreName({ commit }) {
       commit('FIND_GENRE_NAME')    
     },
+    createComment({ commit }, commentdata){
+      axios({
+        method: 'post',
+        url: `http://127.0.0.1:8000/community/reviews/${commentdata.review_id}/comments`,
+        headers: commentdata.token
+      })
+        .then(res=> {
+          console.log(res)
+          commit('CREATE_COMMENT',res.data)
+        })
+        .catch(err=> {
+          console.log(err)
+        })
+    }
   },
   modules: {
   },

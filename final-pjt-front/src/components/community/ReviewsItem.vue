@@ -25,8 +25,8 @@
     </div>
 
     <button class="btn btn-success" @click="updateReview()">수정</button>
-    <button class="btn btn-danger" @click="deleteReview(review)">삭제</button>
-    <Comments/>
+    <button class="btn btn-danger" @click="deleteReview()">삭제</button>
+    <Comments :review="review"/>
   </div>
 
 
@@ -56,7 +56,7 @@ export default {
       return config
     },
     updateReview() {
-      console.log(this.review.form)
+      // console.log(this.review.form)
       const form = {
         id: this.review.id,
         title: this.review.title,
@@ -73,6 +73,14 @@ export default {
       // this.title = null
       // this.content = null
       // this.rank = null
+    },
+    deleteReview(){
+      const idsetToken = {
+        id: this.review.id,
+        token: this.setToken()
+      }
+      this.$store.dispatch('deleteReview', idsetToken)
+
     }
   }
 }

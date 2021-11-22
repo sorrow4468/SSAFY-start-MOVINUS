@@ -31,6 +31,8 @@ def review_detail_update_or_delete(request, review_pk):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     elif request.method == 'PUT':
+        if not request.user.review_set.filter(pk=review_pk).exists():
+            return Response({'detail': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
         serializer = ReviewSerializer(review, data=request.data)
         if serializer.is_valid(raise_exception=True):
             serializer.save()
