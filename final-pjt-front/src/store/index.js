@@ -40,13 +40,16 @@ export default new Vuex.Store({
     },
     GET_GENRES(state, genredata){
       // console.log(state.genres)
+      state.genres = []
       genredata.forEach(genre => {
-        const genre_data = {
-          'id': genre['id'],
-          'name': genre['name'],
-          'isLiked': false,
+        if (state.genres.length !== 18) {
+          const genre_data = {
+            'id': genre['id'],
+            'name': genre['name'],
+            'isLiked': false,
+          }
+          state.genres.push(genre_data)
         }
-        state.genres.push(genre_data)
       })
     },
     GO_MOVIE_DETAIL(state, movieinfo){
@@ -80,8 +83,8 @@ export default new Vuex.Store({
       // console.log(movie)
       state.genreMovies = movie
     },
-    GET_RANDOM_MOVIES(state){
-      state.randomMovies = _.sampleSize(state.genreMovies, 5)
+    GET_RANDOM_MOVIES(state){      
+      state.randomMovies = _.sampleSize(state.genreMovies, 8)
     },
 
     // detail.vue안에서 추천할 때
