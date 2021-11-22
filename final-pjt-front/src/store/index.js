@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import router from '@/router'
 import _ from 'lodash'
+import createPersistedState from "vuex-persistedstate";
+
 
 Vue.use(Vuex)
 
@@ -91,11 +93,13 @@ export default new Vuex.Store({
         state.movie.genres.forEach(movie_genre => {            
           if (movie_genre === genre['id']) {
             // console.log(genre['name'])
-            const genre_name_id = {
-              'id': genre['id'],
-              'name': genre['name']
+            if (state.findGenreNames.length !== state.movie.genres.length) {
+              const genre_name_id = {
+                'id': genre['id'],
+                'name': genre['name']
+              }
+              state.findGenreNames.push(genre_name_id)
             }
-            state.findGenreNames.push(genre_name_id)
           }
         })
       })
@@ -166,6 +170,7 @@ export default new Vuex.Store({
     },
     goMovieDetail({ commit }, movieinfo){
       commit('GO_MOVIE_DETAIL',movieinfo)
+      router.go()
     },
     /////////////////////////////////////////////
     goReviewDetail({ commit }, reviewinfo){
@@ -199,6 +204,7 @@ export default new Vuex.Store({
           console.log(res)
           commit('CREATE_REVIEW',res.data)
           router.push({name:'Community'})
+          router.go()
         })
         .catch(err=> {
           console.log(err)
@@ -293,4 +299,5 @@ export default new Vuex.Store({
   },
   modules: {
   },
+  plugins: [createPersistedState()],
 })

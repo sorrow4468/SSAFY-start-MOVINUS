@@ -2,12 +2,12 @@
   <div>
     <h2 class="m-3">이 영화와 장르가 비슷한 영화들</h2>
     <div class="d-flex justify-content-around">      
-      <div v-for="findGenreName in findGenreNames" :key="findGenreName.id">
+      <div name="findGenreNames" v-for="(findGenreName,idx) in findGenreNames" :key="idx">
         <div class="fs-3 text-light" @click="getGenreMovies(findGenreName['id'])">{{ findGenreName['name'] }}</div>        
       </div>
     </div>
     <div v-if="randomMovies" class="d-flex">
-      <div v-for="randomMovie in randomMovies" :key="randomMovie.id"> 
+      <div v-for="(randomMovie,idx) in randomMovies" :key="idx"> 
         <img @click="goMovieDetail(randomMovie)" class="m-3 w-75" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title">
 
         <!-- {{ randomMovie.vote_count }} -->
@@ -20,7 +20,7 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
-  name: 'MovieRecommend',
+  name: 'MovieDetailRecommend',
   computed: {
     ...mapState([
       'genres',
