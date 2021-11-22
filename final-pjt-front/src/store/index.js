@@ -11,6 +11,7 @@ export default new Vuex.Store({
   state: {    
     isLogin: false,
     movies: null,
+    movie: null,
     genres: null,
     imgSrc: "https://image.tmdb.org/t/p/w300",
     reviews: [],
@@ -40,6 +41,12 @@ export default new Vuex.Store({
       //   state.credentials.likeGenres.push(like_genres_data)
       // })
     },
+    GO_MOVIE_DETAIL(state, movieinfo){
+      state.movie = movieinfo
+      console.log(state.movie)
+      router.push({name:'Detail', params:{movidId: movieinfo.id}})
+    },
+
     /////////////////////////////////////////
     GO_REVIEW_DETAIL(state, reviewinfo){
       state.review = reviewinfo
@@ -100,6 +107,9 @@ export default new Vuex.Store({
         .catch(err => {
           console.log(err)
         })
+    },
+    goMovieDetail({ commit }, movieinfo){
+      commit('GO_MOVIE_DETAIL',movieinfo)
     },
     /////////////////////////////////////////////
     goReviewDetail({ commit }, reviewinfo){

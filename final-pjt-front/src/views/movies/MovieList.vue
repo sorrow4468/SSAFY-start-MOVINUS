@@ -3,8 +3,9 @@
     <h1>다양한 영화들</h1>
     <hr>
     <b-row class="justify-content-center">
-      <b-col col="3" class="m-3" v-for="movie in movies" :key="movie.id">
-        <img :src="imgSrc+movie.poster_path" alt="포스터이미지">
+      <b-col cols="3" class="m-3" v-for="movie in movies" :key="movie.id">
+        <img :src="imgSrc+movie.poster_path" alt="포스터이미지"
+          @click="goMovieDetail(movie)">
       </b-col>
     </b-row>
   </div>
@@ -20,6 +21,11 @@ export default {
       'movies',
       'imgSrc'
     ])
+  },
+  methods:{
+    goMovieDetail(movieinfo){
+      this.$store.dispatch('goMovieDetail',movieinfo)
+    }
   }
   
 }
