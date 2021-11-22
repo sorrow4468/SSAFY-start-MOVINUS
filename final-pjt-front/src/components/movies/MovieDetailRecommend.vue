@@ -7,7 +7,7 @@
       </div>
     </div>
     <div v-if="randomMovies" class="d-flex">
-      <div v-for="(randomMovie,idx) in randomMovies" :key="idx"> 
+      <div v-for="(randomMovie,idx) in randomMovies.slice(0, 5)" :key="idx"> 
         <img @click="goMovieDetail(randomMovie)" class="m-3 w-75" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title">
 
         <!-- {{ randomMovie.vote_count }} -->

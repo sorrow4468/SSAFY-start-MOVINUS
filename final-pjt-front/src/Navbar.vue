@@ -3,7 +3,7 @@
     <div> 
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">홈</router-link> |       
       <router-link :to="{ name:'Community' }" class="fs-4 text-decoration-none">커뮤니티</router-link> | 
-      <router-link :to="{ name:'Recommend' }" class="fs-4 text-decoration-none">영화 추천</router-link>
+      <router-link :to="{ name:'Recommend' }" class="fs-4 text-decoration-none">영화추천</router-link>
     </div>
     <div class="position-absolute translate-middle top-50 start-50">
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">
