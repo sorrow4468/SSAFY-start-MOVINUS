@@ -107,7 +107,7 @@ export default new Vuex.Store({
     }
     ,
     CREATE_COMMENT(state, commentdata) {
-      state.comment = commentdata.content
+      state.comment = commentdata
     },
     
   },
