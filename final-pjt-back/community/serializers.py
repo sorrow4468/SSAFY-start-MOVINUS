@@ -14,7 +14,7 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = '__all__'
         # fields = ('id','title','content','rank',)
         read_only_fields = ('user',)
-
+        
 
 class CommentSerializer(serializers.ModelSerializer):
     # review = ReviewSerializer(read_only=True)
