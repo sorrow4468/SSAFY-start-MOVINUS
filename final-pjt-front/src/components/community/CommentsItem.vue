@@ -1,5 +1,10 @@
 <template>
-  <div>commentsItem</div>
+  <div>
+    <p>{{comment.content}}</p>
+    <p>{{comment.updated_at}}</p>
+    <p>{{comment.user}}</p>
+  </div>
+
 </template>
 
 <script>

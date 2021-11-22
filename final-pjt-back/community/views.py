@@ -50,7 +50,7 @@ def review_detail_update_or_delete(request, review_pk):
 def comment_create(request, review_pk):
     review = get_object_or_404(Review,pk=review_pk)
     if request.method == 'GET':
-        comments = review.comment.all()
+        comments = review.comment_set.all()
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
         
