@@ -1,15 +1,16 @@
 <template>
   <div>
-    <p>이 영화와 장르가 비슷한 영화들</p>
-    <div v-for="findGenreName in findGenreNames" :key="findGenreName.id">
-      <p @click="getGenreMovies(findGenreName['id'])">{{ findGenreName['name'] }}</p>
+    <h2 class="m-3">이 영화와 장르가 비슷한 영화들</h2>
+    <div class="d-flex justify-content-around">      
+      <div v-for="findGenreName in findGenreNames" :key="findGenreName.id">
+        <div class="fs-3 text-light" @click="getGenreMovies(findGenreName['id'])">{{ findGenreName['name'] }}</div>        
+      </div>
     </div>
-    <div v-if="randomMovies">
-      <!-- <movie-filter-genre> -->
+    <div v-if="randomMovies" class="d-flex">
       <div v-for="randomMovie in randomMovies" :key="randomMovie.id"> 
-        {{ randomMovie.title }}
-        {{ randomMovie.vote_count }}
-        <!-- {{ randomMovie.like_users|length }} -->
+        <img @click="goMovieDetail(randomMovie)" class="m-3 w-75" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title">
+
+        <!-- {{ randomMovie.vote_count }} -->
       </div>
     </div>
   </div>
@@ -25,13 +26,15 @@ export default {
       'genres',
       'randomMovies',      
       'genreMovies',
-      'findGenreNames',      
+      'findGenreNames',    
+      'imgSrc',  
     ])
   },
   methods: {
     ...mapActions([      
       'getGenreMovies',
       'findGenreName',
+      'goMovieDetail',
     ])
   },
   created() {
