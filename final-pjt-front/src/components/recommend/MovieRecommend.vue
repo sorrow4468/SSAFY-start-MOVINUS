@@ -1,13 +1,18 @@
 <template>
   <div>
-    <h1>영화 추천</h1>
-    <div v-for="genre in genres" :key="genre.id" class="d-flex">
-      <label :for="genre['id']">{{ genre['name'] }} </label>
-      <input type="checkbox" :id="genre['id']" v-model="genre['isLiked']">
-      <div v-if="genre['isLiked']">
-        
+    <div class="d-flex justify-content-around flex-wrap">      
+      <div name="genres" v-for="(genre,idx) in genres" :key="idx" class="m-4">
+        <b-button pill variant="outline-danger" class="text-light"
+          @click="getGenreMovies(genre.id)">
+          {{ genre['name']}}          
+        </b-button>
       </div>
     </div>
+    <b-row class="d-flex">      
+      <b-col cols="3" v-for="randomMovie in randomMovies" :key="randomMovie.id">
+        <img :src="imgSrc+randomMovie.poster_path" alt="포스터 이미지" class="w-75 m-3">
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -20,7 +25,8 @@ export default {
     ...mapState([
       'genres',
       'genreMovies',
-      'randomMovies'      
+      'randomMovies',
+      'imgSrc',
     ])
   },
   methods: {
