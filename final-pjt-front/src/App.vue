@@ -17,14 +17,20 @@ export default {
   methods: {
     ...mapActions([
       'getMovies',
-      'getGenres',
-    ])
+      'getGenres',      
+      'checkLogin',
+    ]),
+    getToken() {
+      const token = localStorage.getItem('jwt')
+      return token
+    },
   },
   computed: {
   },
   created() {
     this.getMovies()
     this.getGenres()
+    this.$store.dispatch('checkLogin', this.getToken())
   }
   
 }

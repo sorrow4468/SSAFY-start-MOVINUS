@@ -130,6 +130,11 @@ export default new Vuex.Store({
     logout({ commit }){
       commit('LOGOUT')
     },
+    checkLogin({commit}, token) {
+      if (token) {
+        commit('LOGIN')
+      }
+    },
     getMovies({ commit }){
       axios({
         method: 'get',
