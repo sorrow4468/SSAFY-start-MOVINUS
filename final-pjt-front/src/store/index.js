@@ -76,9 +76,9 @@ export default new Vuex.Store({
       state.review = reviewdata
       router.go()
     },
-    DELETE_REVIEW(state, reviewdata){
-      const index = state.reviews.indexOf(reviewdata)
-      state.reviews.splice(index, 1)
+    DELETE_REVIEW(state, commentdata){
+      const index = state.comments.indexOf(commentdata)
+      state.comments.splice(index, 1)
     },
   
     GET_GENRE_MOVIES(state, movie) {
@@ -119,10 +119,15 @@ export default new Vuex.Store({
       state.comment = commentdata
       router.go()
     },
-    UPDATE_COMMENTS(state, commentdata){
+    UPDATE_COMMENT(state, commentdata){
       state.comment = commentdata
       router.go()
-    }
+    },
+    DELETE_COMMENT(state, reviewdata){
+      const index = state.reviews.indexOf(reviewdata)
+      state.reviews.splice(index, 1)
+      // router.go()
+    },
     
   },
   actions: {
@@ -307,7 +312,21 @@ export default new Vuex.Store({
         headers: commentdata.token
       })
         .then(res=>{
-          commit('UPDATE_COMMENTS', res.data)
+          commit('UPDATE_COMMENT', res.data)
+        })
+        .catch(err=> {
+          console.log(err)
+        })
+    },
+    deleteComment({ commit }, commentdata){
+      axios({
+        method: 'delete',
+        url: `http://127.0.0.1:8000/community/comments/${commentdata.commentId}/`,
+        headers: commentdata.token
+      })
+        .then(res=>{
+          // console.log(res)
+          commit('DELETE_COMMENT',res.data)
         })
         .catch(err=> {
           console.log(err)
