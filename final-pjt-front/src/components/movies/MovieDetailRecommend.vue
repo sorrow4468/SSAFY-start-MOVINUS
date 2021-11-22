@@ -24,17 +24,19 @@ export default {
     ...mapState([
       'genres',
       'randomMovies',      
+      'genreMovies',
       'findGenreNames',      
     ])
   },
   methods: {
     ...mapActions([      
       'getGenreMovies',
+      'findGenreName',
     ])
   },
   created() {
-    this.getGenreMovies()
-  }
+    this.findGenreName()
+  },
 }
 </script>
 
