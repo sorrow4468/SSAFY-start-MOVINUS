@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <h1 style="padding-top:120px;">DETAIL</h1>
-    <div class="d-flex">      
-      <img :src="imgSrc+movie.poster_path" alt="포스터이미지">
+  <detail>
+    <p class="position-absolute" style="!important">MOVINUS</p>
+    <h1 style="padding-top:0px;">DETAIL</h1>
+    <div class="d-flex">    
+      <img :src="imgSrc+movie.poster_path" alt="포스터이미지" style="object-fit:none;">
       <div>        
         <div class="d-flex justify-content-between">        
-          <p>제목 : {{ movie.title }}</p>
-          <p>평점 : {{ movie.vote_average }}</p>
-          <br>
+          <p class="m-3 fs-3">제목 : {{ movie.title }}</p>
+          <p class="m-3 fs-3">평점 : {{ movie.vote_average }}</p>
         </div>
-        <div>{{ movie.overview }}</div>
+        <div class="m-3 fs-5 text-start">{{ movie.overview }}</div>
         <movie-detail-teaser></movie-detail-teaser>
       </div>
     </div>
     <movie-detail-recommend></movie-detail-recommend>
-  </div>
+  </detail>
 </template>
 
 <script>

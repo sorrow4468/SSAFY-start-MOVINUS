@@ -47,7 +47,7 @@ export default new Vuex.Store({
     },
     GO_MOVIE_DETAIL(state, movieinfo){
       state.movie = movieinfo
-      console.log(state.movie)
+      // console.log(state.movie)
       router.push({name:'Detail', params:{movieId: movieinfo.id}})
     },
 
