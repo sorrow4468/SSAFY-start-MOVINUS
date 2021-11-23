@@ -12,7 +12,7 @@ class Review(models.Model):
         (5, '★★★★★'),
     ]    
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    # movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     title = models.CharField(max_length=30)
     content = models.TextField()
