@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2 class="m-3">이 영화와 장르가 비슷한 영화들</h2>
-    <div class="d-flex justify-content-around">      
+    <div class="d-flex justify-content-around">             
       <div name="findGenreNames" v-for="(findGenreName,idx) in findGenreNames" :key="idx">
-        <div class="fs-3 text-light" @click="getGenreMovies(findGenreName['id'])">{{ findGenreName['name'] }}</div>        
+        <div class="fs-3 text-light" @click="getGenreMovies(findGenreName['id'])" id="movieGenre">{{ findGenreName['name'] }}</div>        
       </div>
     </div>
     <div v-if="randomMovies" class="d-flex justify-content-between">
@@ -20,8 +20,10 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import methods from '@/assets/js/event.js'
 
 export default {
+  
   name: 'MovieDetailRecommend',
   computed: {
     ...mapState([
@@ -38,14 +40,16 @@ export default {
       'findGenreName',
       'goMovieDetail',
     ]),
-    // clickRandomMovie = function () {
-    //   document.getElementById('').click();
+    // clickRandomMovie() {
+    //   document.getElementById('movieGenre').click();
     // },
   },
   created() {
-    this.findGenreName()
-    // this.getGenreMovies(this.findGenreNames[0])
+    this.findGenreName()    
   },
+  mounted() {
+    methods.clickRandomMovie()
+  }
   
 }
 </script>

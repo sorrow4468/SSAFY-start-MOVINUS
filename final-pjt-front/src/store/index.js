@@ -265,7 +265,7 @@ export default new Vuex.Store({
         .then(res => {
           // console.log(res.data)
           commit('GET_GENRE_MOVIES', res.data)          
-          // commit('GET_RANDOM_MOVIES')
+          commit('GET_RANDOM_MOVIES')
         })
         .catch(err => {
           console.log(err)
@@ -273,7 +273,7 @@ export default new Vuex.Store({
     },
     findGenreName({ commit }) {
       commit('FIND_GENRE_NAME')        
-      commit('GET_RANDOM_MOVIES')  
+      // commit('GET_RANDOM_MOVIES')  
     },
     createComment({ commit }, commentdata){
       // console.log(commentdata)
