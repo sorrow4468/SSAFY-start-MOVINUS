@@ -1,6 +1,9 @@
 <template>
   <div>    
-    <b-button variant="success" @click="toggle" class="m-3">리뷰 작성 열기</b-button>
+    <!-- <b-button pill variant="outline-warning border-3" 
+      class="text-light fw-bold fs-6 m-3" 
+      @click="toggle">리뷰 작성 열기
+    </b-button>
     <div>
       <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group
@@ -41,21 +44,63 @@
           <b-form-datalist id="input-list" :options="options"></b-form-datalist>
         </div>
 
+        <b-button type="submit" pill variant="outline-success border-3" class="text-light fw-bold fs-6" @click="createReview">리뷰 작성</b-button>
+        <b-button type="reset" pill variant="outline-danger border-3" class="text-light fw-bold fs-6 m-3">초기화</b-button>
+      </b-form>   
+    </div> -->
+    <div>
+      <b-button pill variant="outline-warning border-3" 
+      class="text-light fw-bold fs-6 m-3" 
+      v-b-modal.modal-1>리뷰 작성</b-button>
+      <b-modal id="modal-1" title="리뷰 작성">
+        <div>
+          <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+            <b-form-group
+              id="input-group-1"
+              class="mb-3"          
+            >         
+              <label id="input-group-1" for="input-1">제목 : </label>
+              <b-form-input
+                id="input-1"
+                v-model="form.title"
+                type="text"
+                placeholder="제목을 입력해주세요"
+                required
+                block
+                class="mb-3"
+              ></b-form-input>
+            </b-form-group>
 
+            <b-form-group id="input-group-2" label="내용:" label-for="input-2">
+              <b-form-textarea
+                id="input-2"
+                v-model="form.content"
+                placeholder="내용을 입력해주세요"
+                required
+                rows="3"
+                max-rows="6"
+                class="mb-3"
+              ></b-form-textarea>
+            </b-form-group>
 
-        <!-- <b-form-group id="input-group-3" label="Rank:" label-for="input-3">
-          <b-form-select
-            id="input-3"
-            v-model="form.rank"
-            :options="ranks"
-            required
-          ></b-form-select>
-        </b-form-group>         -->
+            <div>
+              <label for="input-with-list">평점</label>
+              <b-form-input list="input-list" id="input-with-list" 
+                placeholder="평점을 입력해주세요"
+                v-model="form.rank"
+                class="mb-3"
+              ></b-form-input>
+              <b-form-datalist id="input-list" :options="options"></b-form-datalist>
+            </div>
 
-        <b-button type="submit" variant="primary" @click="createReview">리뷰 작성</b-button>
-        <b-button type="reset" variant="danger" class="m-3">초기화</b-button>
-      </b-form>      
+            <b-button type="submit" pill variant="outline-success border-3" class="fw-bold fs-6" @click="createReview">리뷰 작성</b-button>
+            <b-button type="reset" pill variant="outline-danger border-3" class="fw-bold fs-6 m-3">초기화</b-button>
+          </b-form>   
+        </div>
+      </b-modal>
     </div>
+    
+    
     
     <!-- <p>리뷰제목: <input type="text" v-model="form.title"></p>
     <label for="content">내용: </label>
@@ -85,7 +130,7 @@ export default {
         rank: null,
       },
       ranks: [{ text: '평점', value: null }, '5', '4', '3', '2', '1'],
-      show: false,
+      show: true,
       options: ['5', '4', '3', '2', '1']
     }
   },
