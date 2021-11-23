@@ -3,7 +3,7 @@
     <h1>Review 게시판</h1>
     <div v-for="review in reviews" :key="review.id" :review="review">
       <p @click="goReviewDetail(review)">{{review.title}}</p>
-      <span>{{review.user}} </span>
+      <span>{{review.user.username}} </span>
       <hr>
     </div>
   </div>

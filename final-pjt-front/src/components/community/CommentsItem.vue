@@ -1,7 +1,12 @@
 <template>
-  <div v-if="comment.review===review.id">
+  <div v-if="comment.review.id===review.id">
     
-    <p v-if="show">{{comment.content}}</p>
+    <div v-if="show">
+      <p>{{comment.content}}</p>
+      <p>{{comment.user.username}}</p>
+      
+    
+    </div>
     <div v-else>
       <input v-model="comment.content">
       <button class="btn btn-success" @click="updateComment">댓글수정</button>
