@@ -6,6 +6,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticate
 from .serializers import GenreSerializer, MovieSerializer
 from .models import Genre, Movie
 
+
 # Create your views here.
 @api_view(['GET'])
 @permission_classes([AllowAny])
