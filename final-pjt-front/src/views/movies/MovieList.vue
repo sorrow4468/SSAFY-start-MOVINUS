@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>다양한 영화들</h1>
+    <div class="fs-2 position-relative position-start pt-2">다양한 영화들</div>
     <hr>
     <b-row class="justify-content-center">
       <b-col cols="3" class="m-3" v-for="movie in movies" :key="movie.id" style="">

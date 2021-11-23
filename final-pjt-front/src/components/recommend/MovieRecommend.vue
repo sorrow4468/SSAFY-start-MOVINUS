@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="pt-3">
     <div class="d-flex justify-content-around flex-wrap">      
-      <div name="genres" v-for="(genre,idx) in genres" :key="idx" class="m-4">
-        <b-button pill variant="outline-danger" class="text-light"
+      <div name="genres" v-for="(genre,idx) in genres" :key="idx" class="m-2">        
+        <b-button pill variant="outline-danger border-3" class="text-light fw-bold fs-6"
           @click="getGenreMovies(genre.id)">
           {{ genre['name']}}          
         </b-button>

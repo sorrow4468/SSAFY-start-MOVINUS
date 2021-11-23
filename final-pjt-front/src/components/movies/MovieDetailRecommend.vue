@@ -1,9 +1,13 @@
 <template>
   <div>
-    <h2 class="m-3">이 영화와 장르가 비슷한 영화들</h2>
+    <h2 class="m-1 pt-5">이 영화와 장르가 비슷한 영화들</h2>
     <div class="d-flex justify-content-around">             
       <div name="findGenreNames" v-for="(findGenreName,idx) in findGenreNames" :key="idx">
-        <div class="fs-3 text-light" @click="getGenreMovies(findGenreName['id'])" id="movieGenre">{{ findGenreName['name'] }}</div>        
+        <!-- style="border-color:#ff9999 !important; background-color:#141414 !important;"  -->
+        <b-button pill 
+          variant="outline-danger"
+          class="fs-4 text-light border-3" 
+          @click="getGenreMovies(findGenreName['id'])" id="movieGenre">{{ findGenreName['name'] }}</b-button>        
       </div>
     </div>
     <div v-if="randomMovies" class="d-flex justify-content-between">

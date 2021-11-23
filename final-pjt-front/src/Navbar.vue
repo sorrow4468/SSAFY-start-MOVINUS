@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="dark" variant="black" fixed="top" id="nav" class="d-flex justify-content-between">
+  <b-navbar type="light" variant="dark" fixed="top" id="nav" class="d-flex justify-content-between" style="background-color:#141414 !important; height:90px;">
     <div> 
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">홈</router-link> |       
       <router-link :to="{ name:'Community' }" class="fs-4 text-decoration-none">커뮤니티</router-link> | 

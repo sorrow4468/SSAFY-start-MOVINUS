@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1 style="padding-top:0px;">Recommend</h1>    
+  <div>  
     <movie-recommend></movie-recommend>
   </div>
 </template>

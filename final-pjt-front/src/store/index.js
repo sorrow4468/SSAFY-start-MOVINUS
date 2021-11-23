@@ -5,11 +5,11 @@ import router from '@/router'
 import _ from 'lodash'
 import createPersistedState from "vuex-persistedstate";
 
+const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search'
+// const YOUTUBE_KEY = process.env.VUE_APP_YOUTUBE_API_KEY
+const YOUTUBE_API_KEY = 'AIzaSyDgPQ6iTjC8NINE4NOFZCDPRre3FuD5ivU'
 
 Vue.use(Vuex)
-
-// const YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/search'
-
 export default new Vuex.Store({
   state: {    
     isLogin: false,
@@ -24,6 +24,7 @@ export default new Vuex.Store({
     findGenreNames: [],
     comments: [],
     comment: null,
+    youtubeVideos: [],
   },
   mutations: {
     LOGIN(state) {
@@ -128,7 +129,9 @@ export default new Vuex.Store({
       state.reviews.splice(index, 1)
       // router.go()
     },
-    
+    SEARCH_YOUTUBE(state, res) {
+      state.youtubeVideos = res.data.items
+    },
   },
   actions: {
     login({commit}, credentials) {
@@ -332,7 +335,27 @@ export default new Vuex.Store({
         .catch(err=> {
           console.log(err)
         })
-    }
+    },
+    searchYoutube({ commit }, movietitle) {
+      const params = {
+        q: movietitle+'movie',
+        key: YOUTUBE_API_KEY,
+        part: 'snippet',
+        type: 'video'
+      }
+      axios({
+        method: 'get',
+        url: YOUTUBE_API_URL,
+        params,
+      })
+      .then(res => {
+        // console.log(res.data.items)
+        commit('SEARCH_YOUTUBE', res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
   },
   getters:{
     comments(state){

@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <p class="position-absolute" style="!important">MOVINUS</p>
-    <h1 style="padding-top:0px;">DETAIL</h1>
+  <div style="padding-top:10px;">
     <div class="d-flex">    
       <img :src="imgSrc+movie.poster_path" alt="포스터이미지" style="object-fit:none;">
       <div>        
         <div class="d-flex justify-content-between">        
-          <p class="m-3 fs-3">제목 : {{ movie.title }}</p>
+          <p class="m-3 fs-3">{{ movie.title }}</p>
           <p class="m-3 fs-3">평점 : {{ movie.vote_average }}</p>
         </div>
         <div class="m-3 fs-5 text-start">{{ movie.overview }}</div>
-        <movie-detail-teaser></movie-detail-teaser>
+        <MovieDetailTeaser :title="movie.title"/>
       </div>
     </div>
     <movie-detail-recommend></movie-detail-recommend>
@@ -27,6 +25,12 @@ export default {
   components: {
     MovieDetailTeaser,
     MovieDetailRecommend,
+  },
+  props: {
+    movie: {
+      type: Object,
+      required: true
+    },
   },
   computed: {
     ...mapState([
