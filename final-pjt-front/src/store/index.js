@@ -128,8 +128,22 @@ export default new Vuex.Store({
       // }
       // console.log(state.findGenreNames)
     },
-    GET_COMMENTS(state, commentdata){
-      state.comments = commentdata
+    GET_COMMENTS(state, commentdatas){
+      const newCommentDatas = []
+      commentdatas.forEach(commentdata => {
+        const year = commentdata.created_at.slice(0,4)
+        const month = commentdata.created_at.slice(5,7)
+        const day = commentdata.created_at.slice(8,10)
+        const hour = commentdata.created_at.slice(11,13)
+        const minute = commentdata.created_at.slice(14,16)
+        const date = year+'년 '+month+'월 '+day+'일 '+hour+'시 '+minute+'분 '
+        const comment = {
+          ...commentdata,
+          created_at: date,
+        }
+        newCommentDatas.push(comment)
+      })
+      state.comments = newCommentDatas 
       state.comments.reverse()
     }
     ,
@@ -144,7 +158,7 @@ export default new Vuex.Store({
     DELETE_COMMENT(state, reviewdata){
       const index = state.reviews.indexOf(reviewdata)
       state.reviews.splice(index, 1)
-      // router.go()
+      router.go()
     },
     SEARCH_YOUTUBE(state, res) {
       state.youtubeVideos = res.data.items

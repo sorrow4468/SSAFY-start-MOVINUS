@@ -1,9 +1,14 @@
 <template>
-  <div class="">
-    <b-form-input type="text" placeholder="댓글을 입력해주세요." v-model="form.content" @keyup.enter="createComment" class="w-100 mt-2 mb-1"></b-form-input>
-    <b-button pill variant="outline-success border-3" 
-        class="text-light fw-bold fs-6 mt-3 mb-3 w-100" @click="createComment">작성</b-button>
-  </div>
+  <b-row>
+    <b-col cols="10">      
+      <b-form-input type="text" placeholder="댓글을 입력해주세요." v-model="form.content" @keyup.enter="createComment" class="m-2 w-100"></b-form-input>
+    </b-col>
+    <b-col cols="2">      
+      <b-button pill variant="outline-success border-3" 
+          class="text-light fw-bold fs-6 m-2 w-100" @click="createComment">작성
+      </b-button>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
