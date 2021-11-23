@@ -40,7 +40,7 @@ export default {
     },
     goReviewDetail(reviewinfo) {
       this.$store.dispatch('goReviewDetail',reviewinfo)
-    }
+    },
   },
   computed: {
     ...mapState([

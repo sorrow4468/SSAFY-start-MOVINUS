@@ -68,10 +68,24 @@ export default new Vuex.Store({
     /////////////////////////////////////////
 
     GET_REVIEWS(state, reviewItems){
-      state.reviews = reviewItems
+      const newReviewItems = []
+      reviewItems.forEach(reviewItem => {
+        const year = reviewItem.created_at.slice(0,4)
+        const month = reviewItem.created_at.slice(5,7)
+        const day = reviewItem.created_at.slice(8,10)
+        const hour = reviewItem.created_at.slice(11,13)
+        const minute = reviewItem.created_at.slice(14,16)
+        const date = year+'년 '+month+'월 '+day+'일 '+hour+'시 '+minute+'분 '
+        const review = {
+          ...reviewItem,
+          created_at: date,
+        }
+        newReviewItems.push(review)
+      })
+      state.reviews = newReviewItems
       state.reviews.reverse()
     },
-    CREATE_REVIEW(state, reviewdata){
+    CREATE_REVIEW(state, reviewdata){      
       state.review = reviewdata
       router.go()
     },
