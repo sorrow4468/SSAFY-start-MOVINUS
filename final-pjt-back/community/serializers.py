@@ -13,7 +13,7 @@ class ReviewSerializer(serializers.ModelSerializer):
         model = Review
         fields = '__all__'
         # fields = ('id','title','content','rank',)
-        read_only_fields = ('user',)
+        read_only_fields = ('user','movie')
         depth = 1
         
 

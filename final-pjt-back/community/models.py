@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from movies.models import Movie
 
 # Create your models here.
 class Review(models.Model):
@@ -11,12 +12,16 @@ class Review(models.Model):
         (5, '★★★★★'),
     ]    
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     title = models.CharField(max_length=30)
     content = models.TextField()
     rank = models.IntegerField(choices=RANKS, default=5)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
 
 class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -25,4 +30,7 @@ class Comment(models.Model):
     content = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.content
     
