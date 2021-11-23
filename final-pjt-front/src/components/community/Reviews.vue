@@ -1,11 +1,21 @@
 <template>
   <div>
-    <h1>Review 게시판</h1>
-    <div v-for="review in reviews" :key="review.id" :review="review">
-      <p @click="goReviewDetail(review)">{{review.title}}</p>
-      <span>{{review.user.username}} </span>
-      <hr>
-    </div>
+    <div class="fw-bold fs-1 d-flex justify-content-start">Review</div>
+    <b-row>
+      <hr style="height:5px;" class="m-3">
+      <!-- <b-col cols="2" class="fw-bold fs-3">영화제목</b-col>
+      <b-col cols="4" class="fw-bold fs-3">게시글</b-col> -->
+      <b-col cols="6" class="fw-bold fs-3">게시글</b-col>
+      <b-col cols="2" class="fw-bold fs-3">작성자</b-col>
+      <b-col cols="4" class="fw-bold fs-3">작성시간</b-col>
+      <hr style="height:5px;" class="m-3">
+    </b-row>
+    <b-row v-for="review in reviews" :key="review.id" :review="review">
+      <b-col cols="6" @click="goReviewDetail(review)">{{review.title}}</b-col>
+      <b-col cols="2" >{{review.user.username}} </b-col>
+      <b-col cols="4" >{{review.created_at}}</b-col>
+      <hr class="m-3">
+    </b-row>
   </div>
 </template>
 
