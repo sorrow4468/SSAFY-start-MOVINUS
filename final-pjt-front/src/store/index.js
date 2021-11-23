@@ -87,7 +87,7 @@ export default new Vuex.Store({
     },
     CREATE_REVIEW(state, reviewdata){      
       state.review = reviewdata
-      router.go()
+      router.push({name:'Community', params:{reviewId: state.review.id}})
     },
     UPDATE_REVIEW(state, reviewdata){
       state.review = reviewdata
