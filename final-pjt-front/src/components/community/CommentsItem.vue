@@ -1,17 +1,15 @@
 <template>
-  <div v-if="comment.review.id===review.id">
-    
-    <div v-if="show">
-      <p>{{comment.content}}</p>
-      <p>{{comment.user.username}}</p>
-      
-    
-    </div>
+  <div v-if="comment.review.id===review.id">    
+    <b-row v-if="show">
+      <b-col cols="2" class="d-flex justify-content-start">{{comment.user.username}}</b-col>
+      <b-col cols="5" class="d-flex justify-content-start">{{comment.content}}</b-col>    
+      <b-col cols="3" class="d-flex justify-content-start">{{comment.created_at}}</b-col>
+      <b-col cols="2" class="d-flex justify-content-start">수정, 삭제</b-col>
+    </b-row>
     <div v-else>
       <input v-model="comment.content">
       <button class="btn btn-success" @click="updateComment">댓글수정</button>
     </div>
-    <p>{{comment.created_at}}</p>
     <button class="btn btn-success" @click="showToggle">댓글수정</button>
     <button class="btn btn-danger" @click="deleteComment">댓글삭제</button>
   </div>
