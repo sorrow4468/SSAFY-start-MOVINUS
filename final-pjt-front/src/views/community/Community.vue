@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <h1>Community</h1>
-    <Reviews/>
+  <div class="pt-3">
     <ReviewForm/>    
+    <Reviews/>
   </div>
 </template>
 

@@ -11,7 +11,7 @@
       <input v-model="comment.content">
       <button class="btn btn-success" @click="updateComment">댓글수정</button>
     </div>
-    <p>{{comment.updated_at}}</p>
+    <p>{{comment.created_at}}</p>
     <button class="btn btn-success" @click="showToggle">댓글수정</button>
     <button class="btn btn-danger" @click="deleteComment">댓글삭제</button>
   </div>

@@ -68,6 +68,7 @@ export default new Vuex.Store({
 
     GET_REVIEWS(state, reviewItems){
       state.reviews = reviewItems
+      state.reviews.reverse()
     },
     CREATE_REVIEW(state, reviewdata){
       state.review = reviewdata
@@ -114,6 +115,7 @@ export default new Vuex.Store({
     },
     GET_COMMENTS(state, commentdata){
       state.comments = commentdata
+      state.comments.reverse()
     }
     ,
     CREATE_COMMENT(state, commentdata) {
