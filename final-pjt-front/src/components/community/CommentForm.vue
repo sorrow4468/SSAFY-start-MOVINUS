@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h1>CommentForm</h1>
-    <input type="text" placeholder="댓글을 입력해주세요." v-model="form.content" @keyup.enter="createComment">
-    <button class="btn btn-primary" @click="createComment">댓글작성</button>
+  <div class="">
+    <b-form-input type="text" placeholder="댓글을 입력해주세요." v-model="form.content" @keyup.enter="createComment" class="w-100 mt-2 mb-1"></b-form-input>
+    <b-button pill variant="outline-success border-3" 
+        class="text-light fw-bold fs-6 mt-3 mb-3 w-100" @click="createComment">작성</b-button>
   </div>
 </template>
 
