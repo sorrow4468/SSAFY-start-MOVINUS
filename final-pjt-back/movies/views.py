@@ -7,6 +7,9 @@ from .serializers import GenreSerializer, MovieSerializer
 from .models import Genre, Movie
 
 
+# from django.core.paginator import Paginator
+# from django.core import serializers
+# from django.http import HttpResponse
 # Create your views here.
 @api_view(['GET'])
 @permission_classes([AllowAny])
@@ -16,6 +19,24 @@ def index(request):
         movies = Movie.objects.order_by('?')
         serializer = MovieSerializer(movies, many=True)
         return Response(serializer.data)
+
+# @api_view(['GET'])
+# @permission_classes([AllowAny])
+# def index(request):
+#     if request.method == 'GET':
+#         # movies = Movie.objects.order_by('?')[:20]
+#         movies = Movie.objects.order_by('?')
+#         paginator = Paginator(movies, 21)
+
+#         page_number = request.GET.get('page')
+#         page_obj = paginator.get_page(page_number)
+
+#         if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+#             data = serializers.serialize('json', page_obj)
+#             return HttpResponse(data, content_type='application/json')
+#         else:
+#             serializer = MovieSerializer(page_obj, many=True)
+#             return Response(serializer.data)
 
 
 @api_view(['GET'])

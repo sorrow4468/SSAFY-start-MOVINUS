@@ -4,6 +4,7 @@ import axios from 'axios'
 import router from '@/router'
 import _ from 'lodash'
 import createPersistedState from "vuex-persistedstate";
+// import InfiniteLoading from 'vue-infinite-loading';
 
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search'
 // const YOUTUBE_KEY = process.env.VUE_APP_YOUTUBE_API_KEY
