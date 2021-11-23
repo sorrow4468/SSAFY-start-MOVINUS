@@ -89,8 +89,21 @@ export default new Vuex.Store({
       state.review = reviewdata
       router.push({name:'Community', params:{reviewId: state.review.id}})
     },
-    UPDATE_REVIEW(state, reviewdata){
-      state.review = reviewdata
+    UPDATE_REVIEW(state, reviewItem){
+      const year = reviewItem.created_at.slice(0,4)
+      const month = reviewItem.created_at.slice(5,7)
+      const day = reviewItem.created_at.slice(8,10)
+      const hour = reviewItem.created_at.slice(11,13)
+      const minute = reviewItem.created_at.slice(14,16)
+      const date = year+'년 '+month+'월 '+day+'일 '+hour+'시 '+minute+'분 '
+      const review = {
+        ...reviewItem,
+        created_at: date,
+      }
+      
+      
+      
+      state.review = review
       router.go()
     },
     DELETE_REVIEW(state, commentdata){

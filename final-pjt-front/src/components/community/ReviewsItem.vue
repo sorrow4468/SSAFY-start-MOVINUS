@@ -1,13 +1,14 @@
 <template>
   <div class="pt-5 m-5">
     <div v-if="reviewShow">
-      <p class="fs-1 fw-bold d-flex justify-content-start">{{review.title}}</p>
+      <div class="d-flex justify-content-between">        
+        <div class="fs-1 fw-bold">{{review.title}}</div>
+        <div class="fs-2 fw-bold align-items-center">평점: {{reviewRank}}</div>
+      </div>
       <hr style="height:5px;">
-      <p class="fs-3 d-flex justify-content-start">{{review.content}}</p>
+      <p class="fs-4 d-flex justify-content-start">{{review.content}}</p>
       <p class="d-flex justify-content-end">{{review.created_at}}</p>
-      <p>{{this.date}}</p>
       <hr style="height:5px;">
-      <p>평점: {{review.rank}}</p>
       <div>
         <b-button pill variant="outline-warning border-3" 
           class="text-light fw-bold fs-6 m-3" 
@@ -23,7 +24,7 @@
           </template>
             <div class="d-block">
               <div>
-              <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+              <b-form @submit="onSubmit" @reset="onReset" v-if="show" @submit.stop.prevent>
                 <b-form-group
                   id="input-group-1"
                   class="mb-3"          
@@ -37,10 +38,17 @@
                     required
                     block
                     class="mb-3"
+                    :state="validation"
                   ></b-form-input>
+                  <b-form-invalid-feedback :state="validation">
+                    제목이 30자를 초과하였습니다
+                  </b-form-invalid-feedback>
+                  <b-form-valid-feedback :state="validation">
+                    제목을 30자 이내로 적어주세요
+                  </b-form-valid-feedback>
                 </b-form-group>
 
-                <b-form-group id="input-group-2" label="내용:" label-for="input-2">
+                <b-form-group id="input-group-2" label="내용:" label-for="input-2" @submit.stop.prevent>
                   <b-form-textarea
                     id="input-2"
                     v-model="review.content"
@@ -49,7 +57,14 @@
                     rows="3"
                     max-rows="6"
                     class="mb-3"
+                    :state="validation2"
                   ></b-form-textarea>
+                  <b-form-invalid-feedback :state="validation2">
+                  내용이 500자를 초과하였습니다
+                </b-form-invalid-feedback>
+                <b-form-valid-feedback :state="validation2">
+                  내용을 500자 이내로 적어주세요
+                </b-form-valid-feedback>
                 </b-form-group>
 
                 <div>
@@ -79,6 +94,14 @@
 import { mapState } from 'vuex'
 import Comments from '@/components/community/Comments'
 
+const rankToStar = {
+  1:'★',
+  2:'★★',
+  3:'★★★',
+  4:'★★★★',
+  5:'★★★★★',
+}
+
 export default {
   name: 'ReviewsItem',
   
@@ -91,12 +114,20 @@ export default {
       show: true,
       rank: null,
       options: ['5', '4', '3', '2', '1'],
+      reviewRank: null,
+      
     }
   },
   computed:{
     ...mapState([
       'review',
     ]),        
+    validation() {
+      return this.review.title.length < 31
+    },
+    validation2() {
+      return this.review.content.length < 501
+    },
   },
   methods: {
     setToken() {
@@ -148,6 +179,9 @@ export default {
       })
     },
   },
+  created() {
+    this.reviewRank = rankToStar[this.review.rank]
+  }
 }
 </script>
 

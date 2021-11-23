@@ -13,7 +13,7 @@
         </template>
           <div class="d-block">
             <div>
-            <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+            <b-form @submit="onSubmit" @reset="onReset" v-if="show" @submit.stop.prevent>
               <b-form-group
                 id="input-group-1"
                 class="mb-3"          
@@ -27,10 +27,17 @@
                   required
                   block
                   class="mb-3"
+                  :state="validation"
                 ></b-form-input>
+                <b-form-invalid-feedback :state="validation">
+                  제목이 30자를 초과하였습니다
+                </b-form-invalid-feedback>
+                <b-form-valid-feedback :state="validation">
+                  제목을 30자 이내로 적어주세요
+                </b-form-valid-feedback>
               </b-form-group>
 
-              <b-form-group id="input-group-2" label="내용:" label-for="input-2">
+              <b-form-group id="input-group-2" label="내용:" label-for="input-2" @submit.stop.prevent>
                 <b-form-textarea
                   id="input-2"
                   v-model="form.content"
@@ -39,7 +46,14 @@
                   rows="3"
                   max-rows="6"
                   class="mb-3"
+                  :state="validation2"
                 ></b-form-textarea>
+                <b-form-invalid-feedback :state="validation2">
+                  내용이 500자를 초과하였습니다
+                </b-form-invalid-feedback>
+                <b-form-valid-feedback :state="validation2">
+                  내용을 500자 이내로 적어주세요
+                </b-form-valid-feedback>
               </b-form-group>
 
               <div>
@@ -69,14 +83,22 @@ export default {
   data(){
     return{
       form: {
-        title: null,
-        content: null,
+        title: '',
+        content: '',
         rank: null,
       },
       ranks: [{ text: '평점', value: null }, '5', '4', '3', '2', '1'],
       show: true,
       options: ['5', '4', '3', '2', '1']
     }
+  },
+  computed: {
+    validation() {
+      return this.form.title.length < 31
+    },
+    validation2() {
+      return this.form.content.length < 501
+    },
   },
   methods:{
     setToken() {
