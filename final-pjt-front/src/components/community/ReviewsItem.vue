@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <div class="fw-bold fs-1 pt-5 d-flex justify-content-start">Review Detail</div>
     <div v-if="reviewShow" class="pt-5">
       <div class="d-flex justify-content-between">        
