@@ -382,7 +382,7 @@ export default new Vuex.Store({
     },
     searchYoutube({ commit }, movietitle) {
       const params = {
-        q: movietitle+'movie',
+        q: movietitle+'movie trailer',
         key: YOUTUBE_API_KEY,
         part: 'snippet',
         type: 'video'
@@ -390,10 +390,10 @@ export default new Vuex.Store({
       axios({
         method: 'get',
         url: YOUTUBE_API_URL,
-        params,
+        params: params,
       })
       .then(res => {
-        console.log(res.data.items)
+        // console.log(res.data.items)
         commit('SEARCH_YOUTUBE', res)
       })
       .catch(err => {

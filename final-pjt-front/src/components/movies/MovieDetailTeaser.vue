@@ -29,7 +29,7 @@ export default {
     ])
   },
   created() {
-    this.$store.dispatch('searchYoutube', this.title + 'movie' + 'trailer')
+    this.$store.dispatch('searchYoutube', this.title)
   },
 }
 </script>
