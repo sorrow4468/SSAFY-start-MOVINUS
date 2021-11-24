@@ -1,5 +1,5 @@
-<template>
-  <b-navbar type="light" variant="dark" fixed="top" id="nav" class="d-flex justify-content-between" style="background-color:#141414 !important; height:90px;">
+<template>  
+  <div id="nav" class="d-flex justify-content-between fixed-top" style="background-color:#1b1b1b !important; height:90px;">
     <div> 
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">홈</router-link> |       
       <router-link :to="{ name:'Community' }" class="fs-4 text-decoration-none">커뮤니티</router-link> | 
@@ -7,10 +7,10 @@
     </div>
     <div class="position-absolute translate-middle top-50 start-50">
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">
-        MOVINUS
+        <p style="color:#ff9999;" class="fs-1 mt-4">MOVINUS</p>
       </router-link>
     </div>
-    <div>      
+    <div class="mt-3">      
       <span v-if="isLogin">
         <router-link @click.native="logout()" to="#" class="fs-5 text-decoration-none">로그아웃</router-link>
       </span>
@@ -19,7 +19,7 @@
         <router-link :to="{ name:'Signup' }" class="fs-5 text-decoration-none">회원가입</router-link>
       </span>
     </div>
-  </b-navbar>
+  </div>
 </template>
 
 <script>

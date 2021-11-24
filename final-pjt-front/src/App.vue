@@ -37,5 +37,6 @@ export default {
 </script>
 
 <style>
-  @import './assets/styles/common.css';
+  @import './assets/styles/common.css';  
+  @import './assets/styles/hover.css';
 </style>

@@ -12,11 +12,11 @@
     </div>
     <div v-if="randomMovies" class="d-flex justify-content-between">
       <div v-for="(randomMovie,idx) in randomMovies.slice(0, 5)" :key="idx"> 
-        <img @click="goMovieDetail(randomMovie)" class="m-3 w-100" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title"
-          style="width:192px; height:292px; object-fit:fill;"
-        >
-
-        <!-- {{ randomMovie.vote_count }} -->
+        <div @click="goMovieDetail(randomMovie)" class="banner_img">          
+          <img class="m-3 w-100" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title"
+            style="width:192px; height:292px; object-fit:fill;"
+          >
+        </div>
       </div>
     </div>
   </div>
