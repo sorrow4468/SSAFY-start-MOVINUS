@@ -4,9 +4,9 @@
     <CommentForm :review="review"/>
     <b-row class="mt-3">
       <b-col cols="2" class="d-flex justify-content-start fs-5 fw-bold">작성자</b-col>
-      <b-col cols="5" class="d-flex justify-content-start fs-5 fw-bold">내용</b-col>
+      <b-col cols="4" class="d-flex justify-content-start fs-5 fw-bold">내용</b-col>
       <b-col cols="3" class="d-flex justify-content-start fs-5 fw-bold">작성시간</b-col>
-      <b-col cols="2" class="d-flex justify-content-start"></b-col>
+      <b-col cols="3" class="d-flex justify-content-start"></b-col>
     </b-row>
     <hr style="height:5px;">
     <CommentsItem v-for="comment in comments" :key="comment.id" :comment="comment" :review="review"/>

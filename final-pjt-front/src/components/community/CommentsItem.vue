@@ -2,7 +2,7 @@
   <div v-if="comment.review.id===review.id">    
     <b-row v-if="show">
       <b-col cols="2" class="fs-6 fw-bold d-flex justify-content-start align-items-center">{{comment.user.username}}</b-col>
-      <b-col cols="4" class="fs-6 fw-bold d-flex justify-content-start align-items-center">{{comment.content}}</b-col>    
+      <b-col cols="4" class="fs-6 fw-bold d-flex text-break justify-content-start align-items-center">{{comment.content}}</b-col>    
       <b-col cols="3" class="fs-6 fw-bold d-flex justify-content-start align-items-center">{{comment.created_at}}</b-col>
       <b-col cols="3" class="fs-6 fw-bold d-flex justify-content-start align-items-center">
         <b-button pill variant="outline-warning border-3" 
@@ -37,6 +37,7 @@
     </div>
     <button class="btn btn-success" @click="showToggle">댓글수정</button> -->
     </b-row>
+    <hr>
   </div>
 </template>
 
