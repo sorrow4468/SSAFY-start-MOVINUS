@@ -4,7 +4,7 @@
     <div class="fs-2 position-relative position-start pt-5">다양한 영화들</div>
     <hr>
     <b-row class="justify-content-center">
-      <b-col cols="3" class="m-3" v-for="movie in movies" :key="movie.id" style="">
+      <b-col cols="3" class="m-3" v-for="movie in movies" :key="movie.id" style="cursor:pointer">
         <sequential-entrance fromBottom>          
           <div @click="goMovieDetail(movie)" class="banner_img">          
             <img :src="imgSrc+movie.poster_path" alt="포스터이미지"

@@ -1,5 +1,5 @@
 <template>
-  <b-row>
+  <b-row v-if="isLogin">
     <b-col cols="10">      
       <b-form-input type="text" 
         placeholder="댓글을 입력해주세요." 
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name:'CommentForm',
   props:{
@@ -30,6 +31,11 @@ export default {
         content:null,
       }
     }
+  },
+  computed:{
+    ...mapState([
+      'isLogin'
+    ])
   },
   methods:{
      setToken() {

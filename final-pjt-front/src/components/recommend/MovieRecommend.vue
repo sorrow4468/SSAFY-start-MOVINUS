@@ -10,7 +10,7 @@
     </div>
     <hr style="color:#ff9999; height:5px;">
     <b-row class="d-flex" v-if="randomMovies">      
-      <b-col cols="3" v-for="randomMovie in randomMovies" :key="randomMovie.id">
+      <b-col cols="3" v-for="randomMovie in randomMovies" :key="randomMovie.id" style="cursor:pointer">
         <sequential-entrance delay="250" fromBottom>          
           <div @click="goMovieDetail(randomMovie)" class="banner_img">          
             <img :src="imgSrc+randomMovie.poster_path" alt="포스터 이미지" class="w-75 m-3"
@@ -38,16 +38,23 @@ export default {
       'genreMovies',
       'randomMovies',
       'imgSrc',
+      'isLogin'
     ])
   },
   methods: {
     ...mapActions([      
       'getGenreMovies',
       'goMovieDetail',
-    ])
+    ]),
+    checkLogin(){
+      if(!this.isLogin){
+        alert('로그인이 필요한 서비스 입니다.')
+        this.$router.push({name: 'Login'})
+      }
+    }
   },
-  created() {
-    this.getGenreMovies()
+  mounted(){
+    this.checkLogin()
   }
 }
 </script>

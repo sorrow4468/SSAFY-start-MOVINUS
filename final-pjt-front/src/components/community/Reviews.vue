@@ -10,7 +10,7 @@
       <hr style="height:5px;" class="m-3">
     </b-row>
     <b-row v-for="review in reviews" :key="review.id" :review="review">
-      <b-col cols="6" @click="goReviewDetail(review)">{{review.title}}</b-col>
+      <b-col cols="6" @click="goReviewDetail(review)" style="cursor:pointer;">{{review.title}}</b-col>
       <b-col cols="2" >{{review.user.username}} </b-col>
       <b-col cols="4" >{{review.created_at}}</b-col>
       <hr class="m-3">

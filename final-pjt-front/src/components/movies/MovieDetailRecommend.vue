@@ -9,7 +9,7 @@
       </div>
     </div>
     <div v-if="randomMovies" class="d-flex justify-content-between">
-      <div v-for="(randomMovie,idx) in randomMovies.slice(0, 5)" :key="idx"> 
+      <div v-for="(randomMovie,idx) in randomMovies.slice(0, 5)" :key="idx" style="cursor:pointer"> 
         <sequential-entrance>          
           <div @click="goMovieDetail(randomMovie)" class="banner_img">          
             <img class="m-3 w-100" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title"

@@ -4,13 +4,16 @@
     <div v-if="reviewShow" class="pt-5">
       <div class="d-flex justify-content-between">        
         <div class="fs-3 fw-bold">{{review.title}}</div>
+
+        {{review.user.username}}
+
         <div class="fs-4 fw-bold align-items-center">평점: {{reviewRank}}</div>
       </div>
       <hr style="height:5px;">
       <p class="fs-4 d-flex justify-content-start pb-5 text-break">{{review.content}}</p>
       <div class="d-flex justify-content-between">        
         <p class="fw-bold align-self-center">{{review.created_at}}</p>
-        <div class="align-self-center">
+        <div class="align-self-center" v-if="isLogin">
           <b-button pill variant="outline-warning border-3" 
             class="text-light fw-bold fs-6 m-3" 
             id="show-btn" 
@@ -124,6 +127,7 @@ export default {
   computed:{
     ...mapState([
       'review',
+      'isLogin'
     ]),        
     validation() {
       return this.review.title.length < 31
@@ -167,8 +171,7 @@ export default {
     },
     onSubmit(event) {
         event.preventDefault()
-        alert('리뷰가 작성하신 내용으로 수정되었습니다!')
-      },
+    },
     onReset(event) {
       event.preventDefault()
       // Reset our form values

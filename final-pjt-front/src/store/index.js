@@ -281,10 +281,11 @@ export default new Vuex.Store({
         .then(res=>{
           // console.log(res)
           commit('UPDATE_REVIEW',res.data)
-          
+          alert('작성하신 리뷰가 수정되었습니다!')
         })
         .catch(err=> {
           console.log(err)
+          alert('본인이 작성한 리뷰만 수정할 수 있습니다.')
         })
     },
     deleteReview({ commit }, reviewdata){
@@ -301,6 +302,7 @@ export default new Vuex.Store({
         })
         .catch(err=> {
           console.log(err)
+          alert('본인이 작성한 리뷰만 삭제할 수 있습니다.')
         })
     },
     getGenreMovies({ commit }, genreId) {
@@ -364,6 +366,7 @@ export default new Vuex.Store({
         })
         .catch(err=> {
           console.log(err)
+          alert('본인이 작성한 댓글만 수정할 수 있습니다.')
         })
     },
     deleteComment({ commit }, commentdata){
@@ -378,6 +381,7 @@ export default new Vuex.Store({
         })
         .catch(err=> {
           console.log(err)
+          alert('본인이 작성한 댓글만 삭제할 수 있습니다.')
         })
     },
     searchYoutube({ commit }, movietitle) {

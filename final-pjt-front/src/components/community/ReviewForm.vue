@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-content-between">
     <div class="fw-bold fs-1">Review</div>
-    <div>
+    <div v-if="isLogin">
       <b-button pill variant="outline-warning border-3" 
         class="text-light fw-bold fs-6" 
         id="show-btn" 
@@ -81,6 +81,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'ReviewForm',
   data(){
@@ -102,6 +104,9 @@ export default {
     validation2() {
       return this.form.content.length < 1001
     },
+    ...mapState([
+      'isLogin'
+    ])
   },
   methods:{
     setToken() {

@@ -7,8 +7,8 @@
     </div>
     <div class="position-absolute translate-middle top-50 start-50">
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">
-        <p style="color:#ff9999; font-family: 'Montserrat', sans-serif; " 
-          class="fs-1 mt-4">MOVINUS</p>
+        <p style="color:#ff9999; font-family: 'Montserrat', sans-serif; font-size: 52px;" 
+          class="mt-4">MOVINUS</p>
       </router-link>
     </div>
     <div class="mt-3">      
