@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-3">
+  <div class="pt-5">
     <div class="d-flex justify-content-around flex-wrap">      
       <div name="genres" v-for="(genre,idx) in genres" :key="idx" class="m-2">        
         <b-button pill variant="outline-danger border-3" class="text-light fw-bold fs-6"
@@ -8,6 +8,7 @@
         </b-button>
       </div>
     </div>
+    <hr style="color:#ff9999; height:5px;">
     <b-row class="d-flex">      
       <b-col cols="3" v-for="randomMovie in randomMovies" :key="randomMovie.id">
         <div @click="goMovieDetail(randomMovie)" class="banner_img">          

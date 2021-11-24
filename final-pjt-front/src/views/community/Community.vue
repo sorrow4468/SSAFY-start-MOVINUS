@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-3">
+  <div class="pt-5">
     <ReviewForm/>    
     <Reviews/>
   </div>

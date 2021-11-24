@@ -1,5 +1,6 @@
 <template>
   <div>
+    <img src="@/assets/img/main_background.png" alt="" class="w-100 pt-5">
     <div class="fs-2 position-relative position-start pt-5">다양한 영화들</div>
     <hr>
     <b-row class="justify-content-center">

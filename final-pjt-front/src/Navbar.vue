@@ -7,7 +7,8 @@
     </div>
     <div class="position-absolute translate-middle top-50 start-50">
       <router-link :to="{ name:'MovieList' }" class="fs-2 text-decoration-none">
-        <p style="color:#ff9999;" class="fs-1 mt-4">MOVINUS</p>
+        <p style="color:#ff9999; font-family: 'Montserrat', sans-serif; " 
+          class="fs-1 mt-4">MOVINUS</p>
       </router-link>
     </div>
     <div class="mt-3">      
@@ -54,4 +55,6 @@ export default {
 
 <style>
   @import './assets/styles/common.css';
+  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
 </style>

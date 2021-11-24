@@ -39,4 +39,5 @@ export default {
 <style>
   @import './assets/styles/common.css';  
   @import './assets/styles/hover.css';
+  @import './assets/styles/font.css';
 </style>

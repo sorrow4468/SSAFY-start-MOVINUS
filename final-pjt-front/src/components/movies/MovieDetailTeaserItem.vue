@@ -1,6 +1,6 @@
 <template>
-  <div class="youtube-container">
-    <iframe :src="videoURL" frameborder="0"></iframe>
+  <div>
+    <iframe :src="videoURL" frameborder="0" style="width:480px; height:220px;" class="me-4"></iframe>
   </div>
 </template>
 
