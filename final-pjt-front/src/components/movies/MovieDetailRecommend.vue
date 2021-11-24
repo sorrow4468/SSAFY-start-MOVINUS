@@ -2,7 +2,6 @@
   <div>
     <div class="d-flex justify-content-around">             
       <div name="findGenreNames" v-for="(findGenreName,idx) in findGenreNames" :key="idx">
-        <!-- style="border-color:#ff9999 !important; background-color:#141414 !important;"  -->
         <b-button pill 
           variant="outline-danger"
           class="fs-4 text-light border-4" 
@@ -11,11 +10,13 @@
     </div>
     <div v-if="randomMovies" class="d-flex justify-content-between">
       <div v-for="(randomMovie,idx) in randomMovies.slice(0, 5)" :key="idx"> 
-        <div @click="goMovieDetail(randomMovie)" class="banner_img">          
-          <img class="m-3 w-100" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title"
-            style="width:192px; height:292px; object-fit:fill;"
-          >
-        </div>
+        <sequential-entrance>          
+          <div @click="goMovieDetail(randomMovie)" class="banner_img">          
+            <img class="m-3 w-100" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title"
+              style="width:192px; height:292px; object-fit:fill;"
+            >
+          </div>
+        </sequential-entrance>
       </div>
     </div>
   </div>
@@ -37,6 +38,9 @@ export default {
       'imgSrc',  
     ])
   },
+  watch: {
+
+  },
   methods: {
     ...mapActions([      
       'getGenreMovies',
@@ -46,6 +50,7 @@ export default {
     // clickRandomMovie() {
     //   document.getElementById('movieGenre').click();
     // },
+    
   },
   created() {
     this.findGenreName()    
