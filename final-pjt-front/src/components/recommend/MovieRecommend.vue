@@ -11,8 +11,8 @@
     <hr style="color:#ff9999; height:5px;">
     <b-row class="d-flex" v-if="randomMovies">      
       <b-col cols="3" v-for="randomMovie in randomMovies" :key="randomMovie.id" style="cursor:pointer">
-        <sequential-entrance delay="500" fromBottom>          
-          <div @click="goMovieDetail(randomMovie)" class="banner_img test">          
+        <sequential-entrance fromBottom>          
+          <div @click="goMovieDetail(randomMovie)" class="banner_img duration">          
             <img :src="imgSrc+randomMovie.poster_path" alt="포스터 이미지" class="w-75 m-3"
               style="width:229px; height:344px; object-fit:cover;"
             >
@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style>
-.test {
-  animation-duration: 1000ms !important;
+.duration {
+  animation-duration: 800ms !important;
 }
 </style>

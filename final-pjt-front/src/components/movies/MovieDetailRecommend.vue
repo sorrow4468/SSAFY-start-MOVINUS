@@ -12,7 +12,7 @@
       <div v-for="(randomMovie,idx) in randomMovies.slice(0, 5)" :key="idx" style="cursor:pointer"> 
         <sequential-entrance>          
           <div @click="goMovieDetail(randomMovie)" class="banner_img">          
-            <img class="m-3 w-100" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title"
+            <img class="m-3 w-100 duration" :src="imgSrc + randomMovie.poster_path" :alt="randomMovie.title"
               style="width:192px; height:292px; object-fit:fill;"
             >
           </div>
