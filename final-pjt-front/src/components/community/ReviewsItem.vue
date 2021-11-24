@@ -2,13 +2,13 @@
   <div>
     <div class="fw-bold fs-1 pt-5 d-flex justify-content-start">Review Detail</div>
     <div v-if="reviewShow" class="pt-5">
-      <div class="d-flex justify-content-between">        
-        <div class="fs-3 fw-bold">{{review.title}}</div>
-
-        {{review.user.username}}
-
-        <div class="fs-4 fw-bold align-items-center">평점: {{reviewRank}}</div>
-      </div>
+      <b-row>          
+        <b-col cols="8" class="fs-3 fw-bold d-flex justify-content-start">{{review.title}}</b-col>
+        <b-col cols="2" class="d-flex justify-content-start fs-4 fw-bold">{{review.user.username}}</b-col>
+        <b-col cols="2" class="fs-4 fw-bold">
+          평점: <span class="text-warning">{{reviewRank}}</span>
+        </b-col>
+      </b-row>
       <hr style="height:5px;">
       <p class="fs-4 d-flex justify-content-start pb-5 text-break">{{review.content}}</p>
       <div class="d-flex justify-content-between">        
@@ -64,11 +64,11 @@
                       :state="validation2"
                     ></b-form-textarea>
                     <b-form-invalid-feedback :state="validation2">
-                    내용이 1000자를 초과하였습니다
-                  </b-form-invalid-feedback>
-                  <b-form-valid-feedback :state="validation2">
-                    내용을 1000자 이내로 적어주세요
-                  </b-form-valid-feedback>
+                      내용이 1000자를 초과하였습니다
+                    </b-form-invalid-feedback>
+                    <b-form-valid-feedback :state="validation2">
+                      내용을 1000자 이내로 적어주세요
+                    </b-form-valid-feedback>
                   </b-form-group>
 
                   <div>
@@ -100,12 +100,19 @@
 import { mapState } from 'vuex'
 import Comments from '@/components/community/Comments'
 
+const starToRank = {
+  '★': 1,
+  '★★': 2,
+  '★★★': 3,
+  '★★★★': 4,
+  '★★★★★': 5,
+}
 const rankToStar = {
-  1:'★',
-  2:'★★',
-  3:'★★★',
-  4:'★★★★',
-  5:'★★★★★',
+  1: '★',
+  2: '★★',
+  3: '★★★',
+  4: '★★★★',
+  5: '★★★★★',
 }
 
 export default {
@@ -119,7 +126,7 @@ export default {
       reviewShow: true,      
       show: true,
       rank: null,
-      options: ['5', '4', '3', '2', '1'],
+      options: ['★★★★★', '★★★★', '★★★', '★★', '★'],
       reviewRank: null,
       
     }
@@ -146,11 +153,13 @@ export default {
     },
     updateReview() {
       // console.log(this.review.form)
+      
       const form = {
         id: this.review.id,
         title: this.review.title,
         content: this.review.content,
-        rank: this.rank,
+        rank: starToRank[this.rank],
+        // rank: this.rank,
       }      
       const formsetToken = {
         form: form,
@@ -192,5 +201,14 @@ export default {
 </script>
 
 <style>
+#input-2::-webkit-scrollbar {
+  width: 6px;
+  
+}
+#input-2::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: gray;
+  border-radius: 50px;
+}
 
 </style>

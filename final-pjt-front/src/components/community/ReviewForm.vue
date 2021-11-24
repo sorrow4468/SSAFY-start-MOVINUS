@@ -14,6 +14,7 @@
         </template>
           <div class="d-block">
             <div>
+            <div class="close"></div>
             <b-form @submit="onSubmit" @reset="onReset" v-if="show" @submit.stop.prevent>
               <b-form-group
                 id="input-group-1"
@@ -83,6 +84,14 @@
 <script>
 import { mapState } from 'vuex'
 
+const starToRank = {
+  '★': 1,
+  '★★': 2,
+  '★★★': 3,
+  '★★★★': 4,
+  '★★★★★': 5,
+}
+
 export default {
   name: 'ReviewForm',
   data(){
@@ -92,9 +101,8 @@ export default {
         content: '',
         rank: null,
       },
-      ranks: [{ text: '평점', value: null }, '5', '4', '3', '2', '1'],
       show: true,
-      options: ['5', '4', '3', '2', '1']
+      options: ['★★★★★', '★★★★', '★★★', '★★', '★']
     }
   },
   computed: {
@@ -117,8 +125,12 @@ export default {
       return config
     },
     createReview() {
+      const newForm = {
+        ...this.form,
+        rank: starToRank[this.form.rank]
+      }
       const formsetToken = {
-        form: this.form,
+        form: newForm,
         token: this.setToken()
       }
       this.$store.dispatch('createReview', formsetToken)
@@ -133,8 +145,8 @@ export default {
     onReset(event) {
       event.preventDefault()
       // Reset our form values
-      this.form.title = null
-      this.form.content = null
+      this.form.title = ''
+      this.form.content = ''
       this.form.rank = null
       // Trick to reset/clear native browser form validation state
       this.show = false
@@ -150,5 +162,9 @@ export default {
 </script>
 
 <style>
-
+.close{
+  background-color: transparent;
+  border:0px;
+  font-size: 1.5rem;
+}
 </style>
