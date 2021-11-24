@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="container">
-    <Navbar/>
-    <router-view/>
+  <div id="app" style="overflow:auto">
+    <Navbar/>    
+    <router-view class="container"/>
   </div>
 </template>
 
