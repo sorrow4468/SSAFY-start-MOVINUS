@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="fw-bold fs-1 d-flex justify-content-start">Review</div>
+  <div>    
     <b-row>
       <hr style="height:5px;" class="m-3">
       <!-- <b-col cols="2" class="fw-bold fs-3">영화제목</b-col>
