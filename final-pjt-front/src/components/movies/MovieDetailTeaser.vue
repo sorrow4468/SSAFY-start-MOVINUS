@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="w-100">
     <MovieDetailTeaserItem
       v-for="(video, idx) in youtubeVideos.slice(0,1)"
       :key="idx"
       :video="video"
+      class="w-100"
     />
   </div>
 </template>

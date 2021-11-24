@@ -11,7 +11,7 @@
           {{ movie.overview }}          
         </div>
         <MovieDetailTeaser :title="movie.title"
-          class="youtube-container d-flex justify-content-center"/>
+          class="youtube-container d-flex justify-content-center w-100"/>
       </div>
     </div>    
     <div class="fs-2  m-3">이 영화와 장르가 비슷한 영화들</div>

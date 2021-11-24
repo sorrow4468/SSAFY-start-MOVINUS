@@ -1,6 +1,6 @@
 <template>
   <div>
-    <iframe :src="videoURL" frameborder="0" style="width:480px; height:220px;" class="me-4"></iframe>
+    <iframe :src="videoURL" frameborder="0" class="w-75" style="height:343px;"></iframe>
   </div>
 </template>
 
