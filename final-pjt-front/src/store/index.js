@@ -393,7 +393,7 @@ export default new Vuex.Store({
         params,
       })
       .then(res => {
-        // console.log(res.data.items)
+        console.log(res.data.items)
         commit('SEARCH_YOUTUBE', res)
       })
       .catch(err => {

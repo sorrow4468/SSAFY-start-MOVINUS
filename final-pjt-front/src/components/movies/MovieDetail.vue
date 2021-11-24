@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top:10px;">
+  <div style="padding-top:60px;">
     <div class="d-flex">    
       <img :src="imgSrc+movie.poster_path" alt="포스터이미지" style="object-fit:none;">
       <div>        
