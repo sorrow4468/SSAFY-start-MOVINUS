@@ -25,13 +25,7 @@ export default {
   components: {
     MovieDetailTeaser,
     MovieDetailRecommend,
-  },
-  props: {
-    movie: {
-      type: Object,
-      required: true
-    },
-  },
+  },  
   computed: {
     ...mapState([
       'movie',

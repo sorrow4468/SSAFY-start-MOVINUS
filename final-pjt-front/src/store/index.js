@@ -8,7 +8,7 @@ import createPersistedState from "vuex-persistedstate";
 
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search'
 // const YOUTUBE_KEY = process.env.VUE_APP_YOUTUBE_API_KEY
-const YOUTUBE_API_KEY = 'AIzaSyDgPQ6iTjC8NINE4NOFZCDPRre3FuD5ivU'
+const YOUTUBE_API_KEY = 'AIzaSyDKTZo0hvwtYjXG3ftB9Dz85TAIYkPyZLM'
 
 Vue.use(Vuex)
 export default new Vuex.Store({
