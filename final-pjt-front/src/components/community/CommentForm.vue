@@ -1,7 +1,12 @@
 <template>
   <b-row>
     <b-col cols="10">      
-      <b-form-input type="text" placeholder="댓글을 입력해주세요." v-model="form.content" @keyup.enter="createComment" class="m-2 w-100"></b-form-input>
+      <b-form-input type="text" 
+        placeholder="댓글을 입력해주세요." 
+        v-model="form.content" 
+        @keyup.enter="createComment" 
+        maxlength="200"
+        class="m-2 w-100"></b-form-input>
     </b-col>
     <b-col cols="2">      
       <b-button pill variant="outline-success border-3" 

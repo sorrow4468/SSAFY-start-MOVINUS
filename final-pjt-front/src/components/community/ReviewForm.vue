@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="d-flex justify-content-between">
+    <div class="fw-bold fs-1">Review</div>
     <div>
       <b-button pill variant="outline-warning border-3" 
-        class="text-light fw-bold fs-6 m-3" 
+        class="text-light fw-bold fs-6" 
         id="show-btn" 
         @click="$bvModal.show('bv-modal-example')"
       >리뷰 작성
@@ -18,6 +19,7 @@
                 id="input-group-1"
                 class="mb-3"          
               >         
+                <!-- <div v-model="form.title">{{form.title}}</div> -->
                 <label id="input-group-1" for="input-1">제목 : </label>
                 <b-form-input
                   id="input-1"
@@ -28,6 +30,7 @@
                   block
                   class="mb-3"
                   :state="validation"
+                  max
                 ></b-form-input>
                 <b-form-invalid-feedback :state="validation">
                   제목이 30자를 초과하였습니다
