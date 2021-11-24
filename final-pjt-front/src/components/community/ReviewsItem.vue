@@ -7,7 +7,7 @@
         <div class="fs-4 fw-bold align-items-center">평점: {{reviewRank}}</div>
       </div>
       <hr style="height:5px;">
-      <p class="fs-4 d-flex justify-content-start pb-5">{{review.content}}</p>
+      <p class="fs-4 d-flex justify-content-start pb-5 text-break">{{review.content}}</p>
       <div class="d-flex justify-content-between">        
         <p class="fw-bold align-self-center">{{review.created_at}}</p>
         <div class="align-self-center">
@@ -61,10 +61,10 @@
                       :state="validation2"
                     ></b-form-textarea>
                     <b-form-invalid-feedback :state="validation2">
-                    내용이 500자를 초과하였습니다
+                    내용이 1000자를 초과하였습니다
                   </b-form-invalid-feedback>
                   <b-form-valid-feedback :state="validation2">
-                    내용을 500자 이내로 적어주세요
+                    내용을 1000자 이내로 적어주세요
                   </b-form-valid-feedback>
                   </b-form-group>
 
@@ -129,7 +129,7 @@ export default {
       return this.review.title.length < 31
     },
     validation2() {
-      return this.review.content.length < 501
+      return this.review.content.length < 1001
     },
   },
   methods: {

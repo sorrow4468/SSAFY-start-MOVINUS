@@ -52,10 +52,10 @@
                   :state="validation2"
                 ></b-form-textarea>
                 <b-form-invalid-feedback :state="validation2">
-                  내용이 500자를 초과하였습니다
+                  내용이 1000자를 초과하였습니다
                 </b-form-invalid-feedback>
                 <b-form-valid-feedback :state="validation2">
-                  내용을 500자 이내로 적어주세요
+                  내용을 1000자 이내로 적어주세요
                 </b-form-valid-feedback>
               </b-form-group>
 
@@ -100,7 +100,7 @@ export default {
       return this.form.title.length < 31
     },
     validation2() {
-      return this.form.content.length < 501
+      return this.form.content.length < 1001
     },
   },
   methods:{
