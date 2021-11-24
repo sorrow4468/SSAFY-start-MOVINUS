@@ -8,6 +8,7 @@ from .models import Comment, Review
 
 # Create your views here.
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def reviews(request):
     reviews = Review.objects.all()
     serializer = ReviewSerializer(reviews,many=True)
@@ -15,7 +16,6 @@ def reviews(request):
 
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
 def review_create(request):
     serializer = ReviewSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
@@ -64,6 +64,9 @@ def comment_create(request, review_pk):
 @api_view(['PUT','DELETE'])    
 def comment_update_or_delete(request, comment_pk):
     comment = get_object_or_404(Comment,pk=comment_pk)
+    if not request.user.comment_set.filter(pk=comment_pk).exists():
+        return Response({'detail': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
+        
     if request.method == 'DELETE':
         comment.delete()
         return Response({'id':comment_pk},status=status.HTTP_204_NO_CONTENT)
