@@ -5,13 +5,10 @@ html, body, template, #app {
 body {
   background-color: #1b1b1b !important;
   color: #ffffff;
-  padding-top: 60px;
-  
+  padding-top: 60px;  
 }
 
-
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,10 +17,8 @@ body {
   background-color: #1b1b1b;
 }
 
-
 #app::-webkit-scrollbar {
   width: 8px;
-  
 }
 #app::-webkit-scrollbar-thumb {
   width: 8px;
@@ -31,18 +26,14 @@ body {
   border-radius: 50px;
 }
 
-
 #app .container ::-webkit-scrollbar {
-  width: 0px !important;
-  
+  width: 0px !important;  
 }
 #app .container ::-webkit-scrollbar-thumb {
   width: 0px !important;
   background-color: #1b1b1b !important;
   border-radius: 50px !important;
 }
-
-
 
 #nav {
   padding: 30px;
@@ -57,11 +48,6 @@ body {
   font-weight: bold;
   color: #ffffff;
 }
-
 #nav a.router-link-exact-active {
   color: #ff9999;
-}
-
-test {
-  background-color: #141414;
 }
