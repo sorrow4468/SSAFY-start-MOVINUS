@@ -1,5 +1,5 @@
 <template>
-  <div>  
+  <div id="movierecommend">  
     <movie-recommend></movie-recommend>
   </div>
 </template>
