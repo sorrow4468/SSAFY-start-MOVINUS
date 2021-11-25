@@ -83,14 +83,6 @@
 <script>
 import { mapState } from 'vuex'
 
-const starToRank = {
-  '★': 1,
-  '★★': 2,
-  '★★★': 3,
-  '★★★★': 4,
-  '★★★★★': 5,
-}
-
 export default {
   name: 'ReviewForm',
   data(){
@@ -98,10 +90,16 @@ export default {
       form: {
         title: '',
         content: '',
-        rank: null,
+        rank: '',
       },
       show: true,
-      options: ['★★★★★', '★★★★', '★★★', '★★', '★']
+      options: [
+        { text: '★★★★★', value: 5, },
+        { text: '★★★★', value: 4, },
+        { text: '★★★', value: 3, },
+        { text: '★★', value: 2, },
+        { text: '★', value: 1, },
+      ]
     }
   },
   computed: {
@@ -123,19 +121,15 @@ export default {
       }
       return config
     },
-    createReview() {
-      const newForm = {
-        ...this.form,
-        rank: starToRank[this.form.rank]
-      }
+    createReview() {      
       const formsetToken = {
-        form: newForm,
+        form: this.form,
         token: this.setToken()
       }
       this.$store.dispatch('createReview', formsetToken)
-      this.title = null
-      this.content = null
-      this.rank = null
+      this.form.title = ''
+      this.form.content = ''
+      this.form.rank = ''
     },
     onSubmit(event) {
         event.preventDefault()
