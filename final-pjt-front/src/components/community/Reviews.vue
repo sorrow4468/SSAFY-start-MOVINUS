@@ -11,7 +11,7 @@
     </b-row>
     <div v-if="reviews[0]">      
       <b-row v-for="review in reviews" :key="review.id" :review="review">
-        <b-col cols="6" @click="goReviewDetail(review)" style="cursor:pointer;">{{review.title}}</b-col>
+        <b-col class="d-flex justify-content-start" cols="6" @click="goReviewDetail(review)" style="cursor:pointer;">{{review.title}}</b-col>
         <b-col cols="2" >{{review.user.username}} </b-col>
         <b-col cols="4" >{{review.created_at}}</b-col>
         <hr class="m-3">
