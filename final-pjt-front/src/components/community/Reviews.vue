@@ -9,12 +9,19 @@
       <b-col cols="4" class="fw-bold fs-3">작성시간</b-col>
       <hr style="height:5px;" class="m-3">
     </b-row>
-    <b-row v-for="review in reviews" :key="review.id" :review="review">
-      <b-col cols="6" @click="goReviewDetail(review)" style="cursor:pointer;">{{review.title}}</b-col>
-      <b-col cols="2" >{{review.user.username}} </b-col>
-      <b-col cols="4" >{{review.created_at}}</b-col>
-      <hr class="m-3">
-    </b-row>
+    <div v-if="reviews[0]">      
+      <b-row v-for="review in reviews" :key="review.id" :review="review">
+        <b-col cols="6" @click="goReviewDetail(review)" style="cursor:pointer;">{{review.title}}</b-col>
+        <b-col cols="2" >{{review.user.username}} </b-col>
+        <b-col cols="4" >{{review.created_at}}</b-col>
+        <hr class="m-3">
+      </b-row>
+    </div>
+    <div v-else>
+      <p class="fs-4 m-3">
+        아직 작성된 리뷰가 없습니다
+      </p>
+    </div>
   </div>
 </template>
 
