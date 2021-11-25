@@ -20,7 +20,6 @@
                 id="input-group-1"
                 class="mb-3"          
               >         
-                <!-- <div v-model="form.title">{{form.title}}</div> -->
                 <label id="input-group-1" for="input-1">제목 : </label>
                 <b-form-input
                   id="input-1"
@@ -144,11 +143,9 @@ export default {
       },
     onReset(event) {
       event.preventDefault()
-      // Reset our form values
       this.form.title = ''
       this.form.content = ''
       this.form.rank = null
-      // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
         this.show = true

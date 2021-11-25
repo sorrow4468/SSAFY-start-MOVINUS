@@ -159,17 +159,12 @@ export default {
         title: this.review.title,
         content: this.review.content,
         rank: starToRank[this.rank],
-        // rank: this.rank,
       }      
       const formsetToken = {
         form: form,
         token: this.setToken()        
       }
       this.$store.dispatch('updateReview', formsetToken)
-      // this.id = null,
-      // this.title = null
-      // this.content = null
-      // this.rank = null
     },
     deleteReview(){
       const idsetToken = {
@@ -183,11 +178,9 @@ export default {
     },
     onReset(event) {
       event.preventDefault()
-      // Reset our form values
       this.form.title = null
       this.form.content = null
       this.form.rank = null
-      // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
         this.show = true

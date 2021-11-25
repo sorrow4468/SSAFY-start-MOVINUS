@@ -31,8 +31,7 @@ export default {
     this.getMovies()
     this.getGenres()
     this.$store.dispatch('checkLogin', this.getToken())
-  }
-  
+  }  
 }
 </script>
 

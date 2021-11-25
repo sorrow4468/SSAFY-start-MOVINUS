@@ -4,11 +4,9 @@ import axios from 'axios'
 import router from '@/router'
 import _ from 'lodash'
 import createPersistedState from "vuex-persistedstate";
-// import InfiniteLoading from 'vue-infinite-loading';
 
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search'
-// const YOUTUBE_KEY = process.env.VUE_APP_YOUTUBE_API_KEY
-const YOUTUBE_API_KEY = 'AIzaSyDKTZo0hvwtYjXG3ftB9Dz85TAIYkPyZLM'
+const YOUTUBE_API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY
 
 Vue.use(Vuex)
 export default new Vuex.Store({
@@ -27,6 +25,7 @@ export default new Vuex.Store({
     comment: null,
     youtubeVideos: [],
   },
+
   mutations: {
     LOGIN(state) {
       state.isLogin = true
@@ -38,7 +37,6 @@ export default new Vuex.Store({
     },
     GET_MOVIES(state, moviedata){
       state.movies = moviedata
-      // state.imgSrc = state.imgSrc + movie.poster_path
     },
     GET_GENRES(state, genredata){
       // console.log(state.genres)
@@ -59,14 +57,10 @@ export default new Vuex.Store({
       // console.log(state.movie)
       router.push({name:'Detail', params:{movieId: movieinfo.id}})
     },
-
-    /////////////////////////////////////////
     GO_REVIEW_DETAIL(state, reviewinfo){
       state.review = reviewinfo
       router.push({name: 'ReviewsItem',params:{reviewId: reviewinfo.id}})
     },
-    /////////////////////////////////////////
-
     GET_REVIEWS(state, reviewItems){
       const newReviewItems = []
       reviewItems.forEach(reviewItem => {
@@ -100,17 +94,13 @@ export default new Vuex.Store({
         ...reviewItem,
         created_at: date,
       }
-      
-      
-      
       state.review = review
       router.go()
     },
     DELETE_REVIEW(state, commentdata){
       const index = state.comments.indexOf(commentdata)
       state.comments.splice(index, 1)
-    },
-  
+    },  
     GET_GENRE_MOVIES(state, movie) {
       // console.log(movie)
       state.genreMovies = movie
@@ -118,12 +108,10 @@ export default new Vuex.Store({
     GET_RANDOM_MOVIES(state){      
       state.randomMovies = _.sampleSize(state.genreMovies, 8)
     },
-
     // detail.vue안에서 추천할 때
     FIND_GENRE_NAME(state) {
       state.findGenreNames = []
       state.randomMovies = null
-      // if (state.findGenreNames.length === 0) {
       state.genres.forEach(genre => {
         state.movie.genres.forEach(movie_genre => {            
           if (movie_genre === genre['id']) {
@@ -138,7 +126,6 @@ export default new Vuex.Store({
           }
         })
       })
-      // }
       // console.log(state.findGenreNames)
     },
     GET_COMMENTS(state, commentdatas){
@@ -177,6 +164,7 @@ export default new Vuex.Store({
       state.youtubeVideos = res.data.items
     },
   },
+
   actions: {
     login({commit}, credentials) {
       axios({
@@ -205,7 +193,6 @@ export default new Vuex.Store({
       axios({
         method: 'get',
         url: 'http://127.0.0.1:8000/movies/',
-        // headers: this.setToken()
       })
         .then(res => {
           // console.log(res)
@@ -219,7 +206,6 @@ export default new Vuex.Store({
       axios({
         method: 'get',
         url: 'http://127.0.0.1:8000/movies/genres/',
-        // headers: this.setToken()
       })
         .then(res => {
           // console.log(res)
@@ -233,12 +219,10 @@ export default new Vuex.Store({
       commit('GO_MOVIE_DETAIL',movieinfo)
       router.go()
     },
-    /////////////////////////////////////////////
     goReviewDetail({ commit }, reviewinfo){
       // console.log(reviewinfo)
       commit('GO_REVIEW_DETAIL',reviewinfo)
     },
-    /////////////////////////////////////////////
     getReviews({ commit }, token){
       axios({
         method: 'get',
@@ -309,7 +293,6 @@ export default new Vuex.Store({
       axios({
         method: 'get',
         url: `http://127.0.0.1:8000/movies/genres/${genreId}/`,
-        // headers: this.setToken()
       })
         .then(res => {
           // console.log(res.data)
@@ -322,7 +305,6 @@ export default new Vuex.Store({
     },
     findGenreName({ commit }) {
       commit('FIND_GENRE_NAME')        
-      // commit('GET_RANDOM_MOVIES')  
     },
     createComment({ commit }, commentdata){
       // console.log(commentdata)
@@ -405,12 +387,15 @@ export default new Vuex.Store({
       })
     },
   },
+
   getters:{
     comments(state){
       return state.comments
     }
   },
+
   modules: {
   },
+
   plugins: [createPersistedState()],
 })

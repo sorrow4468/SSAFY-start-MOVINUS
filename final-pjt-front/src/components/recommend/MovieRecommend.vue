@@ -24,14 +24,10 @@
 </template>
 
 <script>
-// import SequentialEntrance from 'vue-sequential-entrance'
 import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'MovieRecommend',
-  components: {
-    // SequentialEntrance,
-  },
   computed: {
     ...mapState([
       'genres',

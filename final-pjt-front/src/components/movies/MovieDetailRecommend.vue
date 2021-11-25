@@ -46,11 +46,7 @@ export default {
       'getGenreMovies',
       'findGenreName',
       'goMovieDetail',
-    ]),
-    // clickRandomMovie() {
-    //   document.getElementById('movieGenre').click();
-    // },
-    
+    ]),    
   },
   created() {
     this.findGenreName()    
