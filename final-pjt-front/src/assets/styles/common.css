@@ -6,8 +6,8 @@ body {
   background-color: #1b1b1b !important;
   color: #ffffff;
   padding-top: 60px;
+  
 }
-
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Noto Sans KR', sans-serif;
@@ -17,6 +17,18 @@ body {
   color: #ffffff;
   background-color: #1b1b1b;
 }
+
+#app::-webkit-scrollbar {
+  width: 8px;
+  
+}
+#app::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #ff9999;
+  border-radius: 50px;
+}
+
+
 
 #nav {
   padding: 30px;
