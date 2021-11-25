@@ -75,10 +75,10 @@
                     <label for="input-with-list">평점</label>
                     <b-form-input list="input-list" id="input-with-list" 
                       placeholder="평점을 입력해주세요"
-                      v-model="rank"
+                      v-model="rank2"
                       class="mb-3"
                     ></b-form-input>
-                    <b-form-datalist id="input-list" :options="options"></b-form-datalist>
+                    <b-form-datalist id="input-list" :options="options2"></b-form-datalist>
                   </div>
                   <div class="d-flex justify-content-center">                
                     <b-button type="submit" pill variant="outline-primary border-3" class="fw-bold fs-6 m-2" @click="updateReview()">수정</b-button>
@@ -100,13 +100,6 @@
 import { mapState } from 'vuex'
 import Comments from '@/components/community/Comments'
 
-const starToRank = {
-  '★': 1,
-  '★★': 2,
-  '★★★': 3,
-  '★★★★': 4,
-  '★★★★★': 5,
-}
 const rankToStar = {
   1: '★',
   2: '★★',
@@ -125,8 +118,14 @@ export default {
     return {  
       reviewShow: true,      
       show: true,
-      rank: null,
-      options: ['★★★★★', '★★★★', '★★★', '★★', '★'],
+      rank2: null,
+      options2: [
+        { text: '★★★★★', value: 5, },
+        { text: '★★★★', value: 4, },
+        { text: '★★★', value: 3, },
+        { text: '★★', value: 2, },
+        { text: '★', value: 1, },
+      ],
       reviewRank: null,
       
     }
@@ -158,7 +157,7 @@ export default {
         id: this.review.id,
         title: this.review.title,
         content: this.review.content,
-        rank: starToRank[this.rank],
+        rank: this.rank2,
       }      
       const formsetToken = {
         form: form,
