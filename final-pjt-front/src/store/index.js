@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import router from '@/router'
 import _ from 'lodash'
+
+// 새로고침시 데이터 초기화 방지
 import createPersistedState from "vuex-persistedstate";
 
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search'
@@ -12,14 +14,19 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {    
     isLogin: false,
+    
+    // 전체 영화, 디테일 페이지 영화
     movies: null,
     movie: null,
+
     genres: [],
-    imgSrc: "https://image.tmdb.org/t/p/w300",
+    imgSrc: "https://image.tmdb.org/t/p/w300", // + poster_path 
     reviews: [],
     review: null,
     genreMovies: null,
     randomMovies: [],    
+
+    // genre.id를 한글로 변환하여 담는 리스트
     findGenreNames: [],
     comments: [],
     comment: null,
@@ -42,6 +49,9 @@ export default new Vuex.Store({
       // console.log(state.genres)
       state.genres = []
       genredata.forEach(genre => {
+        
+        // 전체 장르 개수는 19개이지만
+        // 마지막 장르가 "TV영화"인데, 해당하는 영화가 없어서 PASS
         if (state.genres.length !== 18) {
           const genre_data = {
             'id': genre['id'],
@@ -62,6 +72,8 @@ export default new Vuex.Store({
       router.push({name: 'ReviewsItem',params:{reviewId: reviewinfo.id}})
     },
     GET_REVIEWS(state, reviewItems){
+
+      // 출력되는 시간을 데이터 형식 말고, 우리가 보는 형식으로 변환
       const newReviewItems = []
       reviewItems.forEach(reviewItem => {
         const year = reviewItem.created_at.slice(0,4)
@@ -105,7 +117,9 @@ export default new Vuex.Store({
       // console.log(movie)
       state.genreMovies = movie
     },
-    GET_RANDOM_MOVIES(state){      
+    GET_RANDOM_MOVIES(state){   
+      
+      // Grid로 랜덤영화 4개씩 두 줄
       state.randomMovies = _.sampleSize(state.genreMovies, 8)
     },
     // detail.vue안에서 추천할 때
