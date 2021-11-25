@@ -9,7 +9,14 @@
       <b-col cols="3" class="d-flex justify-content-start"></b-col>
     </b-row>
     <hr style="height:5px;">
-    <CommentsItem v-for="comment in comments" :key="comment.id" :comment="comment" :review="review"/>
+    <div v-if="comments[0]">  
+      <CommentsItem v-for="comment in comments" :key="comment.id" :comment="comment" :review="review"/>
+    </div>
+    <div v-else>
+      <p class="fs-4 m-3">
+        아직 작성된 댓글이 없습니다
+      </p>
+    </div>
   </div>
 </template>
 
