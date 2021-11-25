@@ -75,6 +75,14 @@ VUE_APP_YOUTUBE_API_KEY='발급 받은 API키를 '' 없이 KEY값만 입력해�
 
 
 
+### 기획, 회의록, 로드맵, 타임라인, 일지 (팀 Notion)
+
+https://dented-mango-660.notion.site/dd755b27b3564da5b72da98d8022f062?v=8862febce01a49158391d51108aed6df
+
+![image-20211125170828926](README.assets/image-20211125170828926-16378277103501.png)
+
+
+
 ### 모델링(ERD)
 
 #### 	DB
