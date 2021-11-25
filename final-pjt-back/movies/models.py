@@ -4,7 +4,6 @@ from django.conf import settings
 # Create your models here.
 class Genre(models.Model):
     name = models.CharField(max_length=50)
-    user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_genres')
 
     def __str__(self):
         return self.name
@@ -20,7 +19,6 @@ class Movie(models.Model):
     poster_path = models.CharField(max_length=200)
     
     genres = models.ManyToManyField(Genre)
-    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
 
     def __str__(self):
         return self.title

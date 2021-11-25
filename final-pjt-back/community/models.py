@@ -12,7 +12,6 @@ class Review(models.Model):
         (5, '★★★★★'),
     ]    
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    # movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     title = models.CharField(max_length=30)
     content = models.TextField(max_length=1000)
@@ -22,6 +21,7 @@ class Review(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

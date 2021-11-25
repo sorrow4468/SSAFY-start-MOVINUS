@@ -1,5 +1,4 @@
 import requests
-# from pprint import pprint
 import json
 
 class TMDBHelper:
@@ -23,10 +22,9 @@ class TMDBHelper:
         
         return  genre_url
 
-tmdb_helper = TMDBHelper('17ad6036a4743047f1619ddbc5e0fbf2')
+tmdb_helper = TMDBHelper('__APIKEY__')
 
 results = list()
-
 movies_list = list()
 
 # 장르정보 저장
@@ -81,7 +79,6 @@ movies_list.sort(key=lambda x: x['fields']['release_date'])
 
 with open('movies.json', 'w', encoding="utf-8") as make_file:
     json.dump(movies_list, make_file, ensure_ascii=False, indent="\t")
-
 
 
 # print(genres)
